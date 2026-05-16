@@ -1,0 +1,84 @@
+NORMATIVA ANTINCENDIO ITALIA - KNOWLEDGE BASE ROST 81
+Aggiornamento: maggio 2026
+
+=== RIFERIMENTI NORMATIVI PRINCIPALI ===
+
+1. D.Lgs. 8 marzo 2006, n. 139
+   Costituzione del Corpo Nazionale dei Vigili del Fuoco.
+   Base istituzionale per le attività di prevenzione incendi.
+
+2. D.P.R. 1 agosto 2011, n. 151
+   Regolamento di semplificazione della prevenzione incendi.
+   Ha sostituito DPR 689/59 e DM 16/02/82.
+   Riduce le attività soggette da 97 a 80 (Allegato I).
+   Introduce la SCIA antincendio in sostituzione del CPI per cat. A e B.
+   Divide le attività in 3 categorie di rischio:
+   - Categoria A: rischio basso, adempimenti semplificati (SCIA)
+   - Categoria B: rischio medio, SCIA + possibile sopralluogo VVF
+   - Categoria C: rischio elevato, rilascio CPI obbligatorio
+
+3. DM 3 agosto 2015 (Codice di Prevenzione Incendi)
+   Regola tecnica orizzontale (RTO) e regole tecniche verticali (RTV).
+   Approccio prestazionale alternativo alle regole prescrittive tradizionali.
+   Aggiornato con le seguenti integrazioni principali:
+   - DM 30/03/2022: chiusure d'ambito edifici civili
+   - DM 19/05/2022: edifici di civile abitazione (RTV V.E.3)
+   - DM 22/11/2022: attività intrattenimento e spettacolo (RTV V.15), in vigore dal 01/01/2023
+   - DM 14/10/2022: modifiche Cap. S.1 (reazione al fuoco)
+   - DM 26/07/2022: stabilimenti stoccaggio e trattamento rifiuti
+   Versione aggiornata disponibile su: vigilfuoco.gov.it
+
+4. DM 1 settembre 2021 (Decreto Controlli)
+   Disciplina i controlli e la manutenzione dei sistemi antincendio.
+   Introduce la figura del Tecnico Manutentore Antincendio qualificato.
+   Qualificazione manutentori in vigore dal 25 settembre 2025 (dopo proroghe).
+
+5. DM 2 settembre 2021 (Decreto Gestione)
+   Gestione della sicurezza antincendio in esercizio.
+   Sostituisce il DM 10 marzo 1998.
+
+=== PROCEDURE AMMINISTRATIVE ===
+
+SCIA Antincendio (cat. A e B):
+- Presentata al Comando VVF prima dell'inizio attività
+- Allegare documentazione tecnica (progetto, relazione, attestazioni)
+- VVF possono effettuare controlli entro 60 giorni
+
+CPI - Certificato di Prevenzione Incendi (cat. C):
+- Richiede valutazione progetto e sopralluogo VVF
+- Validità: 5 anni, rinnovabile
+- Obbligatorio per attività cat. C prima dell'apertura
+
+Rinnovo periodico:
+- Ogni 5 anni per attività cat. C
+- Dichiarazione di rinnovo per cat. A e B
+
+=== ATTIVITÀ SOGGETTE PIÙ COMUNI (DPR 151/2011 - Allegato I) ===
+
+Attività 34: Uffici con oltre 300 persone presenti - cat. B/C
+Attività 35: Scuole con oltre 100 persone - cat. A/B/C
+Attività 36: Strutture sanitarie - cat. A/B/C
+Attività 49: Autorimesse - cat. A/B/C (oltre 9 autoveicoli)
+Attività 64: Depositi di carta, cartoni - oltre 50 q.li - cat. A/B/C
+Attività 65: Alberghi, pensioni con oltre 25 posti letto - cat. A/B/C
+Attività 66: Strutture turistico-ricettive all'aria aperta - cat. A/B/C
+Attività 67: Esercizi di somministrazione pasti con oltre 100 persone - cat. A/B/C
+Attività 71: Edifici civili con altezza antincendio > 24 m - cat. A/B/C
+Attività 74: Impianti per la produzione di calore > 116 kW - cat. A/B/C
+
+=== FORMAZIONE ANTINCENDIO (DM 2 settembre 2021) ===
+
+Rischio basso: 4 ore (teoria + pratica)
+Rischio medio: 8 ore
+Rischio elevato: 16 ore
+Aggiornamento: ogni 3 anni
+
+Addetto antincendio: deve essere designato dal datore di lavoro (art. 18 D.Lgs. 81/08).
+Numero minimo addetti: almeno 1 per turno lavorativo.
+
+=== FONTI UFFICIALI ===
+
+Vigili del Fuoco: vigilfuoco.gov.it
+Normattiva (testi aggiornati): normattiva.it
+INAIL linee guida: inail.it
+Portale attività soggette VVF: vigilfuoco.gov.it/aspx/AttivitaSoggette.aspx
