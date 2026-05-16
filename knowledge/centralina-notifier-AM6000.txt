@@ -1,0 +1,95 @@
+CENTRALINA NOTIFIER AM-6000 - KNOWLEDGE BASE ROST 81
+Fonte: Manuale Operatore e Programmazione M-180.1-AM6000-ITA Rev. F.2
+Nota: modello FUORI PRODUZIONE ma ancora molto diffuso sul campo
+
+=== CARATTERISTICHE PRINCIPALI ===
+- Centrale analogica indirizzabile, fino a 6 loop (linee analogiche)
+- Ogni linea: max 99 sensori + 99 moduli ingresso/uscita
+- Display LCD grafico 16 righe x 40 colonne (480x128 punti)
+- Archivio storico: ultimi 999 eventi in memoria non volatile
+- Alimentazione: 240VAC 50Hz su linea dedicata "IMPIANTO ANTINCENDIO"
+- Batterie tampone: 2x 12V - 24Ah max
+
+=== PANNELLO FRONTALE - LED DI STATO ===
+ROSSO - ALLARME: incendio rilevato
+GIALLO - ALLARME REMOTO ATTIVO: allarme da pannello remoto
+GIALLO - RITARDI ATTIVI: ritardo allarme in corso
+GIALLO - ESCLUSIONI: una o più zone/dispositivi esclusi (attenzione!)
+GIALLO - GUASTI: guasto su sistema, alimentazioni o dispersione a terra
+GIALLO - TEST: modalità test attiva
+VERDE - TENSIONE PRESENTE: sistema alimentato e operativo
+
+GIALLO - SIRENE TACITATE: sirene silenziate manualmente
+GIALLO - COMANDO ANTINCENDIO ESCLUSO: uscita antincendio automatica esclusa
+  (lampeggia se l'uscita è in guasto)
+
+=== TASTI FUNZIONE PRINCIPALI ===
+F1 = EVACUAZIONE: attiva allarme generale immediato
+F2 = AZZERA RITARDI: cancella i ritardi programmati
+F3 = TACITAZIONE USCITE SIRENE: silenzia sirene
+F4 = RIATTIVAZIONE USCITE SIRENE: riattiva sirene
+
+=== LIVELLI DI ACCESSO (PASSWORD) ===
+Livello 1: operatore base (nessuna password)
+Livello 2: operatore avanzato
+Livello 3: programmazione (default: 33333)
+NOTA: password modificabili dal livello 3. Per operazioni livello 3
+occorre abilitare jumper J1 sul retro del frontale (aprire sportello).
+
+=== PROCEDURA CORRETTA ESCLUSIONE ZONE PER MANUTENZIONE ===
+1. Accedere al menu con password livello 2
+2. Selezionare ESCLUSIONI > ZONE o PUNTI
+3. Inserire numero zona/punto da escludere
+4. Confermare con ENTER
+5. Verificare LED ESCLUSIONI giallo acceso
+6. Documentare su registro manutenzione: zona esclusa, orario, motivo
+
+=== PROCEDURA CORRETTA RIATTIVAZIONE DOPO MANUTENZIONE ===
+ATTENZIONE: questa è la causa più comune di falsi allarmi al riavvio.
+
+1. Prima di riattivare: pulire/soffiare i rilevatori interessati dai lavori
+   (polvere = falso allarme garantito)
+2. Riattivare UN SETTORE/ZONA ALLA VOLTA
+3. Attendere minimo 30-60 secondi tra una riattivazione e la successiva
+   (tempo di stabilizzazione del rilevatore)
+4. Osservare il display dopo ogni riattivazione
+5. Solo quando il display è stabile procedere con la zona successiva
+6. MAI riattivare tutto insieme con il tasto di reset generale
+   se ci sono zone che erano in esclusione per manutenzione
+
+=== FALSO ALLARME AL RIAVVIO - CAUSE COMUNI ===
+1. Polvere nei rilevatori ottici (lavori edili, forature, cartongesso)
+2. Riattivazione troppo rapida (sistema non stabilizzato)
+3. Rilevatore in deriva (camera sporca, segnala pre-allarme all'avvio)
+4. Temperatura elevata nell'ambiente durante i lavori
+5. Correnti d'aria improvvise su rilevatori ottici
+
+=== COSA FARE SE PARTE ALLARME SPURIO AL RIAVVIO ===
+1. Premere F3 (TACITAZIONE SIRENE) immediatamente
+2. Leggere sul display quale punto/zona ha generato l'allarme
+3. NON premere RESET subito - prima identificare il punto
+4. Escludere il punto incriminato
+5. Premere RESET per ripristinare la centrale
+6. Investigare il rilevatore segnalato (pulizia o sostituzione)
+7. Riattivare il punto solo dopo verifica
+
+=== LETTURA DISPLAY IN STATO NORMALE ===
+"Nessun allarme in corso" = sistema OK
+Data e ora visualizzate = verificare siano corrette
+Se LED ESCLUSIONI acceso = verificare sempre quali zone sono escluse
+  prima di lasciare il cantiere
+
+=== STORICO EVENTI ===
+Accedere da: MENU > ARCHIVIO > LISTA EVENTI
+Mostra ultimi 999 eventi con data e ora.
+Utile per ricostruire cosa è successo durante interventi.
+
+=== MANUTENZIONE PERIODICA (DM 1/9/2021) ===
+Semestrale: verifica funzionale rilevatori, pulizia, test allarme
+Annuale: verifica batterie, prova evacuazione, aggiornamento registro
+Il tecnico manutentore deve essere qualificato dal 25/09/2025.
+
+=== CONTATTI ===
+Notifier Italia (Honeywell): notifier.it
+Assistenza tecnica: contattare il distributore locale certificato
+Manuale completo: M-180.1-AM6000-ITA Rev. F.2
