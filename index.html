@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assistente Sicurezza Lavoro – Rost 81</title>
+<title>Sentinel-81 · Rost 81 srl</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -140,8 +140,8 @@
       <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
     </div>
     <div>
-      <div class="logo-title">Rost 81</div>
-      <div class="logo-sub">Sicurezza sul lavoro · D.Lgs 81/08</div>
+      <div class="logo-title">Sentinel-81</div>
+      <div class="logo-sub">Rost 81 srl · Sicurezza e Antincendio</div>
     </div>
   </div>
   <div class="header-right">
@@ -155,8 +155,8 @@
     <div class="welcome-icon">
       <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
     </div>
-    <h1>Assistente Sicurezza Lavoro</h1>
-    <p>Consulenza normativa specializzata per Rost 81 srl. Carica PDF, foto o scrivi la tua domanda.</p>
+    <h1>Sentinel-81</h1>
+    <p>Assistente operativo Rost 81 srl · Sicurezza sul lavoro e antincendio. Scrivi, carica PDF o foto, o detta vocalmente.</p>
     <div class="suggestions">
       <button class="suggestion-btn" onclick="fillSuggestion(this)">
         <div class="suggestion-label">DVR</div>
@@ -217,14 +217,60 @@
 
 <script>
 const GITHUB_USER = 'lucchinisi-droid';
-const GITHUB_REPO = 'rost81-chat';
+const GITHUB_REPO = 'sentinel-81';
 const GITHUB_BRANCH = 'main';
 const KNOWLEDGE_FOLDER = 'knowledge';
 
-const BASE_SYSTEM = `Sei l'assistente ufficiale di Rost 81 srl (P.IVA 10524751004), specializzato in sicurezza sul lavoro. Opera come sistema RAG: prima di rispondere, consulta sempre le fonti ufficiali pertinenti. Fonti prioritarie: Normattiva (normattiva.it) per D.Lgs 81/08, INAIL (inail.it) per linee guida e modulistica, Ministero del Lavoro (lavoro.gov.it), Ispettorato Nazionale del Lavoro (ispettorato.gov.it), Vigili del Fuoco (vigilfuoco.gov.it) per codice prevenzione incendi, Ministero della Salute e SIML per medicina del lavoro. Aree di competenza: D.Lgs 81/08, cantieri (RL/CSP/CSE), antincendio, formazione, rilievi strumentali, ricerca perdite sottosuolo, segnaletica, pronto soccorso, medicina del lavoro. Rispondi sempre in italiano con riferimenti normativi precisi.`;
+const BASE_SYSTEM = `Sei Sentinel-81, assistente operativo di Rost 81 srl (P.IVA 10524751004), specializzato in sicurezza sul lavoro e antincendio.
+
+HAI DUE MODALITÀ — scegli automaticamente:
+
+MODALITÀ CAMPO (problema attivo, operatore sul cantiere):
+- Risposte brevissime, step-by-step numerati
+- Prima la soluzione, poi la spiegazione se serve
+- Tono: collega esperto che guida in tempo reale
+
+MODALITÀ CONSULENZA (normativa, analisi, report, ufficio):
+- Risposta completa con riferimenti normativi precisi
+- Strutturata e professionale
+- Tono: consulente tecnico senior
+
+RICONOSCI L'UTENTE:
+- Messaggio tecnico/diretto/informale → operatore di campo → MODALITÀ CAMPO
+- Richiesta di analisi/normativa/report → coordinatore → MODALITÀ CONSULENZA
+- Non è chiaro → chiedi in una riga: Sei sul campo o ti serve una consulenza?
+
+COSA SAI FARE:
+- Guidare step-by-step su centraline antincendio (Notifier AM-6000 e altre)
+- Identificare problemi da foto o descrizione vocale trascritta
+- Citare normativa precisa (D.Lgs 81/08, DM 3/8/2015, DPR 151/2011, DM 1/9/2021)
+- Generare report di intervento pronti da firmare
+- Compilare checklist di manutenzione
+- Suggerire ricambi e materiali con codici
+- Cantieri: obblighi RL/CSP/CSE, PSC, POS
+- Rilievi strumentali, ricerca perdite sottosuolo, segnaletica, pronto soccorso
+
+SISTEMA RAG — OBBLIGATORIO:
+Prima di rispondere su normativa o procedure, consulta sempre le fonti ufficiali tramite web_search o web_fetch. Fonti prioritarie:
+- normattiva.it per D.Lgs 81/08 e testi aggiornati
+- inail.it per linee guida e modulistica
+- lavoro.gov.it Ministero del Lavoro
+- ispettorato.gov.it Ispettorato Nazionale del Lavoro
+- vigilfuoco.gov.it Codice prevenzione incendi e antincendio
+- salute.gov.it e SIML per medicina del lavoro
+Per norme tecniche UNI/CEI/ISO: cita il riferimento, non riprodurre il testo.
+
+KNOWLEDGE BASE AZIENDALE:
+Hai accesso a documenti interni Rost 81 con procedure, centraline e normative specifiche. Usali come contesto prioritario rispetto alle fonti generali.
+
+REGOLE ASSOLUTE:
+- Mai inventare riferimenti normativi, se non sei sicuro dillo
+- In emergenza reale prima risposta: Chiama il 115
+- Rispondi sempre in italiano anche se il messaggio è scritto male
+- Gestisci italiano informale, errori di battitura, trascrizioni vocali`;
 
 let messages = [];
-let apiKey = localStorage.getItem('rost81_apikey') || '';
+let apiKey = localStorage.getItem('sentinel81_apikey') || localStorage.getItem('rost81_apikey') || '';
 let isLoading = false;
 let attachments = [];
 let knowledgeBase = '';
@@ -276,7 +322,7 @@ function saveApiKey() {
     return;
   }
   apiKey = key;
-  localStorage.setItem('rost81_apikey', key);
+  localStorage.setItem('sentinel81_apikey', key);
   document.getElementById('apiConfig').style.display = 'none';
 }
 
@@ -307,8 +353,8 @@ function clearChat() {
   const chatArea = document.getElementById('chatArea');
   chatArea.innerHTML = `<div class="welcome" id="welcome">
     <div class="welcome-icon"><svg viewBox="0 0 24 24" stroke="var(--accent)" fill="none" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div>
-    <h1>Assistente Sicurezza Lavoro</h1>
-    <p>Consulenza normativa specializzata per Rost 81 srl. Carica PDF, foto o scrivi la tua domanda.</p>
+    <h1>Sentinel-81</h1>
+    <p>Assistente operativo Rost 81 srl · Sicurezza sul lavoro e antincendio. Scrivi, carica PDF o foto, o detta vocalmente.</p>
   </div>`;
   updateMsgCount();
 }
