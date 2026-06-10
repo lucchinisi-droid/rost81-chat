@@ -1,0 +1,180 @@
+# CENTRALE ANTINCENDIO COMELIT LOGIFIRE 41CPE118
+## Scheda Tecnica Completa
+Fonte: Datasheet ufficiale Comelit + Manuale tecnico mt-41cpe118-it-2ed-2g40003016
+Certificazioni: EN 54-2, EN 54-4, EN 54-13
+
+---
+
+## DESCRIZIONE GENERALE
+
+La centrale antincendio indirizzata 41CPE118 serie LOGIFIRE è una centrale analogica con:
+- 1 Loop di serie, espandibile a 4 con 3 schede 41ECL120
+- Fino a 8 Loop totali con box espansione 41CPE104
+- Fino a 250 dispositivi indirizzati per loop (rivelatori, pulsanti, moduli I/O, sirene)
+- Fino a 200 zone di rivelazione (500 zone nella versione manuale)
+- Display Touch Screen Resistivo a colori 7" (155x86 mm)
+- 200 LED sul pannello frontale per ripetizione stato zone
+- Doppio microprocessore (CPU ridondante)
+- Contenitore metallico grigio RAL 7045 — dimensioni 430x330x150 mm
+
+---
+
+## CARATTERISTICHE PRINCIPALI
+
+| Parametro | Valore |
+|---|---|
+| Loop di serie | 1 |
+| Max loop (con espansioni) | 8 |
+| Max dispositivi per loop | 250 |
+| Max zone | 200 (500 versione completa) |
+| Funzioni logiche | AND/OR |
+| Max ingressi logici | 250 |
+| Max uscite logiche | 250 |
+| Log eventi | 10.240 eventi |
+| Connettività | LAN (RJ45), RS485 |
+| Supervisione remota | Modbus TCP/IP |
+| Max centrali in rete | 64 (Ethernet) |
+| Max centrali EVAC collegabili | 5 |
+| Livelli di allarme | T1, T2 (+ T3 countdown evacuazione) |
+
+---
+
+## CARATTERISTICHE HARDWARE
+
+| Parametro | Valore |
+|---|---|
+| Grado protezione | IP 30 |
+| Contenitore | Metallico |
+| Colore | Grigio RAL 7045 |
+| Display | Touch screen resistivo 7" |
+| Peso (senza batteria) | 7 kg |
+| LED segnalazione zone | 200 |
+| Altezza | 430 mm |
+| Larghezza | 330 mm |
+| Profondità | 150 mm |
+| Porte programmazione | Micro USB-B, LAN RJ45 |
+| CPU ridondante | Sì |
+
+---
+
+## AMBIENTE DI LAVORO
+
+- Temperatura di funzionamento: -5°C ÷ +40°C (manuale riporta -10°C ÷ +50°C)
+- Temperatura di stoccaggio: -10°C ÷ +60°C
+- Umidità relativa: fino a 96% RH @40°C (senza condensa)
+
+---
+
+## CARATTERISTICHE ELETTRICHE
+
+- Alimentazione principale: 110÷230 VAC / 50÷60 Hz
+- Backup: 1x 12VDC – 18Ah (batteria SLA, non inclusa)
+  - Con 8 loop: 2 batterie da 12V/18Ah
+  - Dimensioni batteria: 167×181×76 mm
+- Uscita alimentazione dispositivi ausiliari: 1 × 24VDC / 0,3A
+- Corrente max per scheda Loop: 650-700 mA
+- Tensione uscita alimentatore: 13,8V
+- Corrente uscita alimentatore: 20A
+
+### Uscite:
+- Uscite a relè (NA/NC): 4 × 30V@10A (programmabili)
+- Uscita monitorata SND (sirene): 1 × 24VDC @ 1A
+- Uscita FIRE R (trasmissione allarme VVFF): 24VDC @ 100mA
+- Uscita FIRE P (estinzione incendio): 24VDC @ 100mA
+- Uscita FAULT R (guasto): 24VDC @ 100mA — SI DISATTIVA in caso di guasto
+
+### Fusibili:
+- Alimentazione principale: 4A, Tipo T
+- Uscite: 0,1A PTC (×3); 0,3A PTC (×1); 1A PTC (×1)
+- Batteria: 15A PTC
+
+---
+
+## INGRESSI MONITORATI
+
+- PrConf, FltPr, AlConf, Vds — 4 ingressi per segnalazione stato apparecchiature estinzione
+- 3 ingressi dedicati all'interfacciamento con sistemi di estinzione
+
+---
+
+## SEGNALAZIONI LED PANNELLO FRONTALE
+
+- ALLARME INCENDIO — acceso fisso, evento allarme generale
+- PREALLARME — zona in stato preallarme
+- GUASTO — guasto generico (dispositivo, uscita, ecc.)
+- GUASTO SISTEMA — guasto processore
+- TACITAZIONI — sirene tacitate
+- RITARDO — ritardo attivo su uscite
+- TENSIONE DI RETE — presenza alimentazione 230V
+- ESCLUSIONI — esclusioni attive
+- TEST — centrale in modalità test
+- ALLARME TECNICO — allarme tecnico ricevuto
+- ALLARME CONFERMATO — segnalazione da apparecchiature allarme
+- USCITE GUASTE/ESCLUSE — guasto/esclusione uscita monitorata allarme
+- CONFERMA SPEGNIMENTO — conferma segnalazione estinzione
+- GUASTO SPEGNIMENTO — guasto apparecchiature estinzione
+
+---
+
+## ARTICOLI ACCESSORI COMPATIBILI
+
+| Codice | Descrizione |
+|---|---|
+| 41ECL120 | Scheda espansione Loop (max 3 in centrale) |
+| 41CPE104 | Box espansione 4 Loop esterno |
+| 41ALM172 | Alimentatore supplementare |
+| 41PRN100 | Stampante termica |
+| 41ECB000 | Modulo espansione BUS ridondante RS485 |
+| 41CPR100 | Pannello ripetitore |
+| 48BIA100 | Telaio per montaggio ad incasso |
+| 41SPG000 | Programmatore elettronico sensori |
+
+---
+
+## DISPOSITIVI INDIRIZZATI COMELIT COMPATIBILI
+
+### Rivelatori:
+- 41RCS100 — Rivelatore termico (classi A1R, A2S, BS)
+- 41RFU100 — Rivelatore ottico di fumo (4 livelli sensibilità)
+- 41RML100 — Rivelatore combinato ottico+termico RoR
+
+### Pulsanti Manuali:
+- 41APM000 — Pulsante manuale da interno
+- 41PAE020 — Pulsante manuale da esterno IP67
+
+### Moduli:
+- 41IOM010 — Mini modulo 1 ingresso monitorato (NO isolatore integrato)
+- 41IOM040 — Modulo 4 ingressi monitorati
+- 41IOM022 — Modulo 2 ingressi + 2 uscite relè
+- 41IOM122 — Modulo 2 ingressi + 2 uscite monitorate (o relè)
+- 41IOM000 — Modulo 1 uscita monitorata
+- 41IOM000/240 — Modulo 1 uscita di potenza 230V
+- 41IOM004 — Modulo 4 uscite monitorate
+- 41ISC000 — Modulo per zona convenzionale
+
+### Sirene:
+- 41SAB100 — Base con sirena
+- 41SCB100 — Base con sirena + lampeggiante
+- 41SAI000 — Sirena
+- 41SCI000 — Sirena con lampeggiante
+
+NOTA: Tutti i dispositivi hanno isolatore integrato, ECCETTO 41IOM010.
+
+---
+
+## NORMATIVA DI RIFERIMENTO
+
+- EN 54-2:1997/A1:2006/AC:1999 — Centrali di controllo e segnalazione
+- EN 54-4:1997/A2:2006/AC:1999 — Apparecchiature di alimentazione
+- EN 54-13 — Valutazione di compatibilità dei componenti di sistema
+- Conformità CPR (Construction Products Regulation)
+- DoP No: 045
+
+---
+
+## PRODUTTORE
+
+Comelit Group S.p.A.
+Via Don Arrigoni 5 — 24020 Rovetta S. Lorenzo (BG) Italy
+Tel: +39 0346 750 011
+Email: info@comelit.it

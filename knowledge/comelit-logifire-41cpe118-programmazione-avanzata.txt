@@ -1,0 +1,791 @@
+# CENTRALE COMELIT LOGIFIRE 41CPE118 — PROGRAMMAZIONE AVANZATA
+## Capitolo 4: Uscite logiche, configurazione centrale, rete, cloud
+Fonte: Manuale tecnico mt-41cpe118-it-2ed-2g40003016 — Cap. 4.6-4.10
+
+4.6.1 Sottomenu per la selezione del tipo di uscita
+•
+PERIFERICA: Selezionare questa opzione quando l'uscita è un terminale di un dispositivo periferico (modulo uscite relè).
+Premere il pulsante “AVANZATE” per programmare i seguenti parametri:
+Parametri Uscita Dispositivo Periferico
+Indirizzo Dispositivo Periferico
+2
+Uscita Dispositivo Periferico relé (1-4)
+1
+◊ Uscita dispositivo periferico: Inserire il numero dell’uscita del modulo relé (da 1 a 4).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva”.
+61
+LOOP: Selezionare questa opzione quando l’uscita è un terminale di un modulo ad uscite.
+Premere il pulsante “AVANZATE” per programmare i seguenti parametri:
+Parametri uscita dispositivo di rete
+41IOM122
+Indirizzi Dispositivi Loop
+1
+Numero loop
+1
+Canale (3,4)
+3
+◊ Indirizzo dispositivo loop: inserire l’indirizzo del dispositivo.
+◊ Numero loop: inserire il numero del loop a cui appartiene il dispositivo.
+◊ Canale: inserire il numero del canale del dispositivo che si vuole attivare. I canali disponibili del dispositivo scelto, sono
+raffigurati tra parentesi.
+ATTENZIONE: Se il dispositivo è una sirena, o un modulo di zona convenzionale 41ISC000, la centrale
+mostrerà solo un canale disponibile.
+I seguenti messaggi di allerta possono essere visualizzati sullo schermo:
+•
+"Questo dispositivo non può essere utilizzato come uscita!" - Ciò significa che il dispositivo o il canale impostato non
+possono essere utilizzati come uscita.
+Il messaggio viene visualizzato se l'indirizzo impostato è di un tipo di dispositivo non avente uscite programmabili (esempio:
+moduli solo ingressi);
+•
+"Già usato!" - Ciò significa che il dispositivo, o il canale impostato, è già stato utilizzato per altre operazioni nella
+configurazione della centrale.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+• RETE: Selezionare questa opzione quando l’uscita deve essere riportata verso l’ingresso (di rete) di un’altra centrale
+connessa via RS485 / LAN.
+Parametri Uscite di rete
+Numero Ingresso
+0
+Numero Centrale/P.Ripetitore
+0
+Premere il pulsante “AVANZATE” per impostare:
+•
+Numero Ingresso: Inserire il numero dell’ingresso, compreso tra 1 e 250.
+•
+Numero Centrale: Inserire il numero della centrale dalla quale proviene l’ingresso di rete, compreso tra 1 e 64.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+62
+• AZIONE: Selezionare questa opzione quando l’uscita verrà attivata da una “Azione” avvenuta nel sistema.
+Premere il pulsante accanto al campo “Funzioni” per selezionare il tipo di azione da associare all’attivazione dell’uscita,
+visualizzati di seguito:
+Tacita buzzer
+Funzioni
+Tacita buzzer
+Tacita sirene
+Evacuazione
+Azzera ritardo
+Cambio classe
+Tacita Allarme (Strobo ON)
+Modalità Giorno
+Modalità Notte
+◊ TACITAZIONE BUZZER - Attivazione dell’uscita in caso di evento Tacitazione del buzzer nel sistema.
+◊ TACITAZIONE SIRENE – Attivazione dell’uscita in caso di evento Tacitazione delle sirene nel sistema.
+◊ RESET - Attivazione dell’uscita in caso di evento di Reset nel sistema.
+◊ EVACUAZIONE – Attivazione dell’uscita in caso di evento Evacuazione nel sistema.
+◊ AZZERA RITARDO – Attivazione dell’uscita in caso di evento di Azzera Ritardo nel sistema.
+◊ CAMBIO CLASSE – Attivazione dell’uscita in caso di evento di Cambio Classe nel sistema.
+◊ TACITA ALLARME (STROBO ON) – Attivazione dell’uscita in caso di evento Tacitazione allarme zona (lampeggiante
+attivo) nel sistema. Inserire il numero della zona.
+◊ MODALITA’ GIORNO – Attivazione dell’uscita se nel sistema è impostata la Modalità Giorno.
+◊ MODALITA’ NOTTE – Attivazione dell’uscita se nel sistema è impostata la Modalità Notte.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’uscita.
+•
+EVENTO: Selezionare questa opzione quando l’uscita verrà attivata da un “Evento” generale nel sistema.
+Allarme
+Funzioni
+Allarme
+Guasti
+Allarme tecnico
+Premere il pulsante “AVANZATE” per impostare il tipo di evento che attiverà l’uscita, tra quelli disponibili:
+◊ Allarme – Attivazione dell’uscita in caso di evento Allarme Incendio nel sistema.
+◊ Guasti – Attivazione dell’uscita in caso di evento di Guasto nel sistema.
+◊ Allarme Tecnico – Attivazione dell’uscita in caso di evento Allarme Tecnico (segnalazioni) nel sistema.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’uscita.
+63
+4.6.2 Menu per la modifica della mappa uscite (inserimento gruppi ingressi e controllo
+delle uscite)
+Menu per la programmazione delle operazioni logiche per l'attivazione delle uscite. La mappa è individuale e può essere
+impostata per ogni singola uscita. Le interazioni logiche di come gli ingressi controlleranno le uscite sono impostate in una
+mappa che viene presentata in una schermata separata dopo aver premuto il pulsante Modifica mappa uscite dal menu
+principale Uscite.
+Funzioni
+0
+Funzioni
+0
+OR
+AND
+0
+1
+2
+0
+3
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+La schermata è organizzata in 3 aree:
+1 - Sezione per l'impostazione dei numeri dei gruppi ingresso operanti in logica OR.
+2 - Sezione per l'impostazione dei numeri dei gruppi ingresso operanti in logica AND.
+3 - Impostazione del tipo di interazione logica tra le sezioni 1 e 2. Funzione logica AND o OR.
+La logica è impostata mediante la pressione del pulsante nell'angolo in alto a destra. Ogni pressione del pulsante
+cambia la funzione logica. La logica selezionata è visualizzata sullo schermo con un diagramma che rappresenta
+l'interazione tra i numeri del gruppo di ingressi delle sezioni 1 e 2.
+Per immettere un numero di gruppo ingressi, premere il pulsante e digitare il numero tramite la tastiera.
+ATTENZIONE: è importante conoscere preventivamente i numeri dei gruppi ingressi da inserire
+nello schema logico dell’uscita da programmare. È raccomandato creare un elenco che descriva la
+corrispondenza tra l’operazione logica dell’ingresso e dell’uscita.
+Esempio di impostazione di uno schema logico d’uscita:
+1
+Numero uscita
+Funzioni
+1
+OR
+Name
+Modalità
+Auto reset
+Polarità uscita
+NORMALE
+Ritardo
+0
+Uscita di tipo impulsiva
+Tipo
+0
+0
+CONTINUA
+Loop
+Modifica mappa uscite
+0
+Avanzate
+2
+0
+0
+0
+Selezionare un’uscita libera - nell'esempio è il numero 1. Quindi selezionare il Tipo di uscita - nell'esempio il tipo è un
+dispositivo loop ad uscite. Premere il pulsante “Modifica mappa uscite” per entrare nella mappa logica.
+Inserire i numeri dei gruppi ingresso, in verticale (sezione OR) e orizzontale (sezione AND).
+I parametri impostati vengono visualizzati con "un interruttore aperto" che rappresenta un'operazione logica inserita.
+Selezionare la logica per il funzionamento di entrambe le sezioni.
+Nell'esempio, l'uscita numero 1 è attivata quando uno dei gruppi di ingresso 1 o 2 sono attivi – Logica OR.
+Se si imposta la logica di funzionamento in AND, l'uscita numero 1 verrà attivata solo nel caso in cui entrambe i gruppi ingresso
+1 e 2 saranno attivi.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’uscita.
+64
+4.7 CENTRALE
+Per accedere al menu centrale premere in sequenza:
+SISTEMA – PROGRAMMAZIONE - CENTRALE
+In questo menu vengono richiamati dei sottomenu aggiuntivi per la programmazione / modifica dei parametri in centrale.
+System accesso
+Codice
+Lingua
+Rete
+Ritardo (T1)
+Escluso
+Stampante
+ModalitàAlarm
+sirene
+Logo
+azienda
+Alarm
+ResetPuls. Emergenza
+Mod.
+FAT/FBF
+4.7.1 Cambio del codice e del livello di accesso
+Il sistema supporta 4 codici differenti e, per ciascuno di loro può essere impostato un differente livello di accesso. Il paragrafo
+4.1 descrive i codici impostati di fabbrica e i livelli di accesso con i quali sono associati. Ogni codice è composto da 4 cifre.
+Numero codice accesso
+Codice accesso
+Livello codice accesso
+4
+3333
+3
+Auto logout
+Esclusa
+Auto logout
+30
+Dopo l’inserimento iniziale del codice, il sistema richiederà automaticamente che il codice sia immesso di nuovo con lo scopo
+di verifica (Conferma). Se i due codici sono differenti, il sistema ignorerà quanto immesso e lascerà attivo il vecchio codice.
+Nel caso in cui i codici immessi siano identici, il nuovo codice sarà scritto nel campo visualizzazione del “Codice di accesso”,
+e apparirà il pulsante “Salva” nell’angolo superiore destro dello schermo. Per memorizzare il codice immesso, è necessario
+selezionare “Salva”. Se il codice esiste già, il sistema lo ignorerà e conserverà il vecchio codice.
+Il cambio del livello di accesso viene effettuato selezionando il pulsante accanto al campo “Livello codice Accesso”. Con la sua
+pressione appare un menu, dal quale l’utente deve scegliere il nuovo livello di accesso (1-3).
+Se il nuovo livello di accesso impostato differisce da quello precedente, sarà attivato il pulsante Salva. Premendolo, il nuovo
+livello di accesso sarà memorizzato.
+Il campo “Auto Logout” è presente solo nella schermata del livello di accesso 3. Se il campo è abilitato, l’uscita dai livelli di
+accesso 2 e 3 è automatica. Il tempo per l’uscita automatica può essere impostato da 0 a 60 minuti. L’uscita automatica dai
+menu di programmazione viene effettuata solo se durante l’intervallo di tempo impostato non c’è alcuna azione sul display
+della centrale.
+Deve obbligatoriamente esserci nel sistema almeno un codice con il livello di accesso 3!
+La centrale non permette di editare il livello di accesso (3), se esso è l’unico presente!
+65
+4.7.2 Menu Rete
+Dopo la selezione del pulsante “Rete” viene richiamata una nuova schermata, dalla quale l’installatore può impostare i
+parametri di due sottomenu: “Impostazioni di rete” e “Centrali”.
+4.7.2.1 Impostazioni di rete:
+Nome
+Porta
+7000
+Numero centrale
+1
+Stato rete
+Esclusa
+Tipo di rete
+LAN
+Protocollo
+Modbus TCP/IP
+Avanzate
+In questo menu vengono impostati i seguenti parametri:
+•
+Nome – Inserire il nome della centrale (max. 40 caratteri).
+•
+Porta – Inserire la porta TCP/IP di comunicazione con la centrale. La centrale riserva automaticamente anche le due porte
+successive. Esse devono essere libere per essere utilizzate dalle centrali. Tutte le centrali in rete devono avere lo stesso
+numero di porta. Quando il parametro della porta viene modificato, la centrale deve essere riavviata.
+•
+Numero Centrale – Inserire il numero identificativo della centrale in rete (1-64). Grazie a questo numero le centrali si
+contraddistinguono all’interno della rete.
+•
+Stato rete - Impostazione dello stato della rete. La rete può essere abilitata o disabilitata.
+•
+Tipo di rete - Selezione del tipo della rete di comunicazione quando le centrali antincendio sono connesse in link tra di loro
+o con centrali EVAC: Seriale (RS485), LAN, Voce EVAC o Voce EVAC + LAN.
+•
+Protocollo – Impostazione per il tipo di protocollo di comunicazione in base al software di sistema BMS utilizzato Modbus RTU su TCP / IP oppure Modbus TCP / IP.
+Dopo aver terminato le impostazioni, premere il pulsante “Salva” dalla schermata principale.
+Dallo stesso menu premendo il pulsante “AVANZATE”, possono essere programmati i seguenti parametri:
+•
+Indirizzo IP centrale – Campo per l’inserimento dell’indirizzo IP della centrale.
+•
+Netmask – Campo per l’inserimento della Netmask della centrale.
+•
+Gateway – Campo per l’inserimento del Gateway della centrale.
+•
+Indirizzo MAC centrale – Campo contenente l’indirizzo MAC centrale. Questo campo non è modificabile.
+•
+Ridondanza – Pulsante per attivare / disattivare la ridondanza quando la rete tra 2 o più centrali avviene mediante
+connessione RS485. Impostare OFF se non si desidera monitorare lo stato della connessione della rete RS485; impostare
+ON se si desidera monitorarlo.
+Indirizzo IP Centrale
+192
+168
+0
+102
+Netmask
+255
+255
+255
+0
+Gateway
+192
+168
+0
+100
+Ind. MAC Address
+Ridondanza
+66
+0050C2745D6A
+OFF
+4.7.2.2 Centrali
+Dopo aver abilitato la rete, ogni centrale inizia a cercare le altre centrali connesse. Se viene trovata una nuova centrale, essa
+viene aggiunta alla lista di centrali in rete. In una rete possono essere collegate fino a un massimo di 64 centrali.
+Per visualizzare eventuali centrali in rete, si può scorrere la lista delle centrali tramite li pulsanti + & -.
+La nuova centrale deve essere memorizzata con il comando Aggiungi. A quel punto lo stato della centrale da Nuovo diventerà
+Esistente. Le centrali si monitorano a vicenda e nel caso una dovesse scomparire, il suo stato all’interno della lista cambierà
+in Guasto. Dal menu si può inoltre impostare quale informazione sarà ricevuta / inviata dalla rispettiva centrale: messaggi e/o
+comandi.
+2
+Numero centrale
+Name
+Indirizzo IP centrale
+192
+168
+0
+Stato centrale
+Presente
+Ricezione messaggi
+Attivata
+Ricezione comandi
+Esclusa
+Invio comandi
+Esclusa
+170
+Avanzate
+Quando viene abilitata la ricezione dei messaggi, deve essere determinato anche il comportamento delle uscite, selezionando il
+pulsante “AVANZATE”.
+Ogni messaggio può essere abilitato o disabilitato. La modifica dello stato viene memorizzata solo dopo la pressione del
+pulsante “Salva”.
+Numero centrale
+2
+Ripetizione sirene
+Attivata
+Ripetizione VVFF
+Attivata
+Ripetizione Guasto
+Esclusa
+Ripetizione estinzione
+Esclusa
+Name
+Indirizzo IP centrale
+192
+168
+0
+Stato centrale
+Presente
+Ricezione messaggi
+Attivata
+Ricezione comandi
+Esclusa
+Invio comandi
+Esclusa
+170
+Avanzate
+I messaggi hanno i seguenti significati:
+•
+Ripetizione Allarme Sirene - Ripete lo stato dell’uscita “Sirene” (SND) della centrale inclusi i ritardi.
+•
+Ripetizione Trasmissione Allarme - Ripete lo stato dell’uscita “Trasmissione allarme VVFF” (Fire R) della centrale inclusi i
+ritardi.
+•
+Ripetizione Estinzione - Ripete lo stato dell’uscita “Estinzione” (Fire P) della centrale inclusi i ritardi.
+•
+Ripetizione Guasto - Ripete lo stato dell’uscita di “Guasto” (Fault) della centrale.
+Nel caso che, una delle centrali antincendio non venga più trovata all’interno della rete, le altre centrali visualizzeranno il
+messaggio “Guasto Centrale n°X”.
+Se l’indirizzo IP di una centrale viene duplicato, le centrali visualizzeranno il messaggio “Indirizzo IP duplicato Centrale n°X”.
+Dopo aver terminato le impostazioni, premere il pulsante “Salva” dalla schermata principale.
+67
+4.7.3 Menu Esclusioni
+Questo sottomenu, permette all’installatore di abilitare o escludere le seguenti segnalazioni:
+•
+Guasto di Terra
+•
+Resistenza Batteria Alta
+•
+Buzzer Interno
+Guasto di terra
+Attivata
+Resistenza batteria alta
+Esclusa
+Buzzer interno
+Esclusa
+ATTENZIONE: l’indicazione “Resistenza Batteria Alta” deve essere abilitata in conformità alla norma
+EN54-4! All’accensione iniziale della centrale l’indicazione “Resistenza Batteria Alta” è disabilitata e deve
+essere abilitata dall’installatore. Ad ogni riavvio della centrale (alimentazione principale e di back-up
+disinserite) l’indicazione di “Resistenza Batteria Alta” viene esclusa e deve essere abilitata dall’installatore.
+Dopo aver terminato le modifiche, premere il pulsante “Salva”.
+4.7.4 Modalità Sirene
+In questo sottomenu l’installatore ha la possibilità di impostare e modificare i parametri comuni a tutte Sirene su Loop nel
+sistema.
+Zone EVAC
+Modalità sirene
+Generale
+Impostazioni allarme
+Riattivazione sirene
+Attivata
+Impostazioni evacuazione
+T3 Evacuazione
+0
+Individual
+Lamp
+Alternanza cicli EVAC/Allarme
+NORMALE
+Tono allarme
+3
+800Hz - 970Hz @ 1Hz
+Alternanza cicli EVAC/Allarme OFF
+0
+Tono evacuazione
+1
+970Hz
+Alternanza cicli EVAC/Allarme ON
+0
+Tono cambio classe
+11
+970Hz, 0.5s ON / 0.5s OFF x 3
+Avanzate
+I seguenti parametri possono essere modificati:
+•
+Modalità Sirene: premendo il pulsante si può modificare la modalità di funzionamento delle sirene:
+◊ Generale – in condizione di allarme incendio tutte le sirene verranno attivate indipendentemente dalla loro zona di
+appartenenza;
+◊ Di Zona – in condizione di allarme incendio si attiveranno solo le sirene appartenenti alla zona da cui è scaturito l’allarme;
+•
+Riattivazione Sirene: questo campo è attivo in entrambe le modalità di funzionamento (Di Zona e Generale). Quando
+questa opzione è esclusa, dopo una prima tacitazione delle sirene (pressione del pulsante tacita allarme), esse non
+verranno più riattivate in caso di un secondo evento di Allarme Incendio, potranno essere attivate solo manualmente.
+Quando l'opzione è Abilitata le sirene tacitate si attiveranno automaticamente in caso di un secondo evento di Allarme.
+•
+T3 Evacuazione: è il tempo di ritardo all’avviamento dell’evacuazione effettiva del sito. Si può immettere un ritardo da
+1 a 10 minuti. Se il valore è=0 la centrale non entrerà mai in modalità Evacuazione (automatica).
+•
+Tono Allarme: campo per la modifica della tonalità delle sirene quando sono in condizione di Allarme Incendio. Con i
+pulsanti + & -, si può scegliere il tono tra i 32 disponibili. Di default il tono di Allarme in centrale è il numero 3
+(800Hz-970Hz @ 1Hz).
+•
+Tono Evacuazione: campo per la modifica della tonalità delle sirene quando sono in condizione di Evacuazione. Con i
+pulsanti + & -, si può scegliere il tono tra i 32 disponibili. Di default il tono di Evacuazione in centrale è il numero 1
+(970Hz continuo).
+•
+Tono Cambio classe: campo per la modifica della tonalità delle sirene quando sono in modalità cambio classe (970Hz,
+0.5s ON / 0.5s OFF x3)
+68
+Con la pressione del pulsante “AVANZATE” si accede al sottomenu per le impostazioni dei parametri di allarme ed evacuazione:
+•
+IMPOSTAZIONI ALLARME:
+◊ Lampeggiante – viene attivata solo la parte ottica delle sirene su loop. L’uscita “SND” della centrale NON viene attivata.
+◊ Sirena - viene attivata solo la parte acustica delle sirene su loop. L’uscita “SND” della centrale viene attivata.
+◊ Sirena / Lamp. - viene attivata sia la parte acustica che quella ottica delle sirene su loop. L’uscita “SND” della centrale
+viene attivata.
+◊ Individual – ogni sirena si attiva seguendo le proprie impostazioni individuali, determinate nel menu avanzate di ogni
+dispositivo Sirena.
+•
+IMPOSTAZIONI EVACUAZIONE:
+◊ Lampeggiante – viene attivata solo la parte ottica delle sirene su loop. L’uscita “SND” della centrale NON viene attivata.
+◊ Sirena - viene attivata solo la parte acustica delle sirene su loop. L’uscita “SND” della centrale viene attivata.
+◊ Sirena / Lamp. - viene attivata sia la parte acustica che quella ottica delle sirene su loop. L’uscita “SND” della centrale
+viene attivata.
+•
+ALTERNANZA EVACUAZIONE: Questa funzione consente l’alternanza delle sirene durante l’evento di Evacuazione o
+Allarme in corso, alternando dallo stato di ON e OFF (solo lampeggiante) in base ai tempi inseriti, questo permette di gestire
+l’alternanza delle sirene con un impianto di evacuazione vocale direttamente sul sito.
+◊ OFF - intervallo di tempo da 1 a 600 secondi, durante l’evacuazione/allarme le sirene funzioneranno solo in modalità
+Lampeggiante (per i modelli disponibili).
+◊ ON - intervallo di tempo da 1 a 600 secondi, durante l’evacuazione/allarme le sirene funzioneranno con l’impostazione
+scelta nel menu “Impostazioni Evacuazione” - ad esempio quando è impostata l’opzione Sirena / Lamp. le sirene
+suonano e lampeggiano contemporaneamente (per i modelli disponibili).
+•
+POLARITA’ – inverte la modalità di funzionamento dell’alternanza delle sirene, da OFF/ON a ON/OFF.
+ATTENZIONE: Per abilitare la funzione di alternanza ciclo evacuazione, bisogna inserire un tempo diverso
+da 0 in entrambe i campi ON e OFF. Altrimenti l’alternanza non sarà attiva.
+Esempio: la modalità di funzionamento è impostata come “Sirena / Lamp.” e i tempi dell’alternanza sono impostati come ON:
+30sec. e OFF: 40 sec.
+Quando l'evacuazione è in corso nel sito protetto, il funzionamento del sistema secondo le impostazioni di evacuazione
+saranno le seguenti: le sirene suoneranno (tono di evacuazione) e lampeggeranno per 30 secondi, poi lampeggeranno solo per
+40 secondi. Il ciclo si ripeterà fino al ripristino del sistema (Reset) o alla pressione del pulsante di tacitazione.
+•
+ZONE EVAC: accedendo a questa funzione si apre una nuova schermata per la gestione e l’attivazione delle zone EVAC
+della centrale evacuazione vocale connessa al sistema antincendio mediante l’interfaccia in dotazione
+(vedi paragrafo seguente).
+69
+4.7.5 Modulo Interfaccia centrali FIRE / EVAC
+Mediante l’utilizzo di questa interfaccia, le centrali antincendio Comelit 41CPE118 sono progettate per esser connesse ad una
+e fino ad un massimo di 5 centrali compatte per Evacuazione Vocale Comelit, articoli: 49CCO002, 49CCO004, 49CCO006.
+Creando una rete dove, le linee dei diffusori dislocate nelle varie zone del sito protetto, verranno automaticamente comandate
+e attivate in base alla programmazione nel menu dedicato della centrale antincendio.
+•
+Connessione hardware interfaccia
+Il collegamento in rete tra la centrale 41CPE118 e la/e centrale/i EVAC avviene mediante cavo di rete CAT 5e SF/UTP PH30,
+crimpato con plug RJ45 in standard “B” sia dal lato centrale antincendio che dal lato centrale evacuazione vocale.
+49CCO00x
+#0
+49CCO00x
+#1
+49CCO00x
+#4
+41CPE118
+Distanza massima totale 1000m
+Innestare il cavo nella porta ethernet dell’interfaccia installata all’interno della centrale antincendio e, in una delle 2 porte LINK
+all’interno della centrale 49CCO00X. In caso di più centrali EVAC usare la seconda porta ethernet LINK per proseguire con il
+collegamento in rete della successiva centrale EVAC.
+•
+Programmazione interfaccia lato centrale antincendio 41CPE118:
+Per programmare il modulo d’interfaccia è necessario accedere al menu della centrale 41CPE118 ed essere loggato come
+utente di livello 3 ed eseguire i seguenti passaggi:
+SISTEMA – PROGRAMMAZIONE – CENTRALE – RETE – IMPOSTAZIONI DI RETE
+All’interno del menu impostazioni di rete impostare i seguenti parametri:
+◊ STATO RETE = ATTIVATA
+◊ TIPO DI RETE = 1.VOCE EVAC o 2.VOCE EVAC + LAN
+1. Impostare VOCE EVAC se l’impianto è composto da una centrale antincendio connessa ad una o più centrali EVAC. In
+questo modo la centrale 41CPE118 attiverà l’interfaccia per la comunicazione tra centrale Antincendio e la/e centrali Evac.
+2. Impostare VOCE EVAC + LAN se l’impianto è composto da una centrale antincendio connessa via LAN ad altre centrali
+41CPE118 (per comunicazione eventi o supervisione da SW) ed in più la stessa deve esser connessa ad una o più centrali
+evacuazione vocale.
+◊ NUMERO CENTRALI EVAC = da 1 a max. 5 (immettere il numero totale delle centrali EVAC connesse al sistema)
+◊ Per proseguire con la programmazione dell’interfaccia, bisogna assegnare alle Zone Incendio il relativo Gruppo Zona
+incendio, in quanto i comandi di attivazione verso la/e centrali Evac, sono riferiti agli allarmi provenienti dai Gruppi di
+Zona.
+70
+ATTENZIONE: Per una corretta programmazione di questa funzione, il numero massimo di Gruppi di Zona
+associabili alle Zone Incendio è 1. L’attivazione delle zone EVAC fa riferimento solo al Gruppo di Zona A.
+Esempio: Rivelatori fumo Uffici PT (Zona 1), Pulsanti Uffici PT (Zona 2), Controsoffitto Uffici PT (Zona 3)
+Nell’esempio le Zone incendio 1,2,3 faranno parte del Gruppo Zona N° 1 che avrà un profilo Evac definito allo scopo di allertare
+gli occupanti con un messaggio di Allerta o Evacuazione, in base alla programmazione.
+Dopo aver associato le singole zone incendio dell’impianto ai relativi gruppi zona, bisogna abbinare i messaggi di Allerta ed
+Evacuazione ai Gruppi zona incendio, eseguire i seguenti passaggi dal display della centrale 41CPE118:
+SISTEMA – PROGRAMMAZIONE – CENTRALE – MODALITA SIRENE – AVANZATE – ZONE EVAC
+Per ogni Gruppo di Zone (massimo 48) impostare il tipo di messaggio da riprodurre sulle zone EVAC gestite.
+1
+Gruppo zona
+Zone EVAC
+1
+2
+3
+4
+5
+6
+Centrale EVAC 0
+E
+A
+A
+A
+A
+off
+Centrale EVAC 1
+off
+off
+off
+off
+off
+off
+Centrale EVAC 2
+off
+off
+off
+off
+off
+off
+Centrale EVAC 3
+off
+off
+off
+off
+off
+off
+Centrale EVAC 4
+off
+off
+off
+off
+off
+off
+•
+Gruppo Zone: Indica il gruppo zone sul quale si sta lavorando, usare i pulsanti + & - per cambiare Gruppo.
+•
+Zone EVAC: Sono le sei linee diffusori in uscita dalla centrale Evac 49CCO00X.
+•
+Evac Centrale X: Indica la centrale Evac connessa al sistema.
+•
+4 – Matrice: Inserire il tipo di messaggio da attivare su quella zona EVAC (linea diffusori), i tipi di messaggio possono
+essere:
+◊ A: messaggio di allerta
+◊ E: messaggio evacuazione
+◊ OFF: nessun messaggio.
+Salvare i cambiamenti.
+Esempio: È stata programmata l’attivazione delle zone Evac (linee diffusori) della centrale Evac 0, su allarme incendio
+proveniente dal Gruppo Zone 1 della centrale antincendio 41CPE118.
+In questo esempio ad allarme scaturito da Gruppo Zona 1, la centrale EVAC riproduce il messaggio di EVACUAZIONE nelle
+zone audio 1, mentre quello di ALLERTA nelle zone 2,3,4,5. La zona audio 6 è in OFF nessun messaggio verrà riprodotto su
+quella linea.
+Nota: Nel momento che la centrale 41CPE118 entra in modalità Evacuazione (mediante attivazione manuale o automatica) tutte
+le zone audio programmate delle centrali Evac passeranno in automatico al messaggio di Evacuazione.
+•
+Programmazione lato centrale EVAC 49CCO00X:
+Per la configurazione dei parametri della/e centrali Evac connessa con la centrale antincendio 41CPE118, dal suo display
+eseguire i seguenti passaggi:
+MAIN MENU – CONFIGURATION - SET RACK CONFIG - SYSTEM
+71
+In System racks: inserire il numero totale di centrali 41CPE118 + 49CCO00X presenti nell’impianto (max 6).
+In Rack address: indirizzo ID della centrale EVAC sulla quale si sta lavorando (da 0 a 4).
+Premere ESCAPE e SAVE.
+Esempio: se utilizzo una centrale 41CPE118 ed una centrale EVAC devo impostare:
+In System racks: 2
+In Rack address: 0
+se invece il Sistema è composto una centrale 41CPE118 e 2 centrali EVAC, impostare:
+In System racks: 3 (per entrambe le centrali Evac)
+In Rack address: 0 (per la prima Evac) e 1 (nella seconda).
+ATTENZIONE: la numerazione delle centrali EVAC parte da 0 e non da 1.
+4.7.6 Modalità pulsanti Emergenza
+In questo sotto menu l’installatore ha la possibilità di scegliere la modalità dell’allarme scaturito dopo la pressione
+dell’elemento flessibile del pulsante manuale.
+Premendo il bottone attivo si può modificare la modalità di funzionamento da:
+•
+Comune - viene generato un allarme generale, indipendentemente dalla zona alla quale è associato.
+•
+Di Zona - viene generato un allarme solo per la zona alla quale è associato il pulsante manuale.
+Mod. Puls. Emergenza
+Generale
+Dopo aver terminato le modifiche, premere il pulsante “Salva”.
+4.7.7 Selezione della lingua
+Qui l'installatore può scegliere la lingua tra quelle disponibili nel sistema.
+Per modificare la lingua dei menu della centrale 41CPE118 basta premere il pulsante con la lingua desiderata e salvare il
+cambiamento.
+4.7.8 Ritardo (T1)
+Qui l’installatore può impostare un tempo di ritardo comune per l’attivazione di tutte le uscite (da 0 a 60 secondi).
+Utilizzato per la prima verifica dell’allarme.
+ATTENZIONE: se il tempo di ritardo di zona T2 è impostato a 0, il tempo di ritardo comune T1 viene
+ignorato.
+Vedi ALLEGATO E - Algoritmo di lavoro “Due livelli di stato allarme”.
+72
+4.7.9 Stampante
+Qui l'installatore può scegliere il modello di stampante termica connessa alla centrale antincendio.
+Sono disponibili i seguenti modelli: 41PRN100, KAFKA, DATECS. Oltre al modello di stampante, nello stesso menu, si può
+impostare il protocollo di comunicazione ESPA 4.4.4 in uscita dalla porta RS232, qualora ad essa non si connetta nessuna
+stampante.
+I parametri della porta RS232 quando selezionato il protocollo ESPA 4.4.4 sono i seguenti:
+•
+Baud rate - 9600
+•
+Bit di parità - nessuno
+•
+Bit di stop - 1
+•
+Controllo - nessuno
+Selezionare il modello desiderato e quindi premere il pulsante "Salva".
+4.7.10 Logo Azienda
+In questo menu possono essere inserite alcune informazioni aggiuntive, visualizzate su 4 righe differenti.
+Premere il campo attivo accanto al numero di riga per inserire il testo (40 caratteri max.), poi premere il pulsante “Salva”.
+Le informazioni inserite vengono presentate al centro dello schermo, come uno screen saver, quando la centrale entra in
+modalità di stand-by.
+Logo Azienda
+Riga 1
+Riga 2
+Riga 3
+Riga 4
+4.8 Reset a Default
+In questo menu l’installatore può effettuare il ripristino alle impostazioni di fabbrica dell’intera configurazione del sistema.
+La centrale richiede la conferma dell’utente prima di avviare il reset dei parametri.
+4.9 Salva
+Questo pulsante permette il salvataggio delle periferiche di centrale o dei dispositivi installati su Loop in modo massivo.
+73
+4.10 PROGRAMMAZIONE E ASSOCIAZIONE AL CLOUD
+INTRODUZIONE
+L’infrastruttura Cloud di Comelit dispone oggi di una sezione “Gestione impianti”, accessibile sia da APP MYComelit
+(disponibile in versione Android e iOS) che da indirizzo web “https://pro.comelitgroup.com/” - sezione “My Comelit”, che
+consente di stabilire una connessione remota protetta e continua con i vari dispositivi Comelit, fra cui anche le centrali
+LogiFire 41CPE118 equipaggiate con le versioni firmware più recenti, permettendo così una gestione completa degli impianti a
+distanza.
+La connessione ethernet della centrale al Cloud Comelit avviene tramite porta LAN RJ45 posizionata sulla scheda madre. Fare
+riferimento all’immagine del capitolo 3.3 - Elemento 1 - LAN - Porta RJ45 per la connessione fisica della rete.
+Nota: Per permettere la connessione al Cloud Comelit, la centrale LogiFire deve essere aggiornata alla versione Firmware 1.1.1
+o superiore.
+REGISTRAZIONE AL CLOUD E PROGRAMMAZIONE PARAMETRI
+La programmazione della centrale e dei parametri inerenti le funzioni Cloud sono accessibili previo accesso al livello 3.
+Selezionare in sequenza SISTEMA - PROGRAMMAZIONE - CENTRALE - RETE - IMPOSTAZIONI DI RETE e premere
+“AVANZATE”.
+Impostazioni Rete
+Centrali
+Indirizzo IP Centrale
+172
+25
+160
+202
+Netmask
+255
+255
+255
+0
+Gateway
+172
+25
+160
+250
+Ind. MAC Address
+Cloud
+90C682806EA1
+OFF
+Ridondanza
+DNS Principale
+8
+8
+8
+8
+DNS Secondario
+8
+8
+4
+4
+Quindi inserire l’indirizzo IP, Netmask e Gateway da assegnare alla centrale in base alla classe di rete del sito di installazione.
+Nota: non modificare i parametri di DNS principale e secondario se non specificatamente richiesto dal proprio amministratore
+di rete.
+17/06/2020
+14:06 tornare al menu RETE premendo “
+Una volta salvati i
+parametri,
+Impostazioni Rete
+Centrali
+Impostazioni Rete
+Cloud
+Centrali
+Cloud
+Premere “Cloud” per visualizzare il seguente menu
+74
+1
+QR
+Code
+2
+Impostazioni Utente
+3
+Rimuovi utenti Cloud
+”
+1 - Premere “QR Code” e, nel caso di prima programmazione, assegnare alla centrale il nome con cui verrà indicata sul portale
+Cloud Web e su APP (lo stesso nome sarà riportato nell’apposito campo delle impostazioni di rete della centrale).
+Nota: se alla centrale è già stato attribuito un nome in precedenza, si consiglia di inserire lo stesso.
+Scansiona il QR-code con l’App
+per registrare la centrale nel Cloud
+Dopo aver inserito il nome della centrale, sul display apparirà un QR Code che può essere scansionato direttamente mediante
+l’utilizzo della APP MYComelit nella sezione dedicata “Gestione Impianti” (“+”), per completare la registrazione al portale Cloud
+Web.
+Se non si dispone di applicazione MYComelit, l’operatore potrà scansionare il QR Code con apposito lettore per rilevare il
+codice univoco ed inserirlo manualmente direttamente sul portale Cloud Web, nella sezione “aggiungi nuovo dispositivo
+antincendio”.
+Scansiona il QR-code con l’App
+per registrare la centrale nel Cloud
+Nota: per la creazione di un nuovo sito nella propria dashboard del portale Cloud Web e la successiva aggiunta di un
+dispositivo antincendio, fare riferimento alla “guida all’utilizzo” disponibile nella sezione inferiore della stessa pagine web.
+(https://staticpro.comelitgroup.com/filescms/mysites/mu_mysites_installer_IT.pdf)
+2 - Premendo “IMPOSTAZIONI UTENTE”, il display mostra le 3 differenti tipologie di ruoli che possono essere attribuiti agli
+operatori che operano con la centrale attraverso il servizio Cloud Web:
+• INSTALLATORE: riservata agli operatori professionali che si occupano dell’installazione e della messa in servizio dell’impianto
+• MANUTENTORE: riservata agli operatori professionali che svolgono un ruolo di manutenzione dell’impianto
+• BUILDING MANAGER: riservata agli operatori professionali che svolgono il ruolo di responsabili di impianto o responsabili
+della sicurezza
+Se necessario consultare il responsabile locale della sicurezza per maggiori chiarimenti circa l’assegnazione dei ruoli preposti
+alle procedure di controllo iniziale, controllo periodico, sorveglianza, manutenzione e verifica generale del sistemi di rivelazione
+di incendio nel rispetto delle direttive locali e delle normative ufficiali vigenti.
+Installattori
+Eventi
+Manutentore
+Eventi
+Building manager
+Eventi
+75
+Per ogni tipologia di ruolo, premendo la corrispettiva opzione “EVENTI”, si possono abilitare o disabilitare le ricezioni di E-mail,
+notifiche Push (ricevute tramite APP MYComelit) o notifiche di testo all’interno del Message Center (disponibile su APP e
+portale Cloud Web) in base a 3 differenti tipologie di eventi, come mostrato nell’immagine seguente:
+Eventi
+di Allarme
+Eventi
+di Guasto
+Eventi
+Allarmi tecnici
+E-Mail
+Attivata
+Notifiche Push
+Attivata
+Message Center
+Attivata
+E-Mail
+Attivata
+Notifiche Push
+Attivata
+Message Center
+Attivata
+E-Mail
+Attivata
+Notifiche Push
+Attivata
+Message Center
+Attivata
+Ogni differente ruolo ”Utente FIRE”, avrà quindi la possibilità di abilitare/disabilitare, a seconda delle esigenze, la ricezione di
+ogni singolo evento di tipo ALLARME, GUASTO ed ALLARMI TECNICI.
+” e selezionare “SALVA”.
+Una volta apportate le modifiche,
+tornare al menu precedente premendo “
+Impostazioni Rete
+3 - Premendo “RIMUOVI UTENTI CLOUD” verrà annullata, previo messaggio di conferma, la registrazione della centrale al
+Cloud con l’eliminazione del dispositivo da tutti gli accounts Cloud precedentemente associati.
+Centrali
+Cloud
+Rimuovere tutti gli utenti cloud connessi a questa centrale?
+Si
+No
+Nota: eseguire questa operazione SOLO se si è certi di voler disconnettere tutti gli account collegati alla centrale antincendio.
+76
+5. Manutenzione

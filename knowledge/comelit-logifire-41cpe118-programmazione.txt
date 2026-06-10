@@ -1,0 +1,2291 @@
+# CENTRALE COMELIT LOGIFIRE 41CPE118 — PROGRAMMAZIONE
+## Capitolo 4: Codici accesso, dispositivi, zone, ingressi logici
+Fonte: Manuale tecnico mt-41cpe118-it-2ed-2g40003016 — Cap. 4.0-4.5
+
+4.0 PROGRAMMAZIONE BASE DA TOUCH SCREEN CENTRALE 41CPE118
+Il display touch-screen della centrale rivelazione incendio 41CPE118 fornisce una semplice ed intuitiva interfaccia di
+navigazione all’interno dei menu di programmazione della centrale e ai parametri di sistema. L'accesso ai menù di
+programmazione avviene con una leggera pressione del pulsante desiderato. Si può utilizzare anche un “pennino” speciale per
+display touch-screen.
+A seconda del menu selezionato e / o al livello di accesso, sullo schermo vengono abilitati o disabilitati alcuni pulsanti. Quando
+si preme un pulsante attivo, la finestra del display cambia e, in base al livello di accesso attuale viene richiesto se necessario
+il livello utente / installatore più alto per poter accedere a quel determinato menu. Una volta effettuato l’accesso verranno
+mostrati una lista di menu supplementari o sottomenu.
+Data e ora
+Campo logo
+Icone stato pannello
+• Pulsanti attivi - Questi pulsanti permettono di
+eseguire diverse operazioni: interrompere le sirene,
+riprsitinare i parametri di sistema o spostarsi tra i menu
+di programmazione.
+Sistema
+Nota: Lo stato di questi pulsanti posso cambiare (attiviinattivi) a seconda del menu di programmazione ed il
+livello di accesso.
+Buzzer
+Tacita Sirene
+Sistema
+Buzzer
+SistemaTacita
+Buzzer
+SilenceDelay
+BuzzerSirene
+Pulsanti attivi
+Tacita Reset
+Sirene
+Con la pressione del pulsante
+pagina precedente.
+si tornerà indietro alla
+Con la pressione del pulsante
+schermata iniziale.
+si tornerà alla
+• Icone stato pannello - The icons give information
+about the status of the fire panel and the programmed
+working mode. The icons are inactive if pressed. The
+different fire panel states are indicated with different
+colour of the icon.
+• Campo Logo – Campo destinato per l’inserimento del
+Logo o di un’immagine del cliente, caricata mediante
+Reset Visualizza Log Eventi software di programmazione.
+•
+Simboli utilizzati:
+- Premere il pulsante indicato
+- Utilizzare una penna per display tattili
+4.0.1 AVVIAMENTO INIZIALE
+All’accensione la centrale antincendio 41CPE118 passa sempre attraverso la procedura di inizializzazione, la quale richiede
+circa 30 secondi. Durante la quale non c’è accesso ai menu della centrale.
+Dopo il primo avviamento, nella centrale non esiste una configurazione memorizzata. L’inizializzazione può richiedere
+alcuni minuti. Il tempo dipende dal numero di dispositivi periferici e di espansioni Loop nella configurazione
+della centrale. Dopo l’avviamento, inizia la procedura di ricerca dei nuovi dispositivi periferici e dei Loop – vedi ALLEGATO D.
+4.0.2 CAMBIO LINGUA
+La centrale 41CPE118 supporta diverse lingue per i menu di programmazione.
+L'impostazione predefinita a default è la lingua inglese. È possibile modificare la lingua dopo l'accensione iniziale seguendo i
+passaggi:
+•
+Accesso 1 - 3333 - OK - Sistema - Programmazione - Pannello - Lingue - Scegliere la lingua desiderata - Salva
+17/06/2020
+14:06 schermata principale premendo il pulsante
+Dopo aver salvato i cambiamenti, è possibile
+tornare alla
+Sistema
+Buzzer
+Tacita Sirene
+22
+4.1 CODICI DI ACCESSO
+Entrando nel menu Programmazione e Manutenzione la centrale chiederà di inserire un codice di accesso valido.
+Sistema
+Programmazione
+Buzzer
+Manutenzione
+Buzzer
+Tacita Sirene
+Codice Accesso
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+OK
+La centrale ha 4 codici di accesso di default, 3 dei quali dedicati per l’accesso in modalità Installatore / Utente, i quali
+possiedono differenti accessi e funzioni, qui di seguito elencate:
+NUMERO DI CODICE
+CODICE
+LIVELLO DI ACCESSO
+FUNZIONI
+1
+0000
+1
+2
+1111
+1
+Sono attivi solamente i pulsanti Tacitazione Buzzer e
+Azzera Ritardo. Non è consentito l’accesso ai menu di
+Programmazione e manutenzione.
+3
+4
+2222
+3333
+2
+Sono attivi i pulsanti Sistema, Azzera ritardo, Tacitazione
+buzzer, Tacitazione Sirene, RESET ed Evacuazione.
+È abilitato l’accesso soltanto a un numero limitato di
+funzioni nel menu Manutenzione
+3
+Sono attivi i pulsanti Sistema, Azzera ritardo, Tacitazione
+buzzer, Tacitazione Sirene, RESET ed Evacuazione.
+È abilitato l’accesso a tutte le funzioni dei menu
+Programmazione e Manutenzione
+La sequenza di cifre inserite viene confermata premendo il tasto OK.
+Tutti i codici di accesso possono essere visualizzati e modificati nel sottomenu “Codici di accesso” dal menu “Centrale”.
+23
+Ci sono diverse restrizioni sui funzionamenti della centrale nei relativi livelli di accesso come riportato nella seguente tabella:
+Manutenzione
+Sistema
+Programmazione
+Centrale di controllo
+Schermata principale
+MENU
+24
+DESCRIZIONE
+LIVELLO DI ACCESSO
+1
+2
+3
+√
+√
+√
+√
+√
+Tacita buzzer
+Disinserimento del buzzer
+Tacita allarme
+Disinserimento delle sirene
+Forzatura ritardo
+Disinserimento di tutti i ritardi attivi alle uscite, eccetto Fire Protection
+√
+√
+√
+RESET
+Ripristino di tutti gli stati attivi
+-
+√
+√
+Evacuare
+Attivazione del segnale di evacuazione
+-
+√
+√
+Allarmi 000
+Visualizzazione degli allarmi di sistema
+√
+√
+√
+Guasti
+Visualizzazione dei guasti di sistema
+√
+√
+√
+Avanzate
+Visualizzazione delle avvertenze
+√
+√
+√
+MENU
+La schermata principale
+√
+√
+√
+Accesso
+Schermata per introduzione del codice di accesso
+√
+√
+√
+Dispositivi
+Programmazione di dispositivi
+-
+-
+√
+Zone
+Programmazione di zone
+-
+-
+√
+Ingressi
+Programmazione di ingressi
+-
+-
+√
+Uscite
+Programmazione di uscite
+-
+-
+√
+Centrale
+Programmazione della centrale
+-
+-
+√
+Impostazioni di
+fabbrica
+Ripristino delle impostazioni di fabbrica
+-
+-
+√
+Memorizzazione della configurazione
+-
+-
+√
+Orario
+Impostazione del orario
+-
+-
+√
+Data
+Impostazione della data
+-
+-
+√
+Giorno
+Programmazione della modalità diurna di funzionamento
+-
+-
+√
+Ritardo all’uscita
+Programmazione dei ritardi alle uscite
+-
+-
+√
+Visualizzazione
+registro
+Visualizzazione registro eventi
+-
+-
+√
+Test
+Svolgimento di un test
+-
+√
+√
+Disabilitazione
+Introduzione di una disabilitazione
+-
+√
+√
+Versione del
+software
+Visualizzazione della versione del software
+-
+-
+√
+Calibrazione
+Calibrazione del display
+-
+-
+√
+Isolatori attivati
+Verifica di attivati isolatori incorporati in dispositivi
+-
+-
+√
+4.2 MENU PROGRAMMAZIONE
+La programmazione della centrale di allarme antincendio 41CPE118 è accessibile dal livello di accesso 3.
+Selezionare il pulsante SISTEMA. Dalla prossima schermata l’Installatore / Utente ha la possibilità di scegliere il tipo di
+operazione da effettuare:
+1. Programmare parametri nel sistema – il menu Programmazione.
+2. Visualizzare o inserire diversi parametri per la manutenzione dell'impianto – menu Manutenzione.
+Sistema
+Programmazione
+Buzzer
+Manutenzione
+Buzzer
+Tacita Sirene
+Per accedere al menu Programmazione, l’installatore / utente deve selezionare in sequenza Sistema – Programmazione.
+Dispositivi
+Reset a Default
+Zone
+Ingressi
+Silence Alarm
+Uscite
+Centrale
+Nel lato sinistro del menu si trovano i pulsanti per accedere ai sottomenu di programmazione dei parametri di Dispositivi, Zone,
+Ingressi, Uscite e Centrali.
+Per entrare nel menu di programmazione desiderato, premere il suo pulsante relativo.
+Mediante il pulsante RESET A DEFAULT si possono ripristinare tutte le impostazioni di fabbrica, mentre con il pulsante SALVA
+viene memorizzata la configurazione della centrale (schede, moduli aggiuntivi installati).
+25
+4.3 DISPOSITIVI
+La centrale antincendio 41CPE118 supporta periferiche e dispositivi loop.
+Tutti i “moduli funzionali” collegati alla configurazione della centrale (alimentatore, espansioni loop..) sono definiti Dispositivi
+Periferici, e hanno speciali programmazioni e impostazioni. La scheda madre principale non è un dispositivo periferico.
+Tutti i dispositivi indirizzabili collegati all’espansioni Loop sono definiti come Dispositivi Loop.
+Premendo il pulsante “Dispositivi”, l'utente / installatore entra nel menù per la scelta del tipo di dispositivo:
+Periferica
+Loop
+Indirizzamento
+4.3.1 DISPOSITIVI PERIFIERICI
+Con il pulsante “Periferiche” si accede al sottomenu per scegliere e determinare i parametri dei dispositivi periferici presenti
+nella configurazione della centrale
+Nella centrale possono essere supportate fino a 10 unità periferiche:
+•
+PSU (Alimentatore principale)
+•
+OUT (Modulo 4 uscite monitorate, 4 uscite relé e 4 ingressi monitorati)
+•
+LOOP (Prima espansione Loop)
+•
+VUOTO (Se non sono presenti periferiche sull’indirizzo corrente)
+Indirizzo fisico del dispositivo periferico
+17/06/2020
+14:06di operare con un massimo di 10 periferiche, indirizzate da 1 a 10. L’alimentatore principale acquisisce
+La
+centrale è in grado
+sempre l’indirizzo 1, successivamente vengono indirizzati il modulo di uscita (indirizzo 2) e, indirizzate in sequenza progressiva
+automatica dal primo indirizzo libero, gli indirizzi delle espansioni loop.
+PSU
+Stato
+NORMALE
+È possibile visualizzare l'indirizzo del dispositivo periferico successivo / precedente premendo i pulsanti di navigazione
+1
+Dispositivi Periferici
+Tensione Batteria
+13.2 [V]
+Tensione di Carica
+13.6 [V]
+Corrente di Carica
+0.1 [A]
+Consumo centrale
+0.3 [A]
+Revisione Software
+2.6
+Controllo PSU esterno
+26
+OFF
+4.3.1.1 Stato corrente del dispositivo
+Lo stato di funzionamento di un dispositivo può essere:
+•
+NUOVO: il dispositivo è nuovo per il sistema. Deve essere salvato. La scheda madre principale riconosce la presenza
+fisica di un dispositivo che non è incluso nella configurazione del sistema. Il nuovo dispositivo deve essere aggiunto alla
+configurazione del sistema per poter comunicare con la centrale, ricevere messaggi di allarme o guasto, attivare e ricevere
+segnalazioni, ecc. Il nuovo dispositivo può essere aggiunto alla configurazione del sistema premendo il pulsante SALVA.
+Nota: il dispositivo è definito come NUOVO in due casi:
+1. Un dispositivo è stato fisicamente aggiunto alla configurazione hardware del sistema. Utilizzare il pulsante “SALVA”.
+(esempio quando un’espansione Loop viene aggiunta alla configurazione del sistema).
+2. Un dispositivo è stato rimosso dalla configurazione del sistema (pulsante “RIMUOVI”), ma è ancora presente nella
+configurazione hardware (non è stato rimosso fisicamente). La centrale riconoscerà la presenza del dispositivo, anche se
+non aggiunto alla configurazione del sistema, quindi il dispositivo risulterà NUOVO per la centrale.
+•
+NORMALE: il dispositivo funziona correttamente.
+•
+GUASTO - il dispositivo non risponde. La centrale comunica periodicamente con i dispositivi periferici per ricevere
+informazioni sul loro stato attuale e autodiagnostica. In caso di mancata comunicazione tra la centrale e un dispositivo
+periferico il dispositivo è considerato in condizione di Guasto. Questa segnalazione può verificarsi anche nel caso in cui
+un dispositivo periferico venga rimosso dalla configurazione hardware (smontato), senza prima esser stato rimosso dalla
+configurazione di sistema (software). Per questo motivo quando si rimuove fisicamente una periferica, deve SEMPRE
+essere rimossa anche dalla programmazione tramite il pulsante “RIMUOVI”.
+Nota: la ricezione del messaggio di guasto di un dispositivo periferico viene visualizzato con un ritardo fino a 60-70 sec.
+•
+TIPO ERRATO - un dispositivo, diverso da quello salvato, è stato rilevato sullo stesso indirizzo. Per cambiare il tipo è
+necessario prima rimuoverlo dalla configurazione del sistema (utilizzare il pulsante “RIMUOVI”) e quindi attendere che il
+sistema rilevi e annunci il nuovo dispositivo periferico trovato. Salvare il nuovo tipo di dispositivo con il pulsante “SALVA”. È
+inoltre possibile utilizzare il pulsante “CONFERMA” per il cambio rapido del tipo di periferica.
+4.3.1.2 Aggiungere una nuova periferica alla configurazione
+Al rilevamento di un nuovo dispositivo periferico (non nella configurazione), verrà visualizzato il seguente messaggio: “NUOVI
+DISPOSITIVI PERIFERICI TROVATI” ed il numero dei dispositivi rilevati. Premere il pulsante SALVA
+per aggiungere i nuovi dispositivi periferici alla configurazione del pannello. Se un dispositivo non risponde, puoi rimuoverlo
+premendo il pulsante RIMUOVI.
+PSU
+Stato
+NORMALE
+OUT
+1
+Dispositivi Periferici
+Stato
+NORMALE
+2
+Dispositivi Periferici
+Tensione Batteria
+13.2 [V]
+Ingressi
+4
+Tensione di Carica
+13.6 [V]
+Rele'
+4
+Corrente di Carica
+0.1 [A]
+Monitoraggio Uscite
+4
+Consumo centrale
+0.3 [A]
+Revisione software
+1.2
+Revisione Software
+2.6
+OFF
+Controllo PSU esterno
+Parametri PSU
+OUT (modulo 4 ingressi + modulo 4 uscite monitorate
++ Modulo espansione 4 relé)
+LOOP
+Stato
+NORMALE
+3
+Dispositivi periferici
+Esempio aggiunta nuova periferica
+Loop
+1
+Tipologia Dispositivo
+41ECL120
+Software Revision
+1.7
+Assorbimento [A]
+0.000
+LOOP (41ECL120 Loop controller)
+Nota: dopo aver premuto il pulsante SALVA scompare dallo schermo e lo stato del dispositivo da NUOVO diventa NORMALE.
+27
+4.3.2 DISPOSITIVI LOOP
+Per accedere al menu programmazione dei parametri dei dispositivi loop, dal menù “Dispositivi” premere il pulsante “LOOP” Fig. Schermata
+I dispositivi loop possono essere auto-indirizzati, per cui il primo dispositivo acquisirà l’indirizzo libero più basso.
+Quando viene trovato un nuovo dispositivo loop (mancante nella configurazione) verrà visualizzato il messaggio “TROVATI
+NUOVI DISPOSITIVI SU LOOP”, nonché il numero di dispositivi rilevati.
+Per aggiungere un nuovo dispositivo alla configurazione premere APPLICA dal menù del dispositivo o, con l’ausilio del
+comando generale, premere SALVA dal menu Programmazione.
+Qualsiasi dispositivo che non è stato aggiunto alla configurazione, non può generare messaggi.
+In caso di rimozione di un dispositivo loop, la centrale genera un messaggio di “DISPOSITIVO LOOP GUASTO”. Quando un
+dispositivo appena rilevato viene rimosso, il pannello decrementa il numero dei nuovi dispositivi trovati e, se il loro numero è
+uguale a 0 rimuove il messaggio “TROVATI NUOVI DISPOSITIVI SU LOOP”.
+La rimozione del dispositivo dalla configurazione viene eseguita con il comando RIMUOVI nel menu del dispositivo specifico.
+Se sono presenti dispositivi aventi lo stesso indirizzo, la centrale mostrerà il messaggio “DOPPIO INDIRIZZO”, indicando il
+numero del loop e del dispositivo con il problema.
+Per individuare i dispositivi con indirizzi duplicati, selezionare in sequenza il numero del loop e dell’indirizzo doppio. Nella
+parte inferiore destra dello schermo premere il pulsante LED: i LED di tutti i dispositivi registrati con questo indirizzo si
+accenderanno. Ciò garantisce la rapida individuazione di tutti i dispositivi con lo stesso indirizzo e la loro correzione con il
+nuovo. Con la successiva pressione del pulsante LED si spegneranno i LED dei dispositivi.
+Se un dispositivo di tipo diverso appare all’indirizzo di un dispositivo già salvato, il pannello genererà il messaggio “TIPO DI
+DISPOSITIVO LOOP ERRATO”.
+Per correggere l’errore è necessario, prima rimuovere l’indirizzo errato e poi salvare il nuovo tipo di dispositivo.
+La scheda Loop 41ECL120 riconosce automaticamente il tipo di dispositivo connesso al loop.
+Ogni dispositivo viene riconosciuto dalla centrale con il proprio codice articolo e breve descrizione della tipologia del sensore.
+L’installatore può impostare un nome specifico per ogni dispositivo in base alle esigenze o al posizionamento all’interno
+dell’impianto.
+Per inserire il nome del dispositivo premere il pulsante attivo “Nome” posizionato sotto il codice dispositivo. Digitare il nome
+utilizzando la tastiera e premere salva, il testo inserito non deve essere più lungo di 40 caratteri spazi inclusi.
+q
+w
+a
+e
+r
+t
+y
+u
+i
+o
+s
+d
+f
+g
+h
+j
+k
+z
+x
+c
+v
+b
+n
+m
+p
+l
+123#
+L'installatore / utente può selezionare la tipologia di scrittura, con alfabeto cirillico o latino. I pulsanti della tastiera hanno il
+seguente significato:
+Button
+Function
+Cyr
+Commuta all’alfabeto cirillico
+SPE
+Visualizza i caratteri speciali
+Lat
+Commuta all’alfabeto latino
+Sym
+Visualizza i caratteri simboli
+A/a
+Commuta tra maiuscule e minuscole
+Num
+Commuta ai caratteri numerici
+Spazio
+28
+←
+Tasto cancella
+↵
+Tasto conferma
+Per informazioni sui modelli di dispositivi Comelit– vedere Allegato B - Modelli di dispositivi.
+In figura è mostrata la vista generale del sottomenu per “nuovi dispositivi loop” (nell’esempio pulsante manuale 41PAM000).
+41PAM000 / 41PAE020
+Nome
+Stato dispositivo
+Nuovo
+Attivata
+Indirizzo
+1
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Descrizione delle funzioni dei pulsanti comuni a tutti i dispositivi (Fig. Schermata 9):
+•
+Salva – Pulsante per applicare le modifiche effettuate nei parametri del dispositivo.
+•
+Conferma/Seleziona tipo – Il pulsante si attiva quando la centrale riconosce un dispositivo di tipo differente da quello
+memorizzato in precedenza.
+•
+Attivata / Esclusa – Pulsante per abilitare o escludere un dispositivo (verde dispositivo attivo / giallo dispositivo escluso),
+ATTENZIONE quando un dispositivo loop è disabilitato, viene visualizzato il messaggio di avviso “Dispositivo Loop
+escluso”. I dispositivi disabilitati non vengono monitorati dalla centrale. L’esclusione del sensore NON viene ripristinata
+dopo un Reset da centrale, ma solo riattivando il sensore.
+•
+Rimuovi – Pulsante per rimuovere il dispositivo dalla configurazione del sistema.
+•
+Simbolo LED on/off – Pulsante per accendere il LED a bordo dei sensori (verde attivo / rosso spento), utile per identificare
+un singolo sensore o durante la ricerca di indirizzi duplicati. Uscendo dal menu il LED si spegne in automatico.
+Nota: Le sirene Art. 41SAI000 e 41SAB100 non avendo LED a bordo, posso essere identificate attivando la segnalazione
+acustica. Il mini modulo Art. 41IOM010 non ha ne indicazione LED ne acustica.
+•
+Avanzate – Pulsante per visualizzare le impostazioni supplementari del dispositivo, variano a seconda del tipo di
+dispositivo. I campi comuni a tutti i dispositivi sono:
+◊ Lampeggio LED – Pulsante per includere o escludere il lampeggio dell’indicazione LED che mostra la comunicazione
+tra centrale e il dispositivo, quando si imposta lo stato ON, il LED del dispositivo inizia a lampeggiare ogni 10 secondi in
+modalità di funzionamento normale.
+Nota: i dispositivi 41IOM010, 41SAI000 e 41SAB100 non hanno indicazioni LED per mostrare la comunicazione con la
+centrale.
+◊ ID – In questo campo viene visualizzato il numero identificativo di 10 cifre “ID”, che serve ad identificare il dispositivo
+all’interno del sistema.
+◊ Revisione Software – In questo campo viene visualizzata la revisione software del dispositivo.
+•
+Nome – Premendolo si apre la schermata tastiera per inserire il nome dispositivo.
+•
+Indirizzo (- / +) – Pulsanti per lo scorrimento dei dispositivi all’interno dello stesso loop, premendo direttamente il numero
+del dispositivo attuale si può inserire direttamente il numero dispositivo da ricercare.
+•
+Numero Loop (- / +) – Pulsanti per la selezione del numero del loop al quale il dispositivo deve appartenere, premendo
+direttamente il numero del loop si può inserire direttamente il numero desiderato.
+•
+Dispositivo Zona (- / +) - Pulsanti per la selezione del numero della zona alla quale il dispositivo deve appartenere,
+premendo direttamente il numero della zona attuale si può inserire direttamente il numero desiderato.
+•
+Stato Dispositivo – Visualizza lo stato corrente del dispositivo, elencati di seguito:
+◊ NUOVO (colore blu) - il dispositivo è nuovo per il sistema. Deve essere memorizzato selezionando il pulsante “Salva”.
+◊ NORMALE (colore verde) - il dispositivo funziona regolarmente.
+◊ GUASTO (colore giallo) - il dispositivo non risponde. Si può eliminare premendo il pulsante “Rimuovi”.
+◊ TIPO ERRATO - è stato identificato un dispositivo di tipo differente da quello precedentemente memorizzato.
+◊ NESSUNO – all’indirizzo non è stato associato nessun dispositivo.
+29
+41RFU100 – Rivelatore ottico di fumo con isolatore
+41RFU100
+Nome
+Stato dispositivo
+Normale
+Attivata
+Indirizzo
+5
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Fumo [%] / Temperatura [°C]
+Controllo
+Lampeggio LED
+ON
+Gruppo sensori
+No uscita LED RI
+Livello allarme mod. giorno
+OFF
+Livello allarme mod. notte
+OFF
+Revisione software
+1.1
+ID
+3271557136
+0
+La figura mostra la schermata delle impostazioni del rivelatore indirizzato 41RFU100.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Fumo (%) / Temperatura (°C): Premere il pulsante "Controllo" per accedere alla schermata visualizzazione parametri:
+◊ Fumo: mostra la percentuale del livello attuale di fumo nella camera ottica del rilevatore.
+◊ Livello contaminazione sensore: mostra la percentuale del livello attuale di contaminazione nella camera ottica del
+rilevatore.
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+•
+Gruppo Sensori: Impostazione per associare un rivelatore ad un gruppo di rivelatori. Inserendo il numero di un gruppo (>
+di 0) nel campo editabile, il rivelatore in questione viene assegnato a quel determinato gruppo. Viene attivato il pulsante che
+permetterà al rivelatore in oggetto di attivare una qualsiasi spia remota Art. 48FPT100 connessa ad un qualsiasi rivelatore
+appartenente allo STESSO gruppo.
+•
+Livello Allarme mod. Giorno*: Impostazione del livello di sensibilità in modalità Giorno.
+•
+Livello Allarme mod. Notte*: Impostazione del livello di sensibilità in modalità Notte.
+* Nota: sono disponibili 4 livelli per l'impostazione della sensibilità del livello di allarme: Alto, Normale, Medio e Basso. Per
+modificare il livello di sensibilità premere il pulsante attivo accanto al campo e scegliere un nuovo livello dall'elenco.
+* Nota: in condizioni di operatività normale della centrale, accanto alla voce Livello Allarme appare un asterisco che identifica
+in quale modalità (giorno / notte) sta operando la centrale antincendio (modificabile dal menu manutenzione).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+30
+41RCS100 – Rivelatore termico con isolatore
+41RCS100
+Nome
+Stato dispositivo
+Nuovo
+Attivata
+Indirizzo
+4
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Fumo [%] / Temperatura [°C]
+Controllo
+Lampeggio LED
+ON
+Gruppo sensori
+No uscita LED RI
+Livello allarme mod. giorno
+A1R
+Livello allarme mod. notte
+A1R
+Revisione software
+1.0
+ID
+2868099610
+0
+La figura mostra la schermata delle impostazioni del rivelatore indirizzato 41RCS100.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Fumo (%) / Temperatura (°C): Premere il pulsante "Controllo" per accedere alla schermata visualizzazione parametri:
+◊ Soglia allarme (°C): mostra la temperatura di attivazione del rivelatore, in gradi centigradi.
+◊ Temperatura (°C): mostra la temperatura corrente nel locale, in gradi centigradi.
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+•
+Gruppo Sensori: Impostazione per associare un rivelatore ad un gruppo di rivelatori. Inserendo il numero di un gruppo (>
+di 0) nel campo editabile, il rivelatore in questione viene assegnato a quel determinato gruppo. Viene attivato il pulsante che
+permetterà al rivelatore in oggetto di attivare una qualsiasi spia remota Art. 48FPT100 connessa ad un qualsiasi rivelatore
+appartenente allo STESSO gruppo.
+•
+Classe Temperatura mod. Giorno*: Impostazione della classe di temperatura del rivelatore in modalità Giorno.
+•
+Classe Temperatura mod. Notte*: Impostazione della classe di temperatura del rivelatore in modalità Notte.
+* Nota: Sono disponibili 3 classi di temperatura per il funzionamento del rivelatore: A1R (58º, RoR), A2S (60º), BS (75º). Per
+modificare la classe premere semplicemente il pulsante attivo accanto al campo e scegliere un nuovo livello dall'elenco. N.B.: Il
+rivelatore termico 41RCS100 è certificato sia per la classe A1R e sia per classe A2S.
+* Nota: in condizioni di operatività normale della centrale, accanto alla voce Livello Allarme appare un asterisco che identifica
+in quale modalità (giorno / notte) sta operando la centrale antincendio (modificabile dal menu manutenzione).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+31
+41RML100 – Rivelatore combinato fumo / calore con isolatore
+41RML100
+Nome
+Stato dispositivo
+Normale
+Attivata
+Indirizzo
+11
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Fumo [%] / Temperatura [°C]
+Controllo
+Lampeggio LED
+ON
+Gruppo sensori
+No uscita LED RI
+Livello allarme mod. giorno
+T (ATTIVO)
+Basso
+Livello allarme mod. notte
+T (ATTIVO)
+Basso
+Revisione software
+1.0
+ID
+2868099610
+0
+La figura mostra la schermata delle impostazioni del rivelatore indirizzato 41RML100.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Fumo (%) / Temperatura (°C): Premere il pulsante "Controllo" per accedere alla schermata visualizzazione parametri:
+◊ Fumo: mostra la percentuale del livello attuale di fumo nella camera ottica del rilevatore.
+◊ Livello contaminazione sensore: mostra la percentuale del livello attuale di contaminazione nella camera ottica del
+rilevatore.
+◊ Soglia allarme (°C): mostra la temperatura di attivazione del rivelatore, in gradi centigradi.
+◊ Temperatura (°C): mostra la temperatura corrente nel locale, in gradi centigradi.
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+•
+Gruppo Sensori: Impostazione per associare un rivelatore ad un gruppo di rivelatori. Inserendo il numero di un gruppo (>
+di 0) nel campo editabile, il rivelatore in questione viene assegnato a quel determinato gruppo. Viene attivato il pulsante che
+permetterà al rivelatore in oggetto di attivare una qualsiasi spia remota Art. 48FPT100 connessa ad un qualsiasi rivelatore
+appartenente allo STESSO gruppo.
+•
+Livello Allarme mod. Giorno*: Impostazione del grado di sensibilità della parte ottica del rivelatore in modalità Giorno. Con
+la pressione del pulsante dedicato, consente di abilitare / disabilitare la parte termica.
+◊ Livelli di Sensibilità: sono disponibili 4 livelli per l'impostazione della sensibilità del livello di allarme: Alto, Normale,
+Medio e Basso. Per modificare il livello di sensibilità premere il pulsante attivo accanto al campo e scegliere un nuovo
+livello dall'elenco.
+◊ Parte Termica: solo per questo dispositivo l’installatore può abilitare o disabilitare la parte termica del rivelatore,
+premendo il pulsante dedicato (T/ATTIVO – T/DISATTIVO).
+La classe di temperatura del rivelatore 41RML100 è impostata come A1R (58º, RoR) e non può essere modificata.
+•
+Livello Allarme mod. Notte*: Impostazione del grado di sensibilità della parte ottica del rivelatore in modalità Notte. Con la
+pressione del pulsante dedicato, consente di abilitare / disabilitare la parte termica.
+Le impostazioni dei livelli d’allarme e della parte termica, sono le stesse elencate sopra per il “livello allarme giorno”.
+Attenzione: non è consentito disabilitare la parte ottica e la parte termica del rivelatore contemporaneamente!
+* Nota: in condizioni di operatività normale della centrale, accanto alla voce Livello Allarme appare un asterisco che identifica
+in quale modalità (giorno / notte) sta operando la centrale antincendio (modificabile dal menu manutenzione).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+32
+41PAM000 – Pulsante manuale con isolatore (uso interno)
+41PAE020 – Pulsante manuale IP67 con isolatore (uso esterno)
+41PAM000 / 41PAE020
+Lampeggio LED
+Nome
+Stato dispositivo
+Nuovo
+ON
+Evento
+Attivata
+Indirizzo
+1
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Revisione software
+2.0
+ID
+2793417600
+La figura mostra la schermata delle impostazioni dei pulsanti indirizzati 41PAM000 / 41PAE020.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+•
+Evento: Premendo il pulsante accanto al campo si può modificare il tipo di evento generato dalla pressione del pulsante
+manuale (41PAM000 /41PAE020), nello specifico:
+◊ Evacuazione – Dopo la pressione dell’elemento flessibile del pulsante, le sirene si attivano immediatamente, poiché i
+tempi di ritardo impostati Т1 e Т2 vengono ignorati.
+◊ Allarme - Dopo la pressione dell’elemento flessibile del pulsante, i ritardi temporali Т1 e Т2 (se impostati) sono attivi ed il
+pulsante manuale funziona come un rivelatore automatico.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+41SAI000 – Sirena con isolatore
+41SAI000
+Nome
+Stato dispositivo
+Normale
+Attivata
+Indirizzo
+12
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Livello sonoro
+Alto
+Gruppo sirene
+0
+Revisione software
+2.0
+ID
+3061843155
+La figura mostra la schermata delle impostazioni della sirena indirizzata 41SAI000.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Livello del suono: Premendo il pulsante il livello sonoro cambia alternativamente da ALTO a BASSO – questa impostazione
+può essere determinata dal numero totale di sirene connesse al Loop:
+◊ Alto - Impostato nei casi in cui il numero di sirene collegate ad un singolo Loop è ≤ a 30.
+◊ Basso - Impostato nei casi in cui il numero di sirene collegate ad un singolo loop è compreso tra 30 e 60.
+•
+Gruppo Sirene: Ogni Sirena indirizzata può appartenere ad un Gruppo Sirene. In caso di allarme di zona oltre alle sirene
+appartenenti a quest’ultima, si attiveranno anche i gruppi sirene associati a quella zona.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+33
+41SCI000 – Sirena con lampeggiante con isolatore
+41SCI000
+Modalità
+Nome
+Stato dispositivo
+Normale
+Attivata
+Indirizzo
+1
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Sirena/Lamp
+Livello sonoro
+Alto
+Gruppo sirene
+0
+Revisione software
+2.0
+ID
+3095402135
+La figura mostra la schermata delle impostazioni della sirena indirizzata 41SCI000.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Modalità: Premendo il pulsante si può modificare la modalità di funzionamento della sirena tra:
+◊ Lamp. – in caso di attivazione viene abilitata solo la parte ottica della sirena;
+◊ Sirena – in caso di attivazione viene abilitata solo la parte acustica della sirena;
+◊ Sirena / Lamp – in caso di attivazione sono abilitate sia la parte ottica che acustica della sirena;
+•
+Livello del suono: Premendo il pulsante il livello sonoro cambia alternativamente da ALTO a BASSO – questa impostazione
+può essere determinata dal numero totale di sirene connesse al Loop:
+◊ Alto - Impostato nei casi in cui il numero di sirene collegate ad un singolo Loop è ≤ a 30.
+◊ Basso - Impostato nei casi in cui il numero di sirene collegate ad un singolo loop è compreso tra 30 e 60.
+•
+Gruppo Sirene: Ogni Sirena indirizzata può appartenere ad un Gruppo Sirene. In caso di allarme di zona oltre alle sirene
+appartenenti a quest’ultima, si attiveranno anche i gruppi sirene associati a quella zona.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+41SAB100 – Base con Sirena integrata e isolatore
+41SAB100
+Nome
+Stato dispositivo
+Normale
+Attivata
+Indirizzo
+14
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Livello sonoro
+Alto
+Gruppo sirene
+0
+Revisione software
+2.0
+ID
+3155660795
+La figura mostra la schermata delle impostazioni della base con sirena indirizzata 41SAB100.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Livello del suono: Premendo il pulsante il livello sonoro cambia alternativamente da ALTO a BASSO – questa impostazione
+può essere determinata dal numero totale di sirene connesse al Loop:
+◊ Alto - Impostato nei casi in cui il numero di sirene collegate ad un singolo Loop è ≤ a 30.
+◊ Basso - Impostato nei casi in cui il numero di sirene collegate ad un singolo loop è compreso tra 30 e 100.
+•
+Gruppo Sirene: Ogni Sirena indirizzata può appartenere ad un Gruppo Sirene. In caso di allarme di zona oltre alle sirene
+appartenenti a quest’ultima, si attiveranno anche i gruppi sirene associati a quella zona.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+Nota: ai rilevatori montati sulle basi 41SAB100 e 41SCB100 viene assegnato un altro indirizzo e NON lo stesso della base.
+34
+41SCB100 – Base con Sirena e lampeggiante integrati e isolatore
+41SCB100
+Sirena/Lamp
+Modalità
+Nome
+Stato dispositivo
+Normale
+Attivata
+Indirizzo
+15
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Livello sonoro
+Alto
+Gruppo sirene
+0
+Revisione software
+2.0
+ID
+3195011485
+La figura mostra la schermata delle impostazioni della sirena/lampeggiante indirizzata 41SCB100.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Modalità: Premendo il pulsante si può modificare la modalità di funzionamento della sirena tra:
+◊ Lamp. – in caso di attivazione viene abilitata solo la parte ottica della sirena;
+◊ Sirena – in caso di attivazione viene abilitata solo la parte acustica della sirena;
+◊ Sirena / Lamp – in caso di attivazione sono abilitate sia la parte ottica che acustica della sirena;
+•
+Livello del suono: Premendo il pulsante il livello sonoro cambia alternativamente da ALTO a BASSO – questa impostazione
+può essere determinata dal numero totale di sirene connesse al Loop:
+◊ Alto - Impostato nei casi in cui il numero di sirene collegate ad un singolo Loop è ≤ a 30.
+◊ Basso - Impostato nei casi in cui il numero di sirene collegate ad un singolo loop è compreso tra 30 e 100.
+•
+Gruppo Sirene: Ogni Sirena indirizzata Comelit, può appartenere ad un Gruppo Sirene. In caso di allarme di zona oltre alle
+sirene appartenenti a quest’ultima, si attiveranno anche i gruppi sirene associati a quella zona.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+Nota: ai rilevatori montati sulle basi 41SAB100 e 41SCB100 viene assegnato un altro indirizzo e NON lo stesso della base.
+ATTENZIONE: l’esclusione delle sirene non è conforme alla normativa EN54-2!
+Se una sirena viene disabilitata, verrà visualizzato un messaggio di attenzione sullo schermo.
+L’esclusione di una base con sirena, modelli (41SAB100 e 41SCB100) non influirà sul funzionamento del rilevatore indirizzato
+montato su di essa.
+Per calcolare il consumo totale delle sirene all’interno del loop ed il loro livello sonoro, utilizzare la seguente tabella, inserendo il
+numero delle sirene utilizzate e calcolando la somma dei loro consumi.
+Tabella 1
+Calcolo del consumo totale delle sirene su loop:
+Sirena
+Numero
+Volume Alto
+Volume Basso
+41SAI000
+_____ x 10mA
+_____ x 4mA
+41SCI000*
+_____ x 16,5mA
+_____ x 11mA
+41SAB100
+_____ x 10mA
+_____ x 3mA
+41SCB100
+_____ x 10mA
+_____ x 3mA
+Consumo massimo, mA (Alto + Basso)
+Consumo totale sirene presenti nel loop:
+35
+Tabella 2
+Calcolo del consumo totale delle sirene su loop con tipo di tono impostato n° 27:
+Sirena
+Numero
+Volume Alto
+Volume Basso
+41SAI000
+_____ x 16,5mA
+_____ x 5mA
+41SCI000
+_____ x 22mA
+_____ x 12mA
+41SAB100
+_____ x 10mA
+_____ x 3mA
+41SCB100
+_____ x 10mA
+_____ x 3mA
+Consumo massimo, mA (Alto + Basso)
+Consumo totale sirene presenti nel loop:
+* NOTA: Modalità di funzionamento Sirena / Lampeggiante (parte ottica e acustica sono attive in caso di evento di
+allarme incendio). Il consumo per le altre modalità di funzionamento è indicato nel manuale di installazione individuale
+di ciascuna sirena.
+41IOM010 – Mini modulo 1 Ingesso monitorato
+41IOM010
+Seleziona evento ingresso
+Nome
+Stato dispositivo
+Nuovo
+41IOM010
+41IOM010-FIRE
+Attivata
+Indirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+41IOM010-GAS
+41IOM010-TECHNICAL
+La figura mostra la schermata delle impostazioni del modulo 41IOM010.
+Il modulo monitora e trasmette alla centrale lo stato dell'ingresso (stato ON, stato OFF).
+Premendo il pulsante dove è riportato il modello del modulo (figura 10 h), il pannello visualizza un elenco di opzioni dal quale
+scegliere il tipo di messaggio o azione preimpostata che verrà comunicata alla centrale in caso di sua attivazione:
+•
+41IOM010 Mini modulo 1 IN: all’ingresso non è associata alcuna “attivazione rapida” e può essere utilizzato nelle logiche
+di programmazione della centrale antincendio (ingressi / uscite virtuali);
+•
+41IOM010 Allarme Incendio*: se attivato Il modulo funziona come rivelatore incendio e genera verso la centrale un evento
+“ALLARME INCENDIO”;
+•
+41IOM010 Allarme GAS: se attivato il modulo genera una segnalazione (allarme Gas) sul display della centrale, utile per
+interfacciare rivelatori di gas convenzionali;
+•
+41IOM010 Allarme Tecnico: se attivato il modulo genera una segnalazione (allarme Tecnico) sul display della centrale.
+* Non conforme a EN54-2
+Dopo aver selezionato il tipo di messaggio / evento premere il pulsante “Salva”.
+Nota: Se è stata selezionata e salvata l’impostazione Allarme GAS o Allarme Tecnico, premendo il pulsante AVANZATE dal
+menu del modulo si può scegliere se Attivare o Disattivare l’attivazione delle sirene al verificarsi di uno di questi 2 eventi,
+premendo il pulsante accanto al campo Allarme.
+Se è presente un guasto sull'ingresso viene visualizzato nel menu AVANZATE del modulo in parte al campo CANALE 1, i guasti
+possono essere:
+•
+Aperto - La linea collegata all'ingresso è aperta, o non sono collegate nel modo corretto le resistenze di doppio
+bilanciamento dal lato dispositivo.
+•
+Corto - C'è un cortocircuito nella linea collegata all'ingresso.
+Se non sono presenti guasti le possibili visualizzazioni sono:
+•
+OFF – il modulo è presente e l’ingresso non è attivo.
+•
+ON – il modulo è presente ed il suo ingresso è stato attivato.
+36
+41IOM010-GAS
+Nome
+Stato dispositivo
+Nuovo
+Allarme
+Attivata
+Canale 1
+OFF
+ID
+2827027013
+Attivata
+Indirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+41IOM022 – Modulo 2 Ingressi monitorati + 2 Uscite relè con isolatore
+41IOM022
+Nome
+Stato dispositivo
+Nuovo
+Gruppo sirene
+0
+Lampeggio LED
+ON
+Attivata
+Inidirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Revisione software
+2.0
+ID
+3195011485
+La figura mostra la schermata delle impostazioni del modulo 41IOM022.
+Questo modulo consente di controllare i 2 ingressi monitorati a bordo dello stesso e comandare 2 uscite a relè.
+Per ulteriori informazioni tecniche, per il cablaggio del modulo e delle linee in ingresso e uscita consultare il suo manuale
+tecnico.
+Nota: La centrale antincendio riconosce “Ingresso 1 come Canale 1”, “Ingresso 2 come Canale 2”, “Uscita 1 come
+Canale 3” e “Uscita 2 come Canale 4”.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+Se ON - Il LED lampeggia ad ogni ciclo di dialogo da parte della centrale, se in OFF il LED non lampeggia durante il ciclo di
+dialogo.
+Se è presente un guasto su un ingresso, nel menu AVANZATE comparirà il campo CANALE 1 e/o CANALE 2, i guasti possono
+essere:
+•
+Aperto - La linea collegata all'ingresso è aperta, o non sono collegate nel modo corretto le resistenze di doppio
+bilanciamento dal lato dispositivo.
+•
+Corto - C'è un cortocircuito nella linea collegata all'ingresso.
+Se non sono presenti guasti le possibili visualizzazioni sono:
+•
+ON – il modulo è presente ed il suo ingresso è stato attivato.
+•
+Nessuna visualizzazione – il modulo è presente e l’ingresso non è attivo.
+Il tipo di configurazione dei canali di ingresso o uscita può essere programmato tramite “attivazione rapida” premendo
+direttamente sul pulsante riportante il modello del modulo.
+37
+Canale 1
+41IOM022
+Ingresso
+Nome
+Nome
+Stato dispositivo
+Nuovo
+Canale 2
+Nome
+Attivata
+Canale 3
+Inidirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Ingresso
+Avanzate
+Uscita
+Nome
+Canale 4
+Uscita
+Nome
+Per inserire il tipo di attivazione dell'ingresso o dell’uscita premere il pulsante a fianco del Canale con il rispettivo numero e
+selezionare una delle opzioni. Ad ogni canale può essere assegnato un nome avente lunghezza massima di 40 caratteri nella
+barra editabile accanto all’etichetta “Nome”.
+Programmazione rapida CANALI D’INGRESSO:
+•
+Ingresso: all’ingresso non è associata alcuna “attivazione rapida” e può essere utilizzato nelle logiche di programmazione
+della centrale antincendio (ingressi / uscite virtuali);
+•
+Allarme*: se attivato Il modulo funziona come rivelatore incendio e genera verso la centrale un evento “ALLARME
+INCENDIO”;
+•
+Evacuazione*: se attivato genera verso la centrale un evento “EVACUAZIONE”;
+•
+Allarme GAS: se attivato il modulo genera una segnalazione (allarme Gas) sul display della centrale, utile per interfacciare
+rivelatori di gas convenzionali;
+•
+Allarme Tecnico: se attivato il modulo genera una segnalazione (allarme Tecnico) sul display della centrale.
+* Non conforme a EN54-2
+Programmazione rapida CANALI D’USCITA:
+•
+Uscita: all’uscita non è associata alcuna “attivazione rapida” e può essere utilizzata nelle logiche di programmazione della
+centrale antincendio (ingressi / uscite virtuali);
+•
+Allarme: in caso di evento Allarme incendio generale l’uscita si attiva.
+•
+Evacuazione: in caso di evento Evacuazione l’uscita si attiva.
+•
+Reset: in caso di azione Reset l’uscita si attiva per un tempo preimpostato.
+•
+Modalità Sirene: in caso di evento attivazione sirene su Loop l’uscita si attiva.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+38
+41IOM122 – Modulo 2 Ingressi monitorati + 2 Uscite monitorate (o relè) con isolatore
+41IOM000/240
+Nome
+Stato dispositivo
+Nuovo
+Gruppo sirene
+0
+Lampeggio LED
+ON
+Attivata
+Indirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Revisione software
+2.0
+ID
+3195011485
+La figura mostra la schermata delle impostazioni del modulo 41IOM122.
+Questo modulo consente di controllare i 2 ingressi monitorati a bordo dello stesso e comandare 2 uscite (monitorate o relè) per
+il controllo ed il monitoraggio di dispositivi ottico acustici, fermi elettromagnetici, ecc..
+Per ulteriori informazioni tecniche, per il cablaggio del modulo e delle linee in ingresso e uscita consultare il suo manuale
+tecnico.
+Nota: La centrale antincendio riconosce “Ingresso 1 come Canale 1”, “Ingresso 2 come Canale 2”, “Uscita 1 come
+Canale 3” e “Uscita 2 come Canale 4”.
+Ogni uscita può essere programmata per funzionare in modalità “monitorata” o “non monitorata” (relè), in base al settaggio dei
+ponticelli (jumper) presenti sul PCB del modulo:
+•
+Jumper chiusi: le uscite funzionano in modalità monitorata (monitoraggio della linea in uscita).
+•
+Jumper aperti: le uscite funzionano in modalità relè (contatti liberi da tensione).
+Quando un'uscita è impostata per funzionare in modalità monitorata, deve essere alimentata da un alimentatore esterno (18-30
+VDC).
+Nota: Durante le operazioni di apertura / chiusura dei jumper togliere SEMPRE l’alimentazione proveniente dal Loop e
+l’alimentazione delle uscite. Per evitare segnalazioni di guasto sulle uscite.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+Se ON - Il LED lampeggia ad ogni ciclo di dialogo da parte della centrale, se in OFF il LED non lampeggia durante il ciclo di
+dialogo.
+Se è presente un guasto su un ingresso, nel menu AVANZATE accanto al campo CANALE 1 e/o CANALE 2 appariranno le
+seguenti indicazioni:
+•
+Aperto - La linea collegata all'ingresso è aperta, o non sono collegate nel modo corretto le resistenze di doppio
+bilanciamento dal lato dispositivo.
+•
+Corto - C'è un cortocircuito nella linea collegata all'ingresso.
+Se non sono presenti guasti le possibili visualizzazioni sono:
+•
+ON – il modulo è presente e l’ingresso è stato attivato.
+•
+OFF – il modulo è presente e l’ingresso non è attivo.
+39
+Sempre nel menu “AVANZATE” è possibile visualizzare lo stato dei canali d’uscita CANALE 3 e CANALE 4.
+Accanto all’etichetta canale sono presenti due campi, il primo riporta le indicazioni della modalità di funzionamento delle uscite
+(monitorata o relè) o, la segnalazione del guasto:
+•
+Tipo Errato – è stato rilevato un tipo errato di uscita, ovvero un jumper è stato chiuso/aperto con il modulo alimentato. Il
+guasto rientrerà disalimentando il modulo dal Loop e l’alimentazione delle uscite.
+•
+Guasto Alimentazione – indica la mancanza di alimentazione esterna alle uscite.
+Il secondo indica lo stato attuale delle uscite, che può essere uno dei seguenti:
+•
+ON – l’uscita è attiva.
+•
+OFF – l’uscita non è attiva.
+•
+Aperto - la linea collegata all’uscita è aperta, o non è collegata la resistenza di fine linea.
+•
+Corto – è presente un cortocircuito nella linea collegata all’uscita. In caso di cortocircuito all'eccitazione dell’uscita
+monitorata, l'alimentazione dell'uscita sarà disattivata fino al ripristino della normale condizione di funzionamento.
+Il tipo di configurazione dei canali di ingresso o uscita può essere programmato tramite “attivazione rapida” premendo
+direttamente sul pulsante riportante il modello del modulo.
+Canale 1
+41IOM000/240
+Ingresso
+Nome
+Nome
+Stato dispositivo
+Nuovo
+Canale 2
+Ingresso
+Nome
+Attivata
+Canale 3
+Indirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Uscita
+Nome
+Canale 4
+Uscita
+Nome
+Per inserire il tipo di attivazione dell'ingresso o dell’uscita premere il pulsante a fianco del Canale con il rispettivo numero e
+selezionare una delle opzioni. Ad ogni canale può essere assegnato un nome avente lunghezza massima di 40 caratteri nella
+barra editabile accanto all’etichetta “Nome”.
+Le “programmazioni rapide” configurabili sui canali d’ingresso e uscita, sono le stesse elencate nel paragrafo del
+modulo indirizzato 41IOM022.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+40
+41IOM004 – Modulo 4 Uscite relè con isolatore
+41IOM004
+Nome
+Stato dispositivo
+Nuovo
+Gruppo sirene
+0
+Lampeggio LED
+ON
+Attivata
+Indirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Revisione software
+2.0
+ID
+3195011485
+La figura mostra la schermata delle impostazioni del modulo 41IOM004.
+Questo modulo consente di comandare 4 uscite relè a bordo dello stesso.
+Per ulteriori informazioni tecniche e per il cablaggio del modulo e delle uscite consultare il suo manuale tecnico.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+Se ON - Il LED lampeggia ad ogni ciclo di dialogo da parte della centrale, se in OFF il LED non lampeggia durante il ciclo di
+dialogo.
+Ad ogni canale d’uscita può essere assegnato un nome avente lunghezza massima di 40 caratteri nella barra editabile accanto
+all’etichetta “Nome”.
+Le “programmazioni rapide” configurabili sulle 4 uscite del modulo 41IOM004, sono le stesse elencate nel paragrafo
+del modulo indirizzato 41IOM022 (canali d’uscita).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+41
+41IOM040 – Modulo 4 Ingressi monitorati con isolatore
+41IOM040
+Nome
+Stato dispositivo
+Nuovo
+Gruppo sirene
+0
+Lampeggio LED
+ON
+Attivata
+Indirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Revisione software
+2.0
+ID
+3195011485
+La figura mostra la schermata delle impostazioni del modulo 41IOM040.
+Questo modulo consente di controllare i 4 ingressi monitorati a bordo dello stesso.
+Per ulteriori informazioni tecniche e per il cablaggio del modulo e delle linee in ingresso consultare il suo manuale tecnico.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo
+Se ON - Il LED lampeggia ad ogni ciclo di dialogo da parte della centrale, se in OFF il LED non lampeggia durante il ciclo di
+dialogo.
+Ad ogni canale d’ingresso può essere assegnato un nome avente lunghezza massima di 40 caratteri nella barra editabile
+accanto all’etichetta “Nome”.
+Le segnalazioni inerenti allo stato degli ingressi nella pagina avanzate e, le “programmazioni rapide” configurabili sui
+4 ingressi monitorati del modulo 41IOM040, sono le stesse elencate nel paragrafo del modulo indirizzato 41IOM022
+(canali d’ingresso).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+42
+41IOM000 – Modulo 1 Uscita monitorata con isolatore
+41IOM000
+Nome
+Stato dispositivo
+Nuovo
+Gruppo sirene
+0
+Lampeggio LED
+ON
+Attivata
+Indirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Revisione software
+2.0
+ID
+3195011485
+La figura mostra la schermata delle impostazioni del modulo 41IOM000.
+Questo modulo consente di comandare un’uscita per il controllo ed il monitoraggio di dispositivi ottico acustici, fermi
+elettromagnetici, ecc..
+Per ulteriori informazioni tecniche e per il cablaggio del modulo e della linea di uscita consultare il suo manuale tecnico.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+Se ON - Il LED lampeggia ad ogni ciclo di dialogo da parte della centrale, se in OFF il LED non lampeggia durante il ciclo di
+dialogo.
+Al canale d’uscita può essere assegnato un nome avente lunghezza massima di 40 caratteri nella barra editabile accanto
+all’etichetta “Nome”.
+Le segnalazioni inerenti allo stato dell’uscita nella pagina avanzate e, le “programmazioni rapide” configurabili
+sull’uscita monitorata del modulo 41IOM000, sono le stesse elencate nel paragrafo del modulo indirizzato 41IOM022
+(canali d’uscita).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+43
+41IOM000/240 – Modulo 1 Uscita relè (240V) con isolatore
+41IOM000/240
+Nome
+Stato dispositivo
+Nuovo
+Gruppo sirene
+0
+Lampeggio LED
+ON
+Attivata
+Indirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Revisione software
+2.0
+ID
+3195011485
+La figura mostra la schermata delle impostazioni del modulo 41IOM000/240.
+Questo modulo consente di comandare un’uscita a relè con contatto pulito per l’attivazione di dispositivi con tensione di
+alimentazione fino 250VAC (5A) o 30VDC (5A).
+Per ulteriori informazioni tecniche e per il cablaggio del modulo e della linea di uscita consultare il suo manuale tecnico.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+Se ON - Il LED lampeggia ad ogni ciclo di dialogo da parte della centrale, se in OFF il LED non lampeggia durante il ciclo di
+dialogo.
+Al canale d’uscita può essere assegnato un nome avente lunghezza massima di 40 caratteri nella barra editabile accanto
+all’etichetta “Nome”.
+Le “programmazioni rapide” configurabili sull’uscita del modulo 41IOM000/240, sono le stesse elencate nel paragrafo
+del modulo indirizzato 41IOM022 (canali d’uscita).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+44
+41ISC000 – Modulo per Zona convenzionale con isolatore
+41ISC000
+Lampeggio LED
+Nome
+Stato dispositivo
+Nuovo
+ON
+Attivata
+Indirizzo
+3
+Rimuovi
+Numero loop
+2
+OFF
+Zona dispositivo
+1
+Avanzate
+Revisione software
+2.0
+ID
+3195011485
+La figura mostra la schermata delle impostazioni del modulo 41ISC000.
+Questo modulo consente di interfacciare al sistema di rilevazione incendio indirizzato una zona convenzionale alimentata
+separatamente.
+Per ulteriori informazioni tecniche ed il cablaggio del modulo consultare il suo manuale tecnico.
+Premere il pulsante “AVANZATE” per accedere alle impostazioni aggiuntive:
+•
+Lampeggio LED: Selezionando il pulsante ON/OFF si abilita/disabilita l’indicazione LED del dispositivo.
+Se ON - Il LED lampeggia ad ogni ciclo di dialogo da parte della centrale, se in OFF il LED non lampeggia durante il ciclo di
+dialogo.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del dispositivo.
+45
+4.3.3. Indirizzamento dei dispositivi
+Questo menu consente all’installatore di impostare / modificare l’indirizzo del dispositivo, di identificare eventuali dispositivi
+non indirizzati ma già connessi al Loop, di eseguire una procedura di indirizzamento sequenziale o di indirizzamento
+automatico di tutti i dispositivi connessi al sistema.
+Il tipo di indirizzamento dipende dalle esigenze dell’installatore e dalla capacità e configurazione del sistema.
+L’installatore può utilizzare tre approcci differenti per aggiungere dispositivi alla configurazione del sistema:
+•
+I dispositivi sono collegati direttamente alla centrale tramite schede Loop 41ECL120, e sono già indirizzati (programmazione
+tramite programmatore manuale 41SPG000). La centrale riconosce automaticamente i dispositivi secondo l’indirizzo
+precedentemente assegnato. L’installatore può SALVARE i nuovi dispositivi uno per uno o tutti contemporaneamente con il
+pulsante SALVA dalla schermata principale di Programmazione.
+•
+INDIRIZZAMENTO SEQUENZIALE: I nuovi dispositivi sono pronti per esser collegati al sistema: la linea del loop è pronta
+ma i dispositivi non sono installati (i rivelatori e le sirene non sono montati sulle basi, pulsanti e moduli non sono collegati al
+loop tramite il loro terminale).
+Per accedere al menu indirizzamento sequenziale l’installatore deve eseguire i seguenti passaggi:
+SISTEMA – PROGRAMMAZIONE – DISPOSITIVI – INDIRIZZAMENTO – INDIRIZZAMENTO SEQUENZIALE.
+Il display mostra il primo indirizzo libero per ciascuna delle schede loop 41ECL120 disponibili.
+A questo punto l’installatore può procedere all’installazione dei dispositivi 1 a 1. La centrale assegna al primo dispositivo
+montato l’indirizzo visualizzato a display e, automaticamente procede al successivo.
+Ind. sedquenziale
+Loop
+Numero di dispositivi
+Indirizzo successivo
+1
+0
+1
+2
+17
+18
+3
+0
+1
+4
+0
+1
+Nel campo “Indirizzo successivo” la centrale mostra il primo indirizzo libero per ogni loop. La centrale riconosce e salta tutti gli
+indirizzi già assegnati e passerà all’indirizzo libero seguente. È possibile scorrere il numero dell'indirizzo utilizzando i pulsanti
++ & - o inserendo direttamente il numero premendo sul corrente indirizzo visualizzato. L'uscita dal menu avviene premendo il
+pulsante
+•
+17
+1
+.
+AUTO-INDIRIZZAMENTO: La funzione di indirizzamento automatico della centrale 41CPE118 ha lo scopo di rendere più
+semplice e veloce l’installazione dei dispositivi sul loop. L’installatore può montare tutti i dispositivi senza pre-impostare
+l’indirizzo, per poi indirizzarli tutti automaticamente con un solo clic dal menu della centrale.
+Il tempo per eseguire l’auto-indirizzamento dipende dalla configurazione del sistema e dal numero totale di dispositivi
+collegati al Loop. L’avanzamento dell’operazione viene visualizzata attraverso una barra di caricamento nella parte inferiore
+dello schermo.
+Uscite
+L’installatore
+deve inserire il numero del loop sul quale si desidera avviare l’indirizzamento nel campo “Numero Loop”. Il
+numero di dispositivi indirizzati verrà visualizzato nel campo “Numero dispositivi”.
+OFF
+Per accedere
+al menu auto-indirizzamento l’installatore deve eseguire i seguenti passaggi:
+SISTEMA – PROGRAMMAZIONE – DISPOSITIVI – INDIRIZZAMENTO – AUTO-INDIRIZZAMENTO.
+Esistono 2 modalità di indirizzamento automatico: per ID seriale dei dispositivi e tramite Isolatore.
+•
+Auto-indirizzamento tramite ID: Avviando questa modalità d’indirizzamento, la centrale rileva e numera tutti i dispositivi in
+ordine crescente rispettando il numero identificativo (ID) presente in ogni dispositivo Comelit, ma divisi per famiglie, ovvero,
+prima i Moduli e Pulsanti, poi i Rivelatori ed infine le Sirene.
+Se l’operazione è andata a buon fine, la centrale visualizza il messaggio “Completato” ed il numero totale di dispositivi
+indirizzati sul Loop selezionato e le eventuali ramificazioni che lo compongono.
+•
+Auto-indirizzamento tramite Isolatore: Avviando l’indirizzamento tramite “Isolatore”, la centrale indirizza tutti i dispositivi
+ordinandoli in ordine crescente partendo dal ramo destro dei terminali della scheda Loop montata nella centrale.
+Montando un rivelatore su di una base con sirena (41SCB100 / 41SAB100), la centrale prima indirizza la sirena e
+successivamente il sensore montato su di essa.
+Se l’operazione è andata a buon fine, la centrale visualizza il messaggio “Completato”, ed il numero totale di dispositivi
+trovati sul Loop selezionato e le eventuali ramificazioni che lo compongono.
+46
+ATTENZIONE: In caso di auto-indirizzamento tramite isolatore, assicurarsi che tutti i dispositivi montati sul
+Loop abbiano l’isolatore. L’unico dispositivo Comelit che NON possiede isolatore è il mini modulo 41IOM010.
+Nel caso si avvii questo indirizzamento, avendo installato sul Loop moduli 41IOM010, la ricerca non andrà
+a buon fine e si interromperà appena la centrale rileva uno di questi dispositivi. Ripetere l’indirizzamento
+scegliendo un’altra modalità.
+Autoindirizzamento
+Diramazione
+Indirizzo
+Numero di dispositivi
+Avvio ID seriale
+1
+5-6
+2
+Avvio isolatore
+Numero loop
+2
+Numero di dispositivi
+0
+Stato
+Avanzate
+In figura viene mostrata la schermata del menu di auto-indirizzamento. Con la pressione del pulsante “Avanzate”, se presenti,
+vengono visualizzate il numero di diramazioni sul Loop e gli indirizzi che lo compongono.
+ATTENZIONE: Eseguendo uno dei 2 auto-indirizzamenti sopra elencati in una centrale antincendio
+41CPE118 già operativa (dispositivi già indirizzati), tutti i dispositivi verranno reindirizzati secondo la nuova
+procedura selezionata, con il rischio di modificare la loro sequenza numerica e le conseguenti logiche di
+funzionamento associate!
+Per accedere al menu Indirizzamento eseguire in sequenza:
+SISTEMA – PROGRAMMAZIONE – DISPOSITIVI – INDIRIZZAMENTO
+Imposta indirizzo
+Cambia indirizzo
+Ind. sequenziale
+Autoindirizzamento
+Dispositivo/i non indirizzato
+Durante una qualsiasi delle procedure di indirizzamento, la centrale 41CPE118 entra in una speciale modalità operativa per
+l'indirizzamento dei dispositivi: la centrale è occupata e non controlla il funzionamento degli altri dispositivi nel sistema. I menu
+per la revisione di allarmi, guasti, avvertenze, test e disabilitazioni sono momentaneamente inattivi.
+41ECL120
+47
+4.3.3.1 Impostare un indirizzo
+In questo sottomenu l'installatore può assegnare direttamente gli indirizzi ai nuovi dispositivi nel sistema. La procedura di
+memorizzazione è la stessa dell’indirizzamento sequenziale. È consigliata quando l'installatore ha la necessità di aggiungere ed
+associare alla configurazione dell'impianto singoli dispositivi ad indirizzi liberi.
+I rivelatori e le sirene non devono essere montati sulle basi; i pulsanti e i moduli non devono essere collegati
+al loop.
+Per impostare l'indirizzo di un dispositivo selezionare in sequenza
+SISTEMA - PROGRAMMAZIONE - DISPOSITIVI – INDIRIZZAMENTO - IMPOSTA INDIRIZZO.
+Il dispositivo deve essere pronto per il collegamento alla centrale.
+Imposta indirizzo
+Imposta indirizzo
+41SCB100
+41SCB100
+Indirizzo
+16
+Indirizzo
+17
+Uscite
+Numero loop
+1
+Numero loop
+1
+OFF
+Il sistema mostra automaticamente il primo indirizzo nel sistema. È possibile verificare il dispositivo assegnato a questo
+indirizzo premendo il pulsante "simbolo LED ON" - i LED del dispositivo si accenderanno in modo permanente. La successiva
+pressione dello stesso pulsante li farà spegnere. Utilizzare i pulsanti + & - per scorrere gli indirizzi ed il numero del loop.
+L'indirizzo è libero se il pulsante "SALVA" si attiva.
+Identificato un indirizzo disponibile, prendere il nuovo dispositivo e collegarlo al sistema: montare il rilevatore o la sirena sulla
+base o collegare il modulo al loop tramite il suo terminale.
+Premere il pulsante "SALVA" e attendere un paio di secondi. Se l'indirizzamento è andato a buon fine sul display verrà
+visualizzato il messaggio "Completato". Se il messaggio è "Errore", significa che c'è un problema: il dispositivo non è stato
+collegato correttamente, non c'è comunicazione con l’espansione loop.
+17/06/2020
+14:06 successivo o uscire con pulsante
+Si può procedere con l’assegnazione
+dell'indirizzo
+.
+Con la pressione del pulsante “RESET“
+l’installatore
+può resettare lo stato del dispositivo.
+Imposta
+indirizzo
+Il pulsante “Uscite“ è attivo in quei dispositivi (sirene) e moduli che hanno uscite a relè o monitorate. Premendo il pulsante di
+riferimento si attiva / disattiva lo stato delle uscite del dispositivo.
+41SCB100
+Indirizzo
+17
+Uscite
+Numero loop
+1
+OFF
+48
+4.3.3.2 Cambiare un indirizzo
+In questo sottomenu l’installatore può modificare l’indirizzo di un dispositivo, per cambiare un indirizzo selezionare in
+sequenza:
+SISTEMA - PROGRAMMAZIONE - DISPOSITIVI – INDIRIZZAMENTO - CAMBIA INDIRIZZO.
+Cambia indirizzo
+41PAM000
+Indirizzo
+1
+Uscite
+Numero loop
+2
+OFF
+Nuovo indirizzo
+1
+La centrale mostra automaticamente il primo indirizzo nel sistema. Utilizzare i pulsanti + & - per selezionare l'indirizzo del
+dispositivo ed il numero del loop che si desidera modificare. Nel campo "Nuovo indirizzo" impostare il nuovo numero di
+indirizzo per il dispositivo. Se l’indirizzo è libero il pulsante “Salva” apparirà sullo schermo.
+Per modificare l'indirizzo premere il pulsante “Salva” e attendere un paio di secondi. Se il cambio di indirizzo ha esito positivo,
+il messaggio "Completato" apparirà sullo schermo. Si può procedere con la modifica di un altro indirizzo o uscire con pulsante
+.
+È possibile utilizzare il pulsante "RESET" per ripristinare le condizioni del dispositivo. Il pulsante “Uscite” è attivo solo per
+i moduli ad uscite o sirene. Utilizzare il pulsante “Uscite” per attivare o disattivare le uscite del modulo / parte sonora della
+sirena.
+4.4 Zone
+Per accedere al menu di programmazione delle zone, selezionare in sequenza:
+Uscite
+SISTEMA – PROGRAMMAZIONE – ZONE
+LaOFFcentrale indirizzata 41CPE118 dispone di 500 zone. Gli stati di ALLARME INCENDIO e PREALLARME vengono visualizzati
+sul pannello frontale con l’attivazione del LED corrispondente (fino a 200). In condizioni di PREALLARME - il LED di zona
+corrispondente lampeggia e viene visualizzato un messaggio di avviso sul display della centrale.
+Nel caso di una seconda attivazione di un dispositivo nella stessa zona, viene generato un messaggio di ALLARME
+INCENDIO per la rispettiva zona - il numero della zona in modalità allarme incendio si illumina di rosso.
+1
+Numero zona
+Numero zona
+1
+Name
+Stato zona
+Attivata
+Modalità
+Doppi All.
+Sirene di zona
+Attivata
+Ritardo allarme sirene (T2)
+60
+Gruppo sirene
+0
+Ritardo VVFF (T2)
+60
+Gruppo sirene
+0
+Ritardo allarme estinzione (T2)
+0
+Gruppo sirene
+0
+Gruppo zone
+Avanzate
+La figura mostra la schermata generale per la programmazione di una Zona.
+49
+Descrizione dei pulsanti del menu Zone:
+Autoindirizzamento
+•
+Pulsanti attivi per selezionare il numero della Zona, premendo direttamente sul numero visualizzato o scorrendo le
+zone con i 2 pulsanti + & -;
+•
+NOME: Campo attivo per immettere il nome della Zona, lunghezza massima 40 caratteri spazi inclusi. Confermare con il
+pulsante “Salva”;
+•
+STATO ZONA: Pulsante per attivare / disattivare la Zona, il pulsante cambia il colore in base allo stato attuale della zona
+(verde attiva – gialla esclusa);
+•
+MODALITA’: Pulsante attivo per modificare la modalità di funzionamento della Zona tra le 3 disponibili:
+Avvio ID seriale
+Avvio isolatore
+Numero loop
+Numero di dispositivi
+Stato
+2
+0
+Avanzate
+◊ NORMALE: In modalità NORMALE, qualsiasi attivazione di un rivelatore all'interno del sistema genera un evento di
+allarme nella rispettiva zona.
+◊ 2 DISPOSITIVI - In modalità 2 DISPOSITIVI, qualsiasi attivazione di un rivelatore all'interno del sistema genera un evento
+di PREALLARME nella rispettiva zona ma, attende anche l'attivazione di un secondo rilevatore della stessa zona per
+generare un segnale di ALLARME INCENDIO. Il comando RESET disabiliterà gli eventi INCENDIO e PREALLARME. Se
+per 4 minuti e un quarto non vengono rilevati altri segnali di allarme da un altro rivelatore nella stessa zona, l'allarme
+INCENDIO verrà ignorato e la centrale resetterà automaticamente l’evento di preallarme.
+◊ DOPPIO ALLARME – In modalità DOPPIO ALLARME, qualsiasi attivazione di un rivelatore all'interno del sistema genera
+un evento di PREALLARME nella rispettiva zona ma, attende un secondo segnale di allarme dallo stesso rilevatore per
+generare un segnale di ALLARME INCENDIO. Il comando RESET disabiliterà gli eventi INCENDIO e PREALLARME. Se
+per 4 minuti e un quarto non vengono rilevati altri segnali di allarme dallo stesso rivelatore nella zona, l'allarme INCENDIO
+verrà ignorato e la centrale resetterà automaticamente l’evento di preallarme.
+ATTENZIONE: i pulsanti manuali ed i moduli di ingresso impostati per generare un evento di allarme,
+verranno ripristinati automaticamente se sono associati ad una zona con modalità di doppio allarme o 2
+dispositivi.
+•
+RITARDO SIRENE (T2)*: Campo per inserire il tempo di ritardo (T2) per l’attivazione delle sirene di quella determinata zona.
+Il ritardo è compreso tra 0-540 secondi. All’attivazione di più di una zona, l’uscita SND seguirà la zona con il ritardo minore.
+•
+RITARDO Trasmissione Allarme VVFF (T2) *: Campo per inserire il tempo di ritardo (T2) per l’attivazione dell’uscita
+“Trasmissione Allarme VVFF” (FIRE R). Il ritardo è compreso tra 0-540 secondi. All’attivazione di più di una zona, l’uscita
+seguirà la zona con il ritardo minore.
+•
+RITARDO ESTINZIONE (T2) *: Campo per inserire il tempo di ritardo (T2) per l’attivazione dell’uscita “Estinzione incendio”
+(FIRE P). Il ritardo è compreso tra 0-540 secondi. All’attivazione di più di una zona, l’uscita seguirà la zona con il ritardo
+minore.
+* NOTA: I Т2 sono i tempi per l’impostazione di un ritardo per l’attivazione di un’uscita. Vedi ALLEGATO E (2 livelli di stato
+allarme).
+ATTENZIONE: se non è stato impostato alcun ritardo T2 - Sirene, Trasmissione incendio VVFF o Uscita
+Estinzione incendio, (T2 = 0 sec), il ritardo generale T1 viene ignorato.
+Ad esempio, se il “Ritardo Sirene (T2)” = 0 sec per la Zona 1, il ritardo T1 impostato verrà ignorato e l’uscita
+verrà attivata immediatamente in caso di evento allarme incendio per quella determinata zona.
+•
+GRUPPO ZONE: Le Zone della centrale 41CPE118 possono essere organizzate in gruppi zone separati (massimo 48
+gruppi). Ogni zona può essere inserita in 3 diversi Gruppi Zone (A, B, C) per offrire una più veloce programmazione
+attraverso le logiche ingresso / uscita, o per l’interfacciamento con la centrale ad Evacuazione Vocale. Di default ogni zona
+non è associata a nessun gruppo (il valore impostato è = 0). Si possono creare un massimo di 48 gruppi zone.
+•
+AVANZATE: Premendo il pulsante avanzate, si accede al sottomenu “GRUPPI SIRENE”.
+◊ SIRENE DI ZONA: Se questo campo è attivo, in caso di allarme proveniente da quella Zona, le sirene appartenenti ad
+essa si attiveranno, in caso contrario (esclusa) le sirene appartenenti a quella zona non verranno attivate.
+◊ GRUPPO SIRENE: 3 differenti gruppi sirene possono essere inseriti ed associati ad una determinata Zona. Nel caso di
+allarme incendio proveniente da quella zona le sirene appartenenti al gruppo sirene inserito si attiveranno seguendo lo
+stato di allarme di quella zona.
+50
+Esempio, se nel primo campo “Gruppo Sirene” della Zona 1 inserisco Gruppo 1 e, la voce “Sirene di Zone” è attivata, significa
+che, in caso di evento Allarme Incendio in quella Zona, si attiveranno le sirene di Zona 1 e le sirene che appartengono al
+Gruppo Sirene 1. Per associare una sirena al suo gruppo sirena vedere il capitolo dispositivi (sirene).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale del menu zone.
+4.5 Ingressi Logici
+Per accedere al menu Ingressi selezionare in sequenza:
+SISTEMA – PROGRAMMAZIONE - INGRESSI
+Il menu comprende due sottomenu: "Ingressi" e "Gruppi". Selezionare il sottomenu "Ingressi" per entrare nella configurazione
+delle impostazioni degli ingressi logici.
+1
+Numero ingresso
+Tipo
+Nessuno
+Avanzate
+Schermata iniziale di un ingresso logico non programmato. Il pulsante riporta la voce NESSUNO.
+Premendo il pulsante “NESSUNO” si accede al sottomenu per la selezione del tipo di ingresso, come mostrato in figura sotto
+Nessuno
+Periferica
+Loop
+Zona
+Allarme
+Orario
+Giorno
+Azioni
+Generale
+Rete
+Gruppo zone
+Gr. sensori
+Descrizione delle tipologie di Ingressi disponibili:
+•
+NESSUNO: L'ingresso non è utilizzato.
+•
+PERIFERICA: Non applicabile.
+•
+LOOP: Selezionare questa opzione quando l'ingresso logico è un ingresso di un dispositivo loop (moduli 41IOM010,
+41IOM040, 41IOM022, 41IOM122);
+•
+ZONA: Selezionare questa opzione quando l'ingresso è generato da un evento di zona.
+•
+ALLARMI: Selezionare questa opzione quando l'ingresso è generato da uno o più allarmi rilevati.
+•
+ORARIO: Selezionare questa opzione quando l'ingresso è generato in base ad una pianificazione oraria.
+•
+DATA: Selezionare questa opzione quando l'ingresso è generato in base ad una pianificazione giornaliera.
+•
+AZIONE: Selezionare questa opzione quando l'ingresso è generato da un “azione avvenuta”.
+•
+GENERALE: Selezionare questa opzione quando l'ingresso è generato da un “evento generale”.
+•
+RETE - Selezionare questa opzione quando l'ingresso è generato da un evento / dispositivo appartenente ad un’altra
+centrale connessa nella sua rete (RS485 / LAN).
+•
+GRUPPO ZONE: Selezionare questa opzione quando l'ingresso è generato da una zona in allarme incendio o guasta,
+inclusa in un gruppo zone.
+•
+GRUPPO SENSORI: Selezionare questa opzione quando l’ingresso è generato da un sensore in allarme, appartenente ad
+un determinato gruppo di sensori.
+51
+Descrizione dei pulsanti del menu Ingressi:
+Una volta selezionato il tipo di Ingresso desiderato, bisogna impostare i parametri inerenti a quel determinato ingresso, di
+seguito viene riportata la schermata generale con i parametri comuni a tutti gli ingressi:
+1
+Numero ingresso
+Nome
+Modalità
+Auto reset
+Polarità
+NORMALE
+Ritardo ingresso
+0
+Tipo
+Azione
+Funzioni
+RESET
+Avanzate
+•
+Numero Ingresso logico: utilizzare i pulsanti + & - o immettere direttamente il numero, per selezionare un ingresso
+compreso tra 1 e 250. Il contenuto della schermata può variare in base alle impostazioni del Tipo di ingresso selezionato.
+Per impostazione predefinita, tutti gli ingressi sono impostati come tipo NESSUNO.
+•
+Nome: campo per inserire un nome o una descrizione dell’ingresso che si sta programmando.
+•
+Modalità: campo per inserire il tipo di comportamento dell’ingresso:
+◊ Auto Reset – lo stato dell’ingresso rimane attivo sino alla sua disattivazione fisica;
+◊ Reset Manuale – lo stato dell’ingresso si disattiva solo dopo un evento di Reset;
+•
+Polarità: campo per inserire la polarità dell’ingresso:
+◊ Normale – l’ingresso è Attivo quando il risultato della funzione logica è TRUE (VERO)
+◊ Invertita – l’ingresso è Attivo quando il risultato della funzione logica è FALSE (FALSO)
+•
+Ritardo Ingresso: è possibile impostare un ritardo all’attivazione dell’ingresso, compreso tra 0-600 secondi
+•
+Tipo: pulsante per selezionare il tipo di Ingresso come precedentemente descritto
+•
+Funzioni: questo pulsante è attivo solo per i tipi di ingresso (zone, azione, generale, gruppo zone)
+•
+“Avanzate” – Gruppo Ingressi: ogni ingresso può appartenere ad un gruppo ingressi logici. Il gruppo può funzionare in
+logica OR o AND.
+ATTENZIONE: per impostazione di default, l’ingresso 1 è associato al gruppo ingressi 1, l’ingresso 2 è
+associato al gruppo ingressi 2, ecc.
+52
+4.5.1 Sottomenu per la selezione del tipo di ingresso
+A seconda del tipo di ingresso selezionato si attiva il pulsante “FUNZIONI”, dal quale possono essere scelte diverse attivazioni.
+•
+LOOP: Selezionare questa opzione quando l'ingresso logico è un ingresso di un dispositivo loop (moduli 41IOM010,
+41IOM040, 41IOM022, 41IOM122), i terminali di ingresso sono visualizzati come numeri di canale.
+Premere il pulsante “AVANZATE” per accedere alla programmazione dell’ingresso:
+◊ Gruppo: Se necessario inserire il numero del gruppo
+ingressi al quale deve appartenere l’ingresso, tra 1 e 250.
+Gruppo
+1
+Parametri ingressi loop
+41IOM122
+Indirizzi dispositivi looop
+1
+Numero loop
+1
+Canale (1,2)
+1
+Sabotaggio
+OFF
+◊ Indirizzo dispositivo loop: Immettere il numero di
+indirizzo del dispositivo che si vuole programmare come
+ingresso, tra 1 e 250.
+◊ Numero loop: Immettere il numero del Loop del
+dispositivo.
+◊ Canale: Immettere il numero dell’ingresso (canale) del
+dispositivo, da associare all’ingresso logico, i canali
+programmabili dei moduli vengono presentati fra parentesi.
+◊ Sabotaggio. Quando l'opzione è abilitata (ON) l'ingresso
+viene attivato (è vero) in caso di condizione di guasto.
+ATTENZIONE: Se il dispositivo è un rivelatore, un pulsante manuale o un modulo per zona convenzionale, il
+canale deve sempre essere impostato a “1”, la modifica del valore non è permessa dalla centrale.
+I seguenti messaggi di allerta possono essere visualizzati sullo schermo:
+•
+"Questo dispositivo non può essere utilizzato come ingresso!" - Ciò significa che il dispositivo o il canale impostato non
+possono essere utilizzati come ingresso.
+Il messaggio viene visualizzato se l'indirizzo impostato appartiene ad un tipo di dispositivo non avente ingressi
+programmabili (esempio: moduli ad uscite);
+•
+"Già usato!" - Ciò significa che il dispositivo, o il canale impostato, è già stato utilizzato per altre operazioni nella
+configurazione della centrale.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+53
+•
+ZONA: Selezionare questa opzione quando l'ingresso logico è determinato da un evento di zona.
+Premere il pulsante accanto al campo “Funzioni” per selezionare il tipo di evento di zona:
+1
+Numero ingresso
+Nome
+Modalità
+Auto reset
+Polarità
+NORMALE
+Ritardo ingresso
+0
+Tipo
+Zona
+Funzioni
+ZONA INCENDIO
+◊ Zona Incendio: L’ingresso è generato dallo stato di
+Allarme Incendio della Zona selezionata.
+◊ Zona Guasta: L’ingresso è generato dallo stato di Guasto
+della Zona selezionata.
+◊ Zona Esclusa: L’ingresso è generato dallo stato
+d’esclusione della Zona selezionata.
+◊ Preallarme Zona: L’ingresso è generato dallo stato di
+preallarme della Zona selezionata.
+Avanzate
+Premere il pulsante “AVANZATE” per programmare i seguenti parametri:
+◊ Gruppo: Se necessario inserire il numero del gruppo ingressi al quale deve appartenere l’ingresso, tra 1 e 250.
+◊ Numero Zona: Inserire il numero della zona che genera l’ingresso, tra 1 e 200.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+•
+ALLARMI: Selezionare questa opzione quando l’ingresso sarà generato da un numero di allarmi rilevati in una determinata
+zona.
+Premere il pulsante “AVANZATE” per programmare i seguenti parametri:
+Gruppo
+1
+◊ Gruppo: Se necessario inserire il numero del gruppo
+ingressi al quale deve appartenere l’ingresso, tra 1 e 250.
+Parametri ingresso zona
+Numero zona
+1
+◊ Numero Zona: Inserire il numero della zona, tra 1 e 200.
+Conteggio allarmi
+1
+◊ Conteggio Allarmi: Inserire il numero di allarmi, compreso
+tra 1 e 9.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+54
+• ORARIO: Selezionare questa opzione quando l'ingresso verrà attivato in base ad una pianificazione oraria.
+Premere il pulsante “AVANZATE” per impostare:
+Gruppo
+1
+Inserire orario
+Lunedì
+OFF
+Martedì
+OFF
+Mercoledì
+OFF
+Orario - Ore
+00
+Giovedì
+OFF
+Orario - Minuti
+00
+Venerdì
+OFF
+Orario - Giorno
+Cambia
+Sabato
+OFF
+Domenica
+OFF
+◊ Ora: Impostare un'ora per l'attivazione. Premere il pulsante accanto al campo e inserire l'ora tramite tastiera. Confermare
+con il pulsante OK.
+◊ Minuti: Impostare i minuti per l'attivazione. Premere il pulsante accanto al campo e inserire i minuti tramite tastiera.
+Confermare con il pulsante OK.
+◊ Giorni della settimana: Premere il pulsante Cambio accanto al campo - i giorni della settimana sono elencati in una
+schermata separata. Abilita (ON) quei giorni della settimana in cui l'ingresso deve essere attivato.
+◊ Gruppo: Se necessario inserire il numero del gruppo ingressi al quale deve appartenere l’ingresso, tra 1 e 250.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+•
+DATA: Selezionare questa opzione quando l’ingresso verrà attivato in base ad una pianificazione giornaliera.
+Premere il pulsante “AVANZATE” per impostare:
+Gruppo
+1
+Inserire data
+Anno
+0
+Mese
+0
+Giorno
+0
+◊ Data - Anno: Premere il pulsante accanto al campo e inserire l'anno tramite tastiera. Confermare con il pulsante OK.
+◊ Data - Mese: Premere il pulsante accanto al campo e inserire il mese tramite tastiera. Confermare con il pulsante OK.
+◊ Data - Giorno: Premere il pulsante accanto al campo e inserire il giorno tramite tastiera. Confermare con il pulsante OK.
+◊ Gruppo: Se necessario inserire il numero del gruppo ingressi al quale deve appartenere l’ingresso, tra 1 e 250.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+55
+•
+AZIONE: Selezionare questa opzione quando l'ingresso è un’ “Azione” di sistema.
+Premere il pulsante accanto al campo “Funzioni” per selezionare il tipo di azione da associare all’ingresso, visualizzati di
+seguito:
+1
+Numero ingresso
+Nome
+TACITA BUZZER
+TACITAZIONE SIRENE
+Modalità
+Auto reset
+RESET
+Polarità
+NORMALE
+SIRENE ON
+Ritardo ingresso
+Tipo
+Funzioni
+0
+SIRENA ON (DI ZONA)
+Azione
+USCITA VVFF ATTIVATA
+TACITA BUZZER
+USCITA GUASTO ATTIVATA
+Avanzate
+USCITA ESTINZIONE ATTIVATA
+◊ TACITAZIONE BUZZER - Attivazione in caso di tacitazione del buzzer nel sistema.
+◊ TACITAZIONE SIRENE - Attivazione in caso di tacitazione delle sirene nel sistema.
+◊ RESET - Attivazione in caso di evento di Reset nel sistema.
+◊ SIRENE ON – Attivazione in caso di evento Sirene Attivate nel sistema.
+◊ USCITA VVFF ATTIVATA – Attivazione in caso di uscita monitorata di Trasmissione Allarme VVFF attivata.
+◊ USCITA GUASTO ATTIVATA - Attivazione in caso di uscita monitorata di Guasto attivata.
+◊ USCITA ESTINZIONE ATTIVATA - Attivazione in caso di uscita monitorata di Estinzione attivata.
+◊ SIRENA ON (DI ZONA) - Attivazione in caso di evento Sirene di Zona Attivate nel sistema.
+◊ MODALITA’ GIORNO – Attivazione in caso di Modalità Giorno impostata nel sistema.
+◊ MODALITA’ NOTTE - Attivazione in caso di Modalità Notte impostata nel sistema.
+Premere il pulsante “AVANZATE”, per inserire il numero di gruppo ingressi da associare all’ingresso (se necessario).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+56
+•
+GENERALE: Selezionare questa opzione quando l'ingresso verrà attivato da un evento “Generale” nel sistema.
+Premere il pulsante accanto al campo “Funzioni” e selezionare il tipo di evento da associare all’ingresso.
+1
+Numero ingresso
+Name
+INCENDIO GENERALE
+PREALLARME GENERALE
+Modalità
+Auto reset
+GUASTO GENERALE
+Polarità
+NORMALE
+GUASTO DI SISTEMA
+Ritardo ingresso
+0
+Tipo
+Generale
+Funzioni
+INCENDIO GENERALE
+Avanzate
+ESCLUSO
+TEST
+EVACUAZIONE GENERALE
+ALTERNANZA VOCE/SIRENE
+◊ INCENDIO GENERALE – Attivazione in caso di evento “Allarme Incendio” nel sistema.
+◊ PREALLARME GENERALE - Attivazione in caso di evento “Pre-allarme” nel sistema.
+◊ GUASTO GENERALE - Attivazione in caso di evento “Guasto generico” nel sistema.
+◊ GUASTO DI SISTEMA - Attivazione in caso di evento “Guasto di Sistema”.
+◊ ESCLUSIONI - Attivazione in caso di un’esclusione (dispositivo loop, zone, uscite, buzzer, ecc..) nel sistema.
+◊ TEST – Attivazione in caso di una procedura di “Test” in corso nel sistema.
+◊ EVACUAZIONE GENERALE – Attivazione in caso di evento “Evacuazione” nel sistema.
+◊ ALTERNANZA VOCE / SIRENE - Attivazione in caso di partenza del ciclo alternato “voce / sirene” (i parametri del tempo
+di ON e OFF si trovano nel sotto-menu “avanzate” del menu “Modalità sirene”).
+Premere il pulsante “AVANZATE”, per inserire il numero di gruppo ingressi da associare all’ingresso (se necessario).
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+•
+RETE: Selezionare questa opzione quando l'ingresso è generato da un evento / dispositivo loop proveniente da un’altra
+centrale connessa nella sua rete (RS485 / LAN).
+1
+Numero ingresso
+Gruppo
+1
+Nome
+Modalità
+Auto reset
+Polarità
+NORMALE
+Ritardo ingresso
+0
+Tipo
+Rete
+Parametri ingressi di rete
+Numero uscita
+1
+Numero centrale /P. Ripetitore
+1
+Avanzate
+Premere il pulsante “AVANZATE” per impostare:
+◊ Numero Uscita: Inserire il numero dell’uscita, compreso tra 1 e 250.
+◊ Numero Centrale: Inserire il numero della centrale dalla quale proviene l’uscita, compreso tra 1 e 64.
+◊ Gruppo: Se necessario inserire il numero del gruppo ingressi al quale deve appartenere l’ingresso, tra 1 e 250.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+57
+•
+GRUPPO ZONE: Selezionare questa opzione quando l'ingresso è generato da una delle zone in allarme incendio o in stato
+di guasto, appartenente a quel determinato gruppo di zone.
+Premere il pulsante accanto al campo “Funzioni” per selezionare il tipo di evento del gruppo di zone:
+Zona Incendio: L’ingresso è generato dallo stato di Allarme Incendio di una Zona appartenente a quel gruppo zone.
+Zona Guasta: L’ingresso è generato dallo stato di Guasto di una Zona appartenente a quel gruppo zone.
+1
+Numero ingresso
+Nome
+ZONA INCENDIO
+ZONA GUASTA
+Modalità
+Auto reset
+Polarità
+NORMALE
+Ritardo ingresso
+0
+Tipo
+Gruppo zone
+Funzioni
+ZONA INCENDIO
+Avanzate
+Premere il pulsante “AVANZATE” per impostare:
+◊ Numero Gruppo Zone: Inserire il numero del gruppo di zona che, in condizione di allarme o guasto, genera l’ingresso,
+compreso tra 1 e 48.
+◊ Funzione: Impostare la logica di funzionamento (OR / AND).
+◊ Gruppo: Se necessario inserire il numero del gruppo ingressi al quale deve appartenere l’ingresso, tra 1 e 250.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+•
+GRUPPO SENSORI: Selezionare questa opzione quando l’ingresso è generato da un sensore (41RFU100, 41RML100,
+41RCS100) in allarme, appartenente a quel determinato gruppo di sensori.
+1
+Numero ingresso
+Gruppo
+1
+Nome
+Modalità
+Auto reset
+Polarità
+NORMALE
+Ritardo ingresso
+Tipo
+0
+Parametri ingresso gruppo sensori
+Gruppo sensori
+1
+Funzioni
+OR
+GRUPPO SENSORI
+Avanzate
+Premere il pulsante “AVANZATE” per impostare:
+◊ Numero Gruppo Sensori: Inserire il numero del gruppo sensori che, in stato di allarme genera l’ingresso, compreso tra 1 e
+100.
+◊ Funzione: Impostare la logica di funzionamento (OR / AND).
+◊ Gruppo: Se necessario inserire il numero del gruppo ingressi al quale deve appartenere l’ingresso, tra 1 e 250.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva” nella schermata principale dell’ingresso.
+58
+4.5.2 GRUPPO DI INGRESSI - Visualizzazione e modifica
+In questo menu si possono modificare e visualizzare rapidamente gli ingressi appartenenti ad un gruppo e nel caso modificarne
+i parametri.
+Per entrare nel menu “Gruppo Ingressi” premere in sequenza:
+SISTEMA – PROGRAMMAZIONE – INGRESSI – GRUPPI
+1
+Gruppo
+Ingressi
+OR
+Ingresso logico
+Gruppi
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+Nella schermata di un gruppo vengono visualizzati tutti gli ingressi (scorrere con le frecce su e giù per visualizzare i successivi),
+rappresentati da piccoli pulsanti quadrati, se l’ingresso appartiene già a quel gruppo il pulsante è di colore verde altrimenti di
+colore grigio.
+Mediante i pulsanti + & - si possono scorrere e visualizzare tutti i gruppi ingresso (max. 250).
+- Logica di funzionamento:
+Utilizzare il pulsante accanto al campo “Ingresso Logico” per definire la logica di funzionamento degli ingressi inseriti in quel
+determinato gruppo:
+- funzione OR: almeno un ingresso appartenente al gruppo deve esser “VERO” per attivare l’uscita di riferimento;
+- funzione AND: tutti gli ingressi appartenenti al gruppo devono esser “VERI” per attivare l’uscita di riferimento.
+Per salvare qualsiasi nuovo parametro premere il pulsante “Salva”.
+4.6 Uscite Logiche
+Per accedere al menu Uscite selezionare in sequenza:
+SISTEMA – PROGRAMMAZIONE – USCITE
+Numero uscita
+Tipo
+1
+Nessuno
+Avanzate
+Schermata iniziale di un’uscita logica non programmata. Il pulsante attivo riporta la voce NESSUNO.
+59
+Premendo il pulsante “NESSUNO” si accede al sottomenu per la selezione del tipo di uscita.
+NESSUNO
+Periferica
+Azione
+Evento
+Loop
+Rete
+Descrizione delle tipologie di Uscite disponibili:
+◊ NESSUNO: L’uscita non è utilizzata.
+◊ PERIFERICA: Selezionare questa opzione quando l'uscita da attivare è un relè del dispositivo periferico a bordo centrale.
+◊ LOOP: Selezionare questa opzione quando l'uscita da attivare appartiene ad un modulo ad uscite (moduli 41IOM004,
+41IOM022, 41IOM122, 41IOM000, 41IOM000/240).
+◊ RETE: Selezionare questa opzione quando l’uscita verrà attivata da un evento / dispositivo appartenente ad un’altra
+centrale connessa nella sua rete (RS485 / LAN).
+◊ AZIONE: Selezionare questa opzione quando l’uscita verrà attivata da un “azione avvenuta”.
+◊ EVENTO: Selezionare questa opzione quando l’uscita verrà attivata da un “evento generale”.
+Descrizione dei pulsanti del menu Uscite:
+Una volta selezionato il tipo di Uscita desiderata, bisogna impostare i parametri inerenti a quella determinata uscita, di seguito
+viene riportata la schermata generale con i parametri comuni a tutte le uscite:
+1
+Numero uscita
+Name
+Modalità
+Auto reset
+Polarità uscita
+NORMALE
+Ritardo
+0
+Uscita di tipo impulsiva
+Tipo
+CONTINUA
+Loop
+Modifica mappa uscite
+Avanzate
+•
+Numero Uscita: utilizzare i pulsanti + & - o immettere direttamente il numero, per selezionare un’uscita compresa tra 1 e
+250. Il contenuto della schermata può variare in base alle impostazioni del Tipo di uscita selezionata. Per impostazione
+predefinita, tutti le uscite sono impostate come tipo NESSUNO.
+•
+Nome: campo per inserire un nome o una descrizione dell’uscita che si sta programmando.
+•
+Modalità: campo per inserire il tipo di comportamento dell’uscita:
+◊ Auto Reset – lo stato dell’uscita rimane attivo sino alla disattivazione dell’evento che la genera;
+◊ Reset Manuale – l’uscita si disattiva solo dopo un evento di Reset;
+•
+Polarità: campo per inserire la polarità dell’uscita:
+◊ Normale – l’uscita è Attiva quando il risultato della funzione logica è TRUE (VERO)
+◊ Invertita – l’uscita è Attiva quando il risultato della funzione logica è FALSE (FALSO)
+•
+60
+Ritardo Uscita: è possibile impostare un ritardo all’attivazione dell’uscita, compreso tra 0-600 secondi
+•
+Tipo uscita: pulsante per selezionare il tipo di Uscita tra:
+◊ Continua - il segnale dall’uscita è costante.
+◊ Impulsiva - il segnale dall’uscita è impulsivo (3 sec. Acceso/ 3 sec. Spento).
+◊ Un impulso - il segnale dall’uscita è a impulso singolo (5 sec).
+•
+Tipo / Funzioni: pulsante per selezionare il tipo di Uscita come precedentemente descritto.
+•
+Modifica Mappa Uscite: schermata per inserire gli ingressi nello schema logico dell’uscita.
+•
+Avanzate: schermata per compilare i parametri inerenti ad ogni tipo di uscita.

@@ -1,0 +1,188 @@
+# CENTRALE COMELIT LOGIFIRE 41CPE118 — MESSAGGI DI ALLARME E GUASTO
+## Guida operativa per tecnici sul campo
+Fonte: Manuale tecnico mt-41cpe118-it-2ed-2g40003016 — Allegato A + Capitolo 6
+
+---
+
+## LIVELLI DI ACCESSO
+
+| Livello | Chi | Password | Operazioni consentite |
+|---|---|---|---|
+| 1 | Utente generico | Nessuna | Tacita buzzer, Azzera ritardo, Visualizza log |
+| 2 | Utente autorizzato | Richiesta | Tacita sirene, Reset, Evacuazione, Manutenzione base |
+| 3 | Installatore | Richiesta | Programmazione completa, esclusioni, test |
+
+---
+
+## MESSAGGI SUL DISPLAY — SFONDO ROSSO (ALLARME)
+
+| Messaggio | Causa | Azione |
+|---|---|---|
+| Allarme | Allarme Incendio generale | Verifica immediata — chiamare 115 se reale |
+| Pre-Allarme | Allarme da zona impostata "2 Dispositivi" o "Doppio allarme" | Verifica zona, può precedere allarme generale |
+| Evacuare | Pulsante manuale attivato o pulsante "Evacuazione" centrale | Evacuazione in corso |
+| Allarme Uscita | Allarme da un'uscita | Identificare uscita interessata |
+| ALLARME GAS! | Allarme gas da dispositivo 41IOM010 | Evacuare, ventilare, niente interruttori |
+| ALLARME TECNICO! | Allarme tecnico da dispositivo 41IOM010 | Verifica dispositivo e impianto collegato |
+
+---
+
+## MESSAGGI SUL DISPLAY — SFONDO GIALLO (GUASTO / ESCLUSIONI)
+
+### Guasti dispositivi Loop:
+
+| Messaggio | Causa | Azione |
+|---|---|---|
+| Dispositivo Loop Guasto | Dispositivo non risponde — rimosso o guasto | Verificare fisicamente il dispositivo in campo |
+| Tipo di dispositivo Loop Errato | All'indirizzo trovato tipo diverso da quello atteso | Verificare indirizzamento o riconfigurare |
+| Indirizzo Duplicato | Due dispositivi con stesso indirizzo sul Loop | Trovare il duplicato e re-indirizzare uno |
+| Ingresso Dispositivo Loop guasto | Guasto verso l'ingresso di un dispositivo Loop | Verifica cablaggio e dispositivo |
+| Uscita Dispositivo Loop Guasta | Guasto verso l'uscita di un dispositivo Loop | Verifica cablaggio e dispositivo |
+| Sirena su Loop Guasta | Corto circuito o apertura linea sirena | Verifica cablaggio sirena interessata |
+| Guasto camera sensore | Guasto fotodiodo della camera del sensore | Sostituire il rivelatore |
+| Pulire Dispositivo | Fotodiodo sporco nel sensore ottico | Pulire o sostituire il rivelatore |
+| Allarme Deriva | Soglia di compensazione raggiunta nel sensore | Sostituire il rivelatore |
+| Blocco del Segnale | Blocco segnale nella barriera lineare | Verifica allineamento e pulizia della barriera |
+| Segnale Alto | Segnale troppo alto dalla barriera lineare | Ridurre sensibilità o verificare allineamento |
+
+### Guasti uscite di centrale:
+
+| Messaggio | Causa | Azione |
+|---|---|---|
+| Guasto - Uscita Guasto | Corto circuito o apertura linea uscita FAULT R | Verifica cablaggio uscita guasto |
+| Guasto - Uscita VVFF | Corto circuito o apertura linea uscita FIRE R | Verifica cablaggio trasmissione allarme VVFF |
+| Guasto - Uscita Estinzione | Corto circuito o apertura linea uscita FIRE P | Verifica cablaggio impianto estinzione |
+| Guasto Sirene | Corto circuito o apertura linea uscita SND | Verifica cablaggio sirene di centrale |
+| AUX 24V Guasto | Corto circuito uscita ausiliaria 24V | Verifica dispositivi alimentati dall'AUX |
+| AUX 12V Guasto | Corto circuito uscita ausiliaria 12V | Verifica dispositivi alimentati dall'AUX 12V |
+
+### Guasti alimentazione:
+
+| Messaggio | Causa | Azione |
+|---|---|---|
+| Mancanza Tensione di Rete | Perdita alimentazione principale 230V | Verificare interruttore, contatore, cablaggi |
+| Batteria Bassa | Batteria centrale scarica | Caricare / sostituire batteria |
+| Guasto carica batterie | Guasto circuito ricarica | Intervento tecnico specializzato |
+| Batteria Assente/Guasta | Batteria mancante o guasta | Installare o sostituire batteria 12V/18Ah SLA |
+| Resistenza Batteria Alta | Ri > 0,3 Ohm — batteria da sostituire subito | Sostituire batteria immediatamente |
+| Guasto Alimentazione Esterna | Batteria scarica, perdita batteria, guasto caricabatterie, perdita rete o dispersione verso terra | Diagnostica completa alimentazione |
+| Alimentazione Esterna Assente | Alimentazione esterna assente | Verificare alimentatore esterno |
+
+### Guasti di Loop e rete:
+
+| Messaggio | Causa | Azione |
+|---|---|---|
+| Loop in Corto | Cortocircuito nel loop | Trovare il tratto in corto con l'aiuto degli isolatori attivi |
+| Loop Aperto | Loop interrotto | Trovare l'interruzione del cavo |
+| Guasto di Terra | Dispersione verso terra < 10k Ohm | Trovare il punto di dispersione |
+| Guasto rete | Guasto rete RS485 o LAN | Verifica connessioni di rete tra centrali |
+| Guasto Centrale | Collegamento interrotto con altra centrale in rete | Verifica connessione fisica e IP |
+| Indirizzo IP Duplicato | Due centrali con stesso IP in rete | Modificare IP di una centrale |
+| Numero Centrale Duplicato | Due centrali con stesso numero in rete | Modificare numero di una centrale |
+| Dispositivo/i non indirizzato | Dispositivi senza indirizzo sul Loop | Indirizzare i dispositivi |
+| Guasto Dispositivo Periferico | Dispositivo periferico non risponde | Verificare il dispositivo |
+| Tipo di Dispositivo Periferico Errato | Tipo diverso da quello atteso | Verificare o riconfigurare |
+| Trovati Nuovi Dispositivi su Loop | Nuovi dispositivi rilevati | Configurare i nuovi dispositivi |
+| Nuovo Dispositivo Periferico trovato | Nuove periferiche rilevate | Configurare le nuove periferiche |
+
+### Esclusioni attive:
+
+| Messaggio | Causa |
+|---|---|
+| Dispositivo Loop Escluso | Un dispositivo Loop è stato escluso manualmente |
+| Zone Escluse | La zona è stata esclusa |
+| Zone in Test | La zona è in modalità test |
+| Sirene Escluse | Uscita sirene esclusa manualmente |
+| Uscita VVFF esclusa | Uscita trasmissione allarme esclusa |
+| Uscita Estinzione esclusa | Uscita estinzione esclusa |
+| Uscita Guasto esclusa | Uscita guasto esclusa |
+| Guasto di Terra ESCLUSO | Segnalazione guasto terra esclusa da menu |
+| Esclusione Controllo Resistenza batteria alta | Segnalazione resistenza batteria esclusa |
+| Esclusione Buzzer Interno | Buzzer interno escluso |
+
+### Errori di sistema:
+
+| Messaggio | Causa | Azione |
+|---|---|---|
+| Errore Ram | Errore memoria RAM | Contattare assistenza Comelit |
+| Errore Flash | Errore memoria permanente | Contattare assistenza Comelit |
+| Codice Errore Sconosciuto | Codice messaggio guasto sconosciuto | Annotare e contattare assistenza |
+
+---
+
+## MESSAGGI INFORMATIVI (SFONDO GRIGIO)
+
+| Messaggio | Descrizione |
+|---|---|
+| Reset | Reset della centrale effettuato |
+| Tacita Allarme | Sirene tacitate |
+| Test Allarme | Allarme da sensore in zona modalità Test |
+| Uscita attivata | Un'uscita è stata attivata |
+| Uscita VVFF Attiva | Uscita trasmissione allarme VVFF attivata |
+| Uscita Estinzione Attiva | Uscita estinzione attivata |
+| Sirene Attivate | Uscita sirene attivata |
+| Login/Logout utente | Accesso/uscita livello utente |
+| Login/Logout installatore | Accesso/uscita livello installatore |
+
+---
+
+## ICONE DI STATO SUL DISPLAY
+
+### Uscita Sirene:
+- Sirene attive (icona attivazione)
+- Sirena su Loop o SND in guasto
+- Sirene a riposo (normale)
+- Sirene disabilitate (escluse)
+
+### Uscita Trasmissione Allarme VVFF (FIRE R):
+- Uscita attiva
+- Uscita in guasto
+- Uscita a riposo
+- Uscita disabilitata
+
+### Uscita Estinzione (FIRE P):
+- Uscita attiva
+- Uscita in guasto
+- Uscita a riposo
+- Uscita disabilitata
+
+### Modalità centrale:
+- Caricamento — avvio sistema
+- Memorizzazione — salvataggio configurazione
+- Modalità giorno — sensibilità ridotta
+- Modalità notte — sensibilità aumentata
+- FATAL error — centrale non operativa, intervento immediato
+
+---
+
+## AZIONI OPERATIVE RAPIDE (LIVELLO 2+)
+
+| Azione | Quando usarla |
+|---|---|
+| TACITA BUZZER | Silenziare buzzer interno durante verifica |
+| AZZERA RITARDO | Annullare ritardi attivi (T1/T2) |
+| TACITA SIRENE | Bloccare sirene dopo evacuazione o falso allarme |
+| RESET | Ripristinare stato normale dopo risoluzione guasto |
+| EVACUAZIONE | Attivare evacuazione manuale d'emergenza |
+
+---
+
+## DIAGNOSTICA RAPIDA SUL CAMPO
+
+### Cortocircuito su Loop:
+1. Menu → Manutenzione → Visualizza Isolatori Attivi
+2. Identificare quali isolatori si sono attivati
+3. Il guasto è nel tratto di loop TRA i due isolatori attivi
+4. Scollegare i dispositivi del tratto uno per uno finché il guasto scompare
+5. Sostituire o riparare il dispositivo/cavo difettoso
+
+### Dispositivo non risponde:
+1. Verificare fisicamente che il dispositivo sia presente e integro
+2. Verificare la connessione al loop (cablaggio)
+3. Verificare l'indirizzo con il programmatore 41SPG000
+4. Sostituire il dispositivo se il problema persiste
+
+### Batteria da sostituire:
+- Tipo: SLA 12V/18Ah — connessione con terminale ad occhiello Ø5mm (M5)
+- PRIMA di sostituire: avvisare il cliente, la centrale andrà momentaneamente su sola rete
+- Procedura: disinserire rete 230V → scollegare terminali batteria + poi - → inserire nuova batteria - poi + → reinserire rete → verificare assenza messaggi di guasto

@@ -1,0 +1,350 @@
+# CENTRALE COMELIT LOGIFIRE 41CPE118 — INSTALLAZIONE E COMPONENTI
+## Capitoli 2 e 3 del manuale tecnico
+Fonte: Manuale tecnico mt-41cpe118-it-2ed-2g40003016
+
+un totale di 8 Loop. A ciascun loop possono essere collegati fino a 250 dispostivi indirizzati (rivelatori, pulsanti, moduli I/O,
+sirene ecc.). E’ caratterizzato da un robusto contenitore metallico grigio delle stesse dimensioni della centrale e degli altri box
+modulari Comelit, così da garantire la modularità e affiancamento dei box in fase di montaggio.
+Dispone di un alimentatore da 14A con uscita 12V per batteria (12V / 18Ah).
+Certificazione secondo EN54-2, EN54-4 e conforme a EN54-13..
+Montaggio e connessione del cavo di comunicazione
+L’affiancamento ed il montaggio in strutture modulari avviene mediante l’utilizzo del kit di viti fornite in dotazione.
+Per la connessione del cavo di comunicazione tra il box 41CPE104 e la centrale antincendio 41CPE118 è sufficiente connettere
+il cavo Flat posizionato all’interno del box supplementare al terminale dedicato all’interno della centrale 41CPE118.
+Caratteristiche tecniche / elettriche 41CPE104
+•
+Loop controller – da 1 a 4 (1 di default)
+•
+Fino a 250 dispositivi (moduli e/o sensori, indipendentemente dal tipo) per ogni Loop 41ECL120
+•
+Corrente max. per ogni scheda Loop – 700mA
+•
+Protocollo di comunicazione per espansioni Loop 41ECL120- Comelit
+•
+Uscite monitorate - 1 (SND) per connessione sirene = 1A @ 24VDC
+•
+Uscita AUX (morsetti +24V e GND) - 1 x 24VDC@0.5A
+•
+Certificazione secondo EN54-2, EN54-4 e conforme a EN54-13.
+•
+Alimentazione principale - 110÷230 VAC
+•
+Frequenza - 50/60 Hz
+•
+Batteria – 1 x 12V / 18Ah di tipo SLA (Sealed lead-acid)
+•
+Tipo di connessione con la batteria: con terminale ad occhiello, Ø5mm (M5)
+•
+EFlt - Jumper per abilitare/disabilitare l’indicazione del guasto di terra (Jumper chiuso, segnalazione guasto di terra abilitato)
+•
+Dimensioni (LxHxP) - 430x330x150 mm
+•
+Materiale – Metallico
+•
+Grado di protezione - IP 30
+•
+Colore - Grigio RAL 7045
+•
+Peso – 7 Kg
+•
+Temperatura di funzionamento – da -10 a +50°C
+•
+Umidità relativa - fino a 95% (senza condensa)
+•
+Temperatura di stoccaggio - -10˚C a +60˚C
+•
+Predisposto per montaggio in strutture modulari
+14
+3.7 Alimentatore - centrale 41CPE118
+LED alimentazione 230 V
+LED comunicazione con la centrale
+Fusibile 4A
+Descrizione morsettiera alimentatore
+FUNZIONE
+-
+DESCRIZIONE
+Alimentazione schede
++
++13.8V
+Ingresso alimentatore supplementare
+IN
+Ingresso per il collegamento dell’uscita (Fault Out) dell’alimentatore supplementare
+OUT
+Uscita errore, si attiva quando emerge qualche problema nella tensione di alimentazione.
+Si collega all’ingresso (Fault In) dell’alimentatore supplementare
+GND
+Ingresso per collegamento a massa dell’alimentatore supplementare
+Prima di connettere l’alimentazione principale, verificare il corretto collegamento di ciascun Loop, sirena o di qualsiasi altro
+ingresso / uscita, ed il collegamento del cavo di messa a terra.
+Collegare il cavo rosso al polo positivo della batteria, e il cavo nero al polo negativo.
+I due cavi vengono connessi alla batteria tramite un terminale ad occhiello Ø5mm.
+Posizionare il sensore di temperatura dietro o sotto la batteria, per garantire una corretta misurazione del valore di temperatura.
+ATTENZIONE: Nel collegare la batteria all’alimentatore, vanno presi in considerazione alcuni particolari.
+•
+Utilizzare solo batterie che hanno le caratteristiche elettriche e le dimensioni indicate dal produttore.
+•
+Prima del collegamento verso l’alimentatore, verificare la polarità della batteria.
+•
+La batteria non può alimentare la centrale prima che sia inserita l’alimentazione di rete.
+•
+La ricarica della batteria avviene a corrente massima di I = 2A e tensione U ≤ 13,8V.
+15
+3.7.1 Alimentatore supplementare – 41ALM172 (opzionale)
+L’unità 41ALM172 è un alimentatore progettato per fornire alimentazione ausiliaria alla centrale antincendio indirizzata
+41CPE118. L’alimentatore è inserito in un contenitore metallico adatto alla realizzazione di una struttura modulare con la
+centrale indirizzata e con un secondo alimentatore. L’accesso alla scheda principale e ai collegamenti dei cavi è assicurato da
+una chiave speciale in dotazione. Lo stato dell’unità 41ALM172 viene visualizzato tramite apposite indicazioni LED sulla scheda
+PCB. È possibile monitorare continuamente lo stato dell’alimentatore abilitando l’opzione “Controllo alimentatore esterno” dal
+menu della centrale 41CPE118. Per accedere al menu di questa funzione eseguire i passaggi:
+SISTEMA – PROGRAMMAZIONE – DISPOSITIVI – PERIFERICA ed attivare CONTROLLO ALIMENTATORE ESTERNO nella
+centrale antincendio.
+Quando l’opzione è abilitata la centrale visualizzerà un messaggio di errore “Guasto all’alimentazione esterna, Dispositivo
+periferico 1-PSU” in caso di problemi con l’alimentatore. Il relativo guasto dell’alimentatore viene visualizzato con un LED
+lampeggiante sulla scheda PCB.
+In modalità di funzionamento normale solo il LED verde “OK” lampeggia e tutti gli altri LED sono spenti. In caso di perdita
+dell’alimentazione principale (230 V~) il LED giallo “FLT” di guasto inizia a lampeggiare ed il LED verde “OK” è spento. In caso
+di problemi con la batteria 1 e/o 2, i LED gialli delle sezioni Batt1 e/o Batt2 lampeggiano.
+Per una descrizione dettagliata di tutti gli indicatori LED consultare il manuale tecnico di 41ALM172.
+Collegamento
+Di seguito viene mostrato lo schema di collegamento di una centrale 41CPE118 con 2 alimentatori supplementari 41ALM172:
+RED
+BLACK
+41ALM172
+Main board
+(first)
+Lorem ipsum
+41ALM172
+Main board
+(second)
+NOTA: Sui morsetti FLT, le frecce rivolte verso l'interno della scheda principale di 41ALM172 indicano i morsetti per i segnali di
+ingresso alla scheda, mentre le frecce rivolte verso l'esterno indicano i morsetti per i segnali di uscita dalla scheda.
+ATTENZIONE:
+16
+•
+Spegnere l’alimentazione principale e la batteria della centrale 41CPE118 prima di installare
+l’alimentatore 41ALM172!
+•
+Utilizzare solo i cavi di collegamento forniti con l’apparecchio: cavi di colore rosso e di colore nero per il
+collegamento ai morsetti JP4; cavi di colore bianco e di colore grigio per il collegamento ai morsetti FLT!
+Non accorciare né allungare questi cavi!
+•
+Effettuare tutti i cablaggi rispettando la polarità dei collegamenti seguendo gli schemi di collegamento
+mostrati. Se dopo aver acceso l’alimentatore 41ALM172, il LED “COLLEGAMENTO ERRATO” è acceso,
+spegnere immediatamente l’alimentazione elettrica e controllare il collegamento tra l’alimentatore della
+centrale 41CPE118 e i morsetti JP4 di 41ALM172!
+•
+Se il LED “Resistenza elevata” per la Batteria 1 o 2 lampeggia, è vivamente consigliato di sostituire
+immediatamente le batterie!
+Caratteristiche tecniche / elettriche 41ALM172
+•
+Alimentazione principale - 230V~ +10%/ -15%, 0.6A, fusibile 4A
+•
+Frequenza - 50/60 Hz
+•
+Uscita VDC:
+◊ Voltaggio - 9.9-14.2Vdc
+◊ Massima corrente - 7A@1 batteria, 14A@2 batterie
+•
+Resistenza interna della batteria Ri - < 0.3Ohm
+•
+Capacità massima batteria - 2x12V/18Ah
+•
+Uscita caricatore - 13.65Vdc ±1%@20°C, max. 2A
+•
+Dimensioni (LxHxP) - 430x330x150 mm
+•
+Materiale – Metallico
+•
+Grado di protezione - IP 30
+•
+Colore - Grigio RAL 7045
+•
+Peso – 6 Kg (senza batterie)
+•
+Temperatura di funzionamento – da -5 a +40°C
+•
+Umidità relativa - fino a 95% (senza condensa)
+•
+Temperatura di stoccaggio – -10 a +60°C
+•
+Montaggio ad incasso con telaio 48BIA100 (opzionale)
+•
+Predisposto per montaggio in strutture modulari
+•
+Standard di certificazione – EN54-4, conforme a EN54-13.
+17
+3.8 Collegamento stampante termica - 41PRN100 (opzionale)
+Stampante termica per centrale indirizzata 41CPE118 caratterizzata da un robusto contenitore metallico grigio delle stesse
+dimensioni della centrale e degli altri box modulari Comelit, così da garantire la modularità e affiancamento dei box in fase di
+montaggio. Permette all’operatore di stampare eventi come: allarmi, guasti, attivazioni e allarmi tecnici, registrati nella memoria
+della centrale. La capacità della memoria è di 10240 eventi, i quali vengono salvati e stampati con la data e l’ora in cui l’evento
+si è verificato.
+Sulla portella frontale sono presenti 2 LED per la visualizzazione dello stato della stampante. Il collegamento con la centrale
+41CPE118 avviene mediante interfaccia seriale RS232, il cavo di collegamento è fornito a corredo della stampante e deve
+essere connesso ALLA PORTA RS232 della centrale 41CPE118.
+Per far si che la stampante 41PRN100 comunichi con la centrale 41CPE118 è necessario accedere al menu della centrale
+antincendio, esser loggati come utente di livello 3 ed eseguire in sequenza i seguenti passaggi:
+SISTEMA – PROGRAMMAZIONE – CENTRALE – STAMPANTE
+All’interno del menu stampanti selezionare “Stampante 41PRN100” e salvare i cambiamenti.
+Testare il corretto funzionamento della stampante.
+La centrale 41CPE118 supporta il funzionamento con stampanti esterne di tipo Canon 9, modelli Kafka e Datecs.
+Per collegare la centrale alla stampante è necessario preparare un cavo speciale – collegare due connettori maschi DB9-DB9
+(Datecs) e DB9-DIN5 (Kafka).
+Prima di avviare la stampa, verificare i collegamenti tra stampante e centrale antincendio.
+Al pannello
+Alla stampante
+del tipo Datecs
+Al pannello
+Schemi di collegamento di una stampante termica esterna.
+Caratteristiche tecniche / elettriche 41PRN100
+•
+Alimentazione principale - 110÷230 VAC
+•
+Frequenza - 50/60 Hz
+•
+Dimensioni (LxHxP) - 430x330x150 mm
+•
+Materiale – Metallico
+•
+Grado di protezione - IP 30
+•
+Colore - Grigio RAL 7045
+•
+Peso – 5,5 Kg
+•
+Temperatura di funzionamento – da -10 a +50°C
+•
+Umidità relativa - fino a 95% (senza condensa)
+•
+Temperatura di stoccaggio - -10˚C a +60˚C
+•
+Montaggio ad incasso con telaio 48BIA100 (opzionale)
+•
+Predisposto per montaggio in strutture modulari
+18
+Alla stampante
+del tipo Kafka
+3.9 COLLEGAMENTO E PROGRAMMAZIONE MODULO RS485 - 41ECB000 (opzionale)
+La centrale di allarme antincendio indirizzata 41CPE118 è progettata per il collegamento in una rete di comunicazione
+ridondante seriale fra più centrali 41CPE118, centrali 2 Loop Art. 41CPE112 e pannelli ripetitori 41CPR100, fino un massimo
+di 64 centrali/pannelli in rete, assicurando una linea di connessione di riserva in caso di singolo guasto del supporto fisico. La
+rete ridondante si basa sull’interfaccia di comunicazione RS485, dove la massima distanza fra 2 schede 41ECB000 (o pannello
+ripetitore) non deve superare i 1000 m.
+Connettere il modulo in centrale al terminale dedicato.
+ATTENZIONE: Il modulo di rete viene aggiunto alla configurazione della centrale e collegato alla scheda di
+interfaccia vocale solamente CON L’ALIMENTAZIONE PRINCIPALE E DI BACKUP DISINSERITA!
+Per programmare il modulo 41ECB000 è necessario accedere al menu della centrale 41CPE118 ed essere loggato come utente
+di livello 3 ed eseguire i seguenti passaggi:
+SISTEMA – PROGRAMMAZIONE – CENTRALE – RETE – IMPOSTAZIONI DI RETE
+All’interno del menu impostazioni di rete impostare:
+STATO RETE = ATTIVATA
+TIPO DI RETE = RS485
+NUMERO CENTRALE = X (impostare un numero diverso per ogni apparato in rete)
+Salvare i cambiamenti.
+Per attivare la ridondanza della scheda, sempre dal menu IMPOSTAZIONI DI RETE premere AVANZATE e impostare
+RIDONDANZA = ON, salvare i cambiamenti.
+N.B.: Ricordarsi di assegnare ad ogni centrale/pannello ripetitore un numero diverso, in modo tale di non creare
+indirizzi di centrale duplicati.
+Per memorizzare ed aggiungere alla programmazione tutte le centrali in link alla rete RS485, eseguire i seguenti passaggi:
+SISTEMA – PROGRAMMAZIONE – CENTRALE – RETE – CENTRALI
+In questo menu utilizzare le frecce per scorrere le centrali presenti nel sistema, sulla centrale cui si sta lavorando si potrà
+visualizzare solo il suo codice IP e lo stato (presente, guasto..), sulle altre centrali in rete si attiverà il pulsate AGGIUNGI,
+premendolo la seconda centrale sarà aggiunta alla configurazione in rete.
+A questo punto selezionare quello che la seconda centrale dovrà inviare o ricevere dalle altre centrali connesse:
+RICEZIONE MESSAGGI: Attivandolo la centrale riceverà tutti i messaggi in arrivo dalle altre centrali in link (messaggi tecnici, di
+guasto, di allarme...)
+RICEZIONE COMANDI: Attivandolo la centrale riceverà tutti i comandi in arrivo dalle altre centrali in link (evacuazione,
+attivazione sirene, comando di tacitazione buzzer/sirene).
+INVIO COMANDI: Attivandolo la centrale sarà in grado di inviare i comandi verso le altre centrali in link (se le stesse hanno
+abilitato la ricezione da altre centrali connesse).
+Sempre nella stessa sezione del menu CENTRALI, premendo il pulsante AVANZATE si potranno attivare o disattivare alcune
+funzioni di ripetizione:
+RIPETIZIONE SIRENE: Attivandolo ripete verso le altre centrali l’attivazione delle sirene e dell’uscita SND in centrale.
+RIPETIZIONE VVFF: Attivandolo ripete verso le altre centrali l’attivazione dell’uscita monitorata VVFF (FIRE R trasmissione
+allarme incendio).
+RIPETIZIONE GUASTO: Attivandolo ripete verso le altre centrali le segnalazioni di Guasto.
+RIPETIZIONE ESTINZIONE: Attivandolo ripete verso le altre centrali l’attivazione dell’uscita monitorata dedicata all’estinzione
+(FIRE P).
+19
+MODULO
+INTERFACCIA FIRE / EVAC
+41ECB000
+41CPE118
+CENTRALE ANTINCENDIO
+41CPE112
+CENTRALE ANTINCENDIO
+MODULO 1
+BUS RIDONDANTE
+MODULO 2
+BUS RIDONDANTE
+41CPR100
+PANNELLO RIPETITORE
+FINO A 64 CENTRALI IN UNA RETE RIDONDANTE
+41CPE118
+41CPE118
+41CPE112
+41CPR100
+41ECB000
+41ECB000
+41ECB000
+Alimentatore
+esterno
+24VDC
+3.10 COLLEGAMENTO DELLA RETE LAN
+È possibile collegare fino ad un massimo di 64 centrali antincendio 41CPE118 in una rete LAN connesse ad uno switch,
+sfruttando il protocollo TCP / IP e mediante un PC supervisore, si può monitorare in tempo reale lo stato delle singole centrali
+di rivelazione incendio ed eseguire comandi verso di essa.
+Per utilizzare il modulo LAN l’installatore deve impostare il tipo di Rete della centrale come: “LAN”, vedi menu impostazioni di
+rete.
+La porta Ethernet dove connettere il cavo LAN è posizionata sulla scheda madre all’interno della portella frontale della centrale.
+20
+3.11 PANNELLO RIPETITORE 41CPR100 (opzionale)
+Il pannello ripetitore 41CPR100 consente di ricevere tutte le segnalazioni provenienti dall’impianto ed effettuare tutti i comandi
+anche lontano dalla centrale qualora essa sia fisicamente poco accessibile da parte degli operatori. Dispone di un Display
+Touch a colori 7" resistivo, che replica la medesima interfaccia utente della centrale 41CPE118. Numero massimo di centrali/
+pannelli collegabili su rete RS485 o LAN TCP/IP, N°64. Comandi diretti per Tacitazione buzzer, Tacitazione sirene, Reset,
+Evacuazione, Test Segnalazioni.
+1
+2
+3
+1. Morsettiera 41CPR100:
+◊ IN – Collegamento RS485 di ingresso per la connessione con la/e centrali;
+◊ OUT - Collegamento RS485 di uscita per la connessione con la/e centrali;
+◊ Power - Alimentazione del pannello ripetitore - 24VDC;
+2. ETH – Porta ethernet per la connessione in LAN TCP/IP con la/e centrali;
+3. Micro USB - Micro USB per programmazione e aggiornamento firmware.
+ATTENZIONE: Per la connessione in rete (RS485 / LAN) con le centrali antincendio 41CPE118 o 41CPE112,
+fare riferimento ai paragrafi precedenti.
+KIT DI MONTAGGIO 41CPR100
+Il pannello ripetitore 41CPR100 viene fornito di serie con il kit per il montaggio a parete. Inoltre, mediante i kit opzionali di
+montaggio il pannello ripetitore può esser montato ad incasso o come base da tavolo. Di seguito i riferimenti per i kit opzionali:
+•
+41KPR101: Kit base da tavolo, composto da base da tavolo orientabile in 2 posizioni, tappo di chiusura e 2 staffe plastiche
+per il fissaggio.
+•
+41KPR102: Kit montaggio ad incasso, composto da cornice esterna e 4 staffe per fissaggio struttura.
+Caratteristiche tecniche / elettriche 41CPR100
+•
+Alimentazione principale: 24±4 VDC
+•
+Consumo massimo: 220mA
+•
+Comunicazione: RS485 / LAN
+•
+Display: Touch screen resistivo a colori 7”
+•
+Sezione massima terminali: 0.4 – 2.5 mm²
+•
+Temperatura di funzionamento: da -5°C a +50°C
+•
+Peso: 0.77 Kg
+•
+Grado di protezione: IP 30
+•
+Dimensioni pannello (LxHxP): 227 x 166 x 38mm
+•
+Dimensioni display: 155x86
+•
+Colore: contenitore - bianco RAL 9002, cornice – nera.
+21
+4. PROGRAMMAZIONE

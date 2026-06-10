@@ -1,0 +1,200 @@
+# CENTRALE COMELIT LOGIFIRE 41CPE118 — PROCEDURE DI MANUTENZIONE
+## Menu Manutenzione, Test, Esclusioni
+Fonte: Manuale tecnico mt-41cpe118-it-2ed-2g40003016 — Capitolo 5
+
+---
+
+## ACCESSO AL MENU MANUTENZIONE
+
+Percorso: SISTEMA → MANUTENZIONE
+Livello di accesso richiesto: Livello 2 (Installatore) o Livello 3
+
+Voci disponibili nel menu:
+- Orario
+- Data
+- Modalità Giorno
+- Ritardo Uscite
+- Visualizza Log eventi
+- Test
+- Revisione software
+- Display
+- Visualizza Isolatori Attivi
+- Reset
+
+---
+
+## 5.1 IMPOSTAZIONE ORARIO
+
+Menu Manutenzione → "Orario"
+- Muoversi con i pulsanti + e - per modificare ore e minuti
+- Oppure premere il campo numerico per inserimento diretto
+- Premere "Salva" per confermare
+
+---
+
+## 5.2 IMPOSTAZIONE DATA
+
+Menu Manutenzione → "Data"
+- Modificare anno, mese, giorno con + e -
+- Premere "Salva" per confermare
+
+---
+
+## 5.3 MODALITÀ GIORNO / NOTTE
+
+Menu Manutenzione → "Modalità Giorno"
+
+Opzioni:
+- OFF — modalità notte sempre attiva (sensibilità massima)
+- ON — modalità giorno sempre attiva (sensibilità ridotta, meno falsi allarmi)
+- Programmatore Orario — commutazione automatica a orari definiti
+
+Programmatore Orario:
+- Impostare Ora ON (inizio modalità giorno) e Ora OFF (fine modalità giorno)
+- L'orario si applica a tutti i giorni della settimana
+- Default alla partenza: modalità notte
+
+NOTA OPERATIVA: La modalità giorno riduce la sensibilità dei rivelatori. Usarla durante attività lavorative per ridurre falsi allarmi da polvere, fumo di sigarette, vapori.
+
+---
+
+## 5.4 RITARDO USCITE
+
+Menu Manutenzione → "Ritardo Uscite"
+
+I ritardi impostabili sono:
+
+1. **Ritardo Allarme Sirene**: posticipa l'attivazione delle sirene su Loop e uscita SND. Consente di verificare l'autenticità dell'allarme prima dell'evacuazione. LED "RITARDO" si attiva.
+
+2. **Ritardo uscita VVFF (trasmissione allarme)**: posticipa l'attivazione dell'uscita Fire R verso i Vigili del Fuoco. LED "RITARDO" attivo.
+
+3. **Ritardo uscita Estinzione**: posticipa l'attivazione dell'uscita Fire P verso sistemi di estinzione. LED "RITARDO" attivo.
+
+Modalità:
+- ON/OFF — fisso
+- Programmatore Orario — attivo solo nelle fasce orarie definite
+
+---
+
+## 5.5 VISUALIZZAZIONE LOG EVENTI
+
+Menu Manutenzione → "Visualizza Log eventi"
+
+- Capacità: fino a 10.240 eventi
+- Navigazione per data o per numero evento
+- Ogni evento registra: data, ora, tipo di evento, indirizzo dispositivo, zona, nome zona
+- Stampa diretta su stampante termica 41PRN100 (opzionale)
+- Esportazione via software di programmazione
+
+**Cancellazione log**: Pulsante "AVANZATE" → confermare con "SI"
+
+---
+
+## 5.6 TEST
+
+Menu Manutenzione → "Test"
+
+### Test delle Zone (5.7.1)
+- Visualizza mappa prime 60 zone (scorrere con frecce per le restanti fino alla 200)
+- Selezionare zona → mettere "In Test"
+- I dispositivi della zona si attivano in modalità test senza generare allarme reale
+
+### Test Indicazioni LED (5.7.2)
+- Verifica funzionamento buzzer interno
+- Verifica funzionamento LED pannello frontale
+- Eseguire a ogni visita di manutenzione
+
+### Test Dispositivi (5.7.3)
+- Test singolo dispositivo Loop indirizzato
+- Verificare risposta e stato del dispositivo
+
+### Test Uscita Sirene — SND (5.7.4)
+- Attiva l'uscita SND per verificare il funzionamento delle sirene collegate
+- ATTENZIONE: avvisare gli occupanti prima di eseguire il test sirene
+
+---
+
+## 5.7 ESCLUSIONI / DISABILITAZIONI
+
+Menu Manutenzione → "Esclusioni"
+
+### Esclusione Dispositivi Loop (5.8.1)
+- Selezionare dispositivo → escludere
+- Il dispositivo non genera allarmi né guasti
+- LED "ESCLUSIONI" si attiva
+- ATTENZIONE: documentare sempre le esclusioni; ripristinare appena possibile
+
+### Esclusione Zone (5.8.2)
+- Esclude tutti i dispositivi di una zona
+- La zona non genera allarmi
+
+### Dispositivi di Zona (5.8.3)
+- Visualizza i dispositivi associati a una zona specifica
+
+### Esclusione Uscite (5.8.4)
+- Esclude singole uscite (Sirene, VVFF, Estinzione, Guasto)
+- L'uscita esclusa non si attiva in caso di evento
+
+---
+
+## 5.8 REVISIONE SOFTWARE
+
+Menu Manutenzione → "Revisione Software"
+- Visualizza versione firmware installato
+- Da annotare nel rapporto di manutenzione
+
+---
+
+## 5.9 DISPLAY
+
+Menu Manutenzione → "Display"
+- Calibrazione touch screen
+- Colori display
+- Modalità risparmio energetico schermo
+
+---
+
+## 5.10 VISUALIZZA ISOLATORI ATTIVI
+
+Menu Manutenzione → "Visualizza Isolatori Attivi"
+- Mostra gli isolatori attivi nel Loop (attivati automaticamente in caso di cortocircuito)
+- Un isolatore attivo indica un problema nel tratto di loop tra i due isolatori
+- Identificare il tratto guasto e ripristinare
+
+---
+
+## PROCEDURA DI MANUTENZIONE PERIODICA CONSIGLIATA
+
+### Visita semestrale (ogni 6 mesi):
+
+1. Verificare alimentazione principale (230V presente — LED TENSIONE DI RETE acceso)
+2. Verificare stato batteria backup (nessun messaggio "Batteria Bassa" o "Resistenza Batteria Alta")
+3. Leggere e annotare il Log eventi dal ultimo intervento
+4. Eseguire Test Indicazioni LED
+5. Eseguire Test Zone (zona per zona, avvisare gli occupanti)
+6. Eseguire Test Dispositivi su campione (rivelatori, pulsanti)
+7. Verificare assenza esclusioni attive
+8. Verificare assenza messaggi di guasto
+9. Annotare versione firmware (Revisione Software)
+10. Verificare data e ora corrette
+11. Documentare tutto sul Rapporto di Manutenzione MAN-2026-XXX
+
+### Visita annuale (in aggiunta al semestrale):
+
+- Test completo di tutti i rivelatori
+- Test uscita sirene (coordinare con il cliente per l'evacuazione controllata)
+- Test uscita VVFF (verificare con il gestore del sistema di trasmissione allarme)
+- Pulizia fisica della centrale (aria compressa, no liquidi)
+- Verifica integrità cavi visibile
+- Sostituire batteria se necessario (vita utile tipica: 3-5 anni)
+
+---
+
+## RICAMBIO BATTERIA
+
+- Tipo: 12V / 18Ah SLA (Sealed Lead Acid)
+- Dimensioni: 167×181×76 mm
+- Connessione: terminale ad occhiello Ø5mm (M5)
+- Resistenza interna max: < 0,3 Ohm
+- Soglia di allarme: messaggio "Batteria Bassa" o "Resistenza Batteria Alta" → sostituire immediatamente
+- Procedura: DISINSERIRE SEMPRE alimentazione principale e backup prima di sostituire
