@@ -1,0 +1,143 @@
+COMELIT LOGIVOX — MANUALE UTENTE (1a edizione 03/2024, cod. 2G40002872)
+Modelli: 49CCO100, 49CCO101, 49CCO104, 49CCO106
+
+=== PANNELLO FRONTALE ===
+LED DI STATO (3 LED):
+- POWER (verde): centrale alimentata
+- FAULT WARNING (giallo): almeno un guasto attivo
+- VOICE ALARM (rosso): allarme vocale in corso
+
+Elementi fisici:
+- Display touch 4,3" 480×272 px
+- USB1 + USB2: riproduzione MP3 (anche contemporanee su zone diverse)
+- VVF: microfono palmare PTT (premere per parlare)
+- CASSA MONITOR: altoparlante interno ~1W per verifica audio locale
+- BUZZER: cicalino per segnalazione guasti
+
+=== CONDIZIONI OPERATIVE ===
+STATO IDLE: quiete normale — solo LED verde acceso, display "Stato Idle", buzzer tace
+STATO FAULT: guasto rilevato — LED verde + LED giallo, display "Stato FAULT", buzzer attivo
+  → Tocca "Stato FAULT" per vedere guasti attivi
+  → Quando guasto rientra: torna a IDLE, triangolino warning in basso SX fino a conferma
+STATO ALARM: allarme vocale in corso — LED verde + LED rosso, display "Stato ALARM", buzzer attivo
+  → Attivazione: contatto supervisionato OPPURE postazione BUS EMG
+
+=== POSTAZIONI DI EMERGENZA (BUS EMG — max 2) ===
+
+49BME101 (1 tasto EVAC):
+Procedura:
+1. Alzare il copritasto
+2. Tieni premuto EVAC >=2 secondi → LED SYSTEM rosso lampeggia a 1Hz
+   (se tieni premuto >8s = errore, sistema torna in quiete)
+3. Entro 8 secondi premi di nuovo EVAC → parla tenendo premuto
+   LED SYSTEM rosso fisso, LED BUSY arancione durante comunicazione
+4. A fine utilizzo: riabbassare copritasto
+
+49BME107 (7 tasti):
+Procedura:
+1. Alzare il copritasto
+2. Tieni premuto EVAC >=2 secondi → LED SYSTEM rosso lampeggia 1Hz
+3. Entro 8 secondi seleziona tasto 1-6 o ALL
+4. Premi nuovamente EVAC → messaggio o comunicazione vocale
+5. A fine utilizzo: riabbassare copritasto
+
+49MVF101 (PTT da parete, armadio rosso):
+1. Aprire portella con chiave
+2. Impugnare microfono PTT
+3. Premere pulsante e parlare tenendolo premuto
+
+LED postazioni BUS EMG:
+- BUSY verde = bus libero / BUSY arancione = bus occupato
+- SYSTEM verde = quiete / SYSTEM rosso lampeggiante = EVAC abilitata / SYSTEM rosso = allarme / SYSTEM arancione = guasto
+
+=== POSTAZIONI DI SERVIZIO (BUS SRV — max 7 / BUSP — max 8) ===
+
+49BMC101 (1 tasto TALK):
+1. Tieni premuto TALK
+2. Parla nel microfono
+
+49BMC107 (7 tasti):
+1. Premi tasto selezione linee
+2. Premi TALK → messaggio preregistrato o microfono attivo
+
+49BMD110 (47+3 tasti):
+- Tasto TALK, tasti selezione, display LCD
+- Tasto annullamento selezione
+- Tasto MUSIC: riservato futuro utilizzo
+- Scorrere con > per visualizzare oltre 7 tasti
+
+49PMS101 (BUSP, priorità su musica):
+- Pulsante bistabile o PTT (configurabile con dip-switch)
+- Alimentata dalla centrale (sospesa su batteria)
+
+LED postazioni BUS SRV:
+- BUSY verde = bus libero / BUSY arancione = bus occupato
+- SYSTEM verde = quiete / SYSTEM rosso = allarme / SYSTEM arancione = guasto
+
+=== MENU UTENTE (Livello 1) ===
+Navigazione: touch screen, tasto HOME (torna alla home), tasto RITORNO (sale di un livello)
+SALVA: obbligatorio per rendere attive le modifiche
+
+MUSICA:
+- Frecce < > per sorgente: USB1, USB2, AUX1, AUX2
+- Imposta livello audio sorgente
+- Seleziona zone per sorgente 1 (sorgente 2 agisce sulle zone restanti)
+- Due sorgenti contemporanee possibili
+
+AUDIO → Equal Audio: equalizza 7 sorgenti non-EVAC (Alti, Medi, Bassi, Vol per ognuna)
+AUDIO → BUSP/PABX: zone dove agisce l'audio dalle 49PMS101 (ON/OFF per zona)
+AUDIO → Monitor: quale canale riproduce l'altoparlante frontale
+AUDIO → Subwoofer: quale canale inviare all'uscita 0dB
+AUDIO → Livello Audio: volume per ogni singola zona (-9dB a 0dB)
+
+STATO ZONE: per ogni zona — Aperto / Sotto carico / Sovraccarico / Terra A / Terra B / Corto A / Corto B
+  OK = test positivo | FAIL = test fallito (zona non calibrata = tutti FAIL)
+
+STATO GENERALE: OK/FAIL per ogni componente: Zone, Amplific.1/2, Bus EMG/SRV, SD Card 1/2, Alimentaz., Input, PTT, HW interno, Link, Config., Conn. MB
+
+ALIMENTAZIONE: Tensione Batteria (mV), Corrente Batteria (mA), Temp. Batteria (°C)
+  Alim. Principale / Alim. Backup / Stato Batteria / Stato Caricatore / Comun. PM544 (OK/FAIL)
+
+LOG EVENTI: 2 registri — Log Sistema (eventi generali) e Log Fault (guasti)
+  4096 eventi per log, rotazione FIFO, ogni evento: data/ora, descrizione, attivazione/ripristino
+
+DATA/ORA: giorno, mese, anno, ore, minuti, fuso orario, ora legale ON/OFF
+
+INPUT: visualizza stato degli 8 ingressi monitorati
+
+INFO: Firmware, Hardware, Variante, Numero Seriale di ogni scheda (MB, HMI, PM554, Zone Exp)
+
+TEST PANNELLO FRONTALE: Toggle Buzzer, Toggle LED1/2/3 — display cambia colore ogni 3 secondi
+
+=== SILENZIA BUZZER (Livello 1) ===
+Silenzia segnalazione acustica — NON rimuove il guasto e la segnalazione visiva
+
+=== MESSAGGI (Livello 1) ===
+Gestisce messaggi commerciali (slot 1-6):
+1. Selezionare/deselezionare zone (tasto ALL = tutte)
+2. Premere messaggio per avviare; premere di nuovo per fermare
+Riproduzione UNA SOLA VOLTA
+
+=== EVACUAZIONE MANUALE (Livello 2) ===
+Riservato a personale autorizzato:
+1. Selezionare zone (tasto ALL = tutte)
+2. Premere EVAC o ALERT
+3. Premere di nuovo per fermare
+Messaggi Alert/Evac riprodotti IN LOOP
+
+=== TABELLE LOG FAULT ===
+Initialization | HMI Comm. | Ext Flash | SPI | SD 1 | SD 2 | SD Mismatch
+IO Exp Matrix | IO Exp Feedback | IO Exp Zone
+TDA ampli 1 (guasto equalizzatore amp 1) | TDA ampli 2 (guasto equalizzatore amp 2)
+Input Short (ingresso in corto) | Input Cut (ingresso tagliato)
+PTT Open (PushToTalk disconnessa) | PTT Short (PushToTalk in corto)
+PM544 ModBus (perdita com. scheda PM544) | PM544 230VAC (perdita alim. principale)
+PM544 24VDC (perdita alim. 24V) | PM544 Charger (guasto caricabatterie) | PM544 Battery (guasto batterie)
+Watchdog (riavvio per watchdog)
+Bus EMG Id x Capsule OPEN | Bus EMG Id x Capsule SHORT | Bus EMG Id x Type Err | Bus EMG Id x Comm. Timeout
+Bus SRV Id x Capsule OPEN | Bus SRV Id x Capsule SHORT | Bus SRV Id x Type Err | Bus SRV Id x Comm. Timeout
+Zone x Open | Zone x Underload | Zone x Overload | Zone x Short A to GND | Zone x Short B to GND
+Zone x Short A | Zone x Short B | Zone x Amp | Ampli 1 | Ampli 2 | Config. | Link x | EEPROM
+
+=== TABELLE LOG SISTEMA ===
+Power On | Status IDLE | Status FAULT | Status ALARM | Status LOW POWER | Input IDLE | Input ACTIVE

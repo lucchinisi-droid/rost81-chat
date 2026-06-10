@@ -1,0 +1,156 @@
+COMELIT LOGIVOX — PROGRAMMAZIONE COMPLETA (Livello 3 Installatore)
+Manuale Tecnico 2a edizione REV1 01/2025
+ACCESSO: password default 3333
+
+Percorso: HOME → "Programmazione" → inserire password 3333
+Menu: Bus Esterni | Linee | Messaggi | Equal Evac | Livello Evac | PTT | Input | Output | Sistema | Backup | Calibrazione Display
+
+=== BUS ESTERNI ===
+
+Bus EMG — aggiunge/configura postazioni emergenza:
+Modelli: 49BME101 / 49BME107 / 49MVF101
+Per 49MVF101: selezionare per ogni zona/rack ON o OFF
+Per 49BME107: 6 tasti (Tasto 1-6) + tasto ALL (sempre attivo)
+  Per ogni tasto, selezionare per ogni zona/rack:
+  A = Alert | E = Evac | T = Parola | 1-6 = messaggio specifico | N = Null
+  Max 2 opzioni di messaggio diverse per rack
+
+Bus SRV — aggiunge/configura postazioni servizio:
+Modelli: 49BMC101 / 49BMC107 / 49BMD110
+Per 49BMC101: selezionare per ogni zona/rack ON o OFF
+Per 49BMC107: 6 tasti + ALL
+  Per ogni tasto: T = Parola | 1-6 = messaggio | N = Null (max 2 opzioni per rack)
+Per 49BMD110:
+  "Tasto": tastierino numerico 1-47 (scorrere con > per oltre 7 tasti per schermata)
+  "Msg": 3 pulsanti MSG1-MSG2-MSG3 (ID 48-49-50) — solo N o 1-6 (no Parola)
+  I tasti non devono essere progressivi
+
+Monitoraggio: abilita/disabilita monitoraggio e CHIME sul BUS SRV
+  (Il controllo sul BUS EMG è SEMPRE attivo)
+
+=== LINEE ===
+
+Impost. Linee:
+- Tolleranza impedenza per ogni linea A e B (default 30%, modificabile con +/-)
+- Abilita/disabilita linea A e B per zona (ON/OFF)
+- Se variazione impedenza > tolleranza → segnala errore
+
+Imped. Linee (calibrazione):
+- Mostra Riferimento e Attuale per ogni zona
+- "Calibra": calibra tutte le zone presenti
+- Potenza minima per linea: 40W
+- Zona non calibrata = tutti i test FAIL in Stato Zone
+
+=== MESSAGGI ===
+
+Emergenza:
+- Associa messaggi MP3 dalle micro-SD a: EVAC, ALERT, CHIME
+- OBBLIGATORIO: almeno un messaggio per Evac e Alert (errore all'avvio se assenti)
+- Selezione scorrendo i file presenti sulle SD con le frecce
+- Lingue disponibili: IT, EN, FR, NL, ES, PT
+
+Annunci:
+- Associa messaggi MP3 ai 6 slot commerciali (Messaggio 1-6)
+- Messaggi commerciali: 1 volta da centrale/postazione, loop da contatto
+- Messaggi EVAC/ALERT: sempre in loop
+
+File audio compatibili:
+- Formato: MP3 (tutte le varianti)
+- Campionamento max: 48 kHz
+- Le due micro-SD devono essere IDENTICHE (SD Mismatch se diverse)
+- Aggiunta messaggi personalizzati: rimuovere SD, aggiungere su ENTRAMBE
+  Nome file: max 50 caratteri, prefisso numerico 2 cifre (es. "08-mio-messaggio.mp3")
+
+Aggiorna Tracce: appare solo se SD sostituite/modificate — aggiorna il riferimento alle nuove SD
+
+=== EQUAL EVAC ===
+Equalizza 4 canali di emergenza: PTT / Bus EMG / Evac Msg / Alert Msg
+Parametri: Alti, Medi, Bassi, Vol per ogni canale (2 canali per schermata, frecce per navigare)
+
+=== LIVELLO EVAC ===
+Regola il volume dei messaggi di emergenza zona per zona (+/-)
+
+=== PTT ===
+Abilita/disabilita le zone in cui parla il microfono PTT (per ogni zona/rack — ON/OFF)
+Default: TUTTE le zone abilitate
+ATTENZIONE: esclusione zone da valutare attentamente in accordo col piano evacuazione
+
+=== INPUT ===
+Configura gli 8 ingressi supervisionati:
+- Frecce > < per navigare tra gli 8 input
+- NO o NC (normalmente aperto/chiuso — mutuamente esclusivi)
+- Monitoraggio: ON/OFF per ogni contatto
+- Configurazione azione per zona/rack:
+  E = Evac | A = Alert | 1-6 = messaggio servizio | N = nessuna azione
+  Max 2 opzioni di messaggio diverse per rack
+
+=== OUTPUT ===
+Configura le 3 uscite relè (Output 1, 2, 3):
+Condizioni disponibili:
+- Null (contatto mai attivato)
+- Status ALARM (centrale in allarme vocale)
+- Status FAULT (guasto rilevato)
+- Evac Msg (messaggio Evac in esecuzione)
+- Alert Msg (messaggio Alert in esecuzione)
+- Bus EMG occ. (BUS EMG occupato)
+- Bus SRV occ. (BUS SRV occupato)
+- Messaggio 1...6 (quel messaggio in esecuzione)
+- Replica Input 1...8 (replica lo stato del contatto di ingresso)
+
+=== SISTEMA ===
+Indirizzo Rack: ID unico della centrale nel sistema (1-6)
+Rack di Sistema: numero totale centrali (LOGIVOX + fire, max 7)
+Zone del Rack: dipende dal modello, NON modificabile
+EOL Link: resistenza terminazione 120Ω — attivare su MAX 2 centrali (quelle agli estremi)
+Preserva Amp: riserva il 2° amp per sostituire il 1° a guasto (non disponibile su 49CCO100)
+Volume Smart (solo 49CCO101): a guasto amp, il 2° copre tutte le zone con -6dB (non con Preserva Amp)
+Cambia Lingua: IT/EN/FR/NL/ES/PT — opzione per cambiare anche lingua messaggi audio (se file presenti)
+Ripristino: ripristina configurazione di fabbrica (conferma "Si")
+Aggiorn. Main: aggiorna firmware Mainboard (Livello 4, chiavetta USB interna, file .main)
+Aggiorn. HMI: aggiorna firmware display/menu (Livello 4, file .hmi)
+Aggiorn. Logo: aggiorna logo homepage (file .bmp 236×134 px — o "Ripristina" logo di fabbrica)
+
+=== BACKUP ===
+1. Connetti: collega chiavetta USB (inserire nella scheda HMI — rimuovere copertura metallica)
+2. Salva: salva configurazione come file .conf (es. LOGIVOX_11_05_2021_09_46.conf)
+3. Ripristina: ripristina una configurazione .conf selezionata dalla USB
+4. Disconnetti: scollega dalla USB
+
+=== CALIBRAZIONE DISPLAY ===
+Calibra il touch screen (usa se impreciso)
+Seguire istruzioni a display: toccare il punto in alto a sinistra indicato
+
+=== MANUTENZIONE ===
+Aggiornamento FW: mantenere aggiornato (vedi Programmazione → Sistema → Aggiorn. Main/HMI)
+Display e LED: verificare periodicamente (vedi Menu Utente → Test Pann. Frontale)
+Batterie: verificare stato periodicamente — RISCHIO ESPLOSIONE se sostituzione errata
+  Sostituire SOLO con batterie identiche o equivalenti — smaltire secondo normativa
+Pulizia: panno asciutto non ruvido — ventole e ingressi aria liberi da polvere
+
+=== CARATTERISTICHE TECNICHE ===
+Distorsione: <10% su tutti i modelli
+Display: 4,3" touch 480×272 punti
+
+Audio:
+- PTT: SNR>45dB, BW 100-6000Hz, sensibilità -66dBV±3dB
+- BUS EMG/SRV: SNR>45dB, BW 200-12000Hz
+- BUSP: SNR>45dB, BW 50-12000Hz, impedenza IN 22kΩ
+- PABX: SNR>45dB, BW 20-12000Hz, impedenza IN 22kΩ
+- AUX 1/2: SNR>45dB, BW 20-20000Hz
+- LINK: SNR>45dB, BW 80-12000Hz, imp. IN 22kΩ / OUT 240Ω
+- Zone AB 100V: +39dBV (100V), +36dBV (70V), +33dBV (50V), +30dBV (35V)
+  Impedenza min: 32Ω (49CCO100/101), 16Ω (49CCO104/106), BW 80-20000Hz
+
+I/O:
+- Uscite: 3 relè 0-30Vdc 1A NA/NC
+- Ingressi: 8 monitorati 2K2 + 1 contatto priorità PABX
+
+Alimentazione:
+- Primaria: 230Vac (-15%/+10%), 50/60Hz
+- Potenza: 250VA (49CCO100), 300VA (49CCO101), 375VA (49CCO104/106)
+- Batterie: 12V da 33-42Ah, Ri max 0,2Ω, min ~21V, max ~27,8V, corrente max ~25A
+
+Meccanica:
+- Dimensioni (L×H×P): 430×710×280 mm
+- Peso senza batterie: 20,9 kg (49CCO100/101), 29,85 kg (49CCO104/106)
+- IP30 | Metallico | Grigio RAL 7045 | Temperatura: +5°C ÷ +40°C

@@ -1,0 +1,144 @@
+COMELIT LOGIVOX — INSTALLAZIONE E COLLEGAMENTI
+Manuale Tecnico 2a edizione REV1 01/2025 (cod. 2G40003479)
+RISERVATO A PERSONALE QUALIFICATO
+
+=== NORME E CONFORMITÀ ===
+EN 54-16:2008 + EN 54-4:1997+A1:2002+A2:2006
+CPR (Regolamento Prodotti da Costruzione) | DOP: 501 | 0068-CPR-175/2023
+Funzioni certificate EN54-16: avvertimento acustico, tacitazione/ripristino manuale allarme vocale,
+uscita condizione allarme, segnalazione guasti, comando manuale, microfono emergenza, amplificatori ridondanti
+
+=== COMPONENTI INTERNI ===
+1. ALIMENTATORE: 230Vac → 24Vdc
+2. MAINBOARD: scheda madre
+3. SCHEDA ZONE: solo in 49CCO104/106 (4-6 zone)
+4. PM544: scheda UPS a norme EN54-4
+5. INVERTER: 600W
+6. TRASFORMATORI: audio 8Ω / 100V / 70V / 50V / 35V
+7. BATTERIE: 2×12V 42Ah
+8. NICCHIA: spazio PTT + 2 USB frontali
+9. BUZZER: cicalino
+10. HMI: scheda display touch
+11. USB interna: aggiornamento FW e backup configurazione
+12. CASSA MONITOR: altoparlante frontale
+13. PASSANTI: forature per passaggio cavi
+14. MORSETTIERA: collegamento 230Vac
+
+=== SCHEDA MADRE — MORSETTIERI ===
+J10a / J10b: ZONA 1/2 AB (solo 49CCO100/101)
+J5: 8 ingressi supervisionati (IN1-IN8)
+T1: Ethernet RJ45 (futuro utilizzo)
+J6: 3 uscite relè (NA/NC)
+J12: uscita 0dB (subwoofer/alta fedeltà)
+J4: AUX2 (RCA musica)
+J3: AUX1 (RCA musica)
+J1: LINK (2 porte RJ45 RS-485+audio)
+P2: BUS SRV (postazioni servizio)
+P1: BUS EMG (postazioni emergenza)
+J7: PABX (bilanciato + contatto BGM)
+P3: BUSP (49PMS101)
+Pos.14/15: micro-SD1 e micro-SD2 (FAT/FAT32, max 32GB)
+
+SCHEDA ZONE (solo 49CCO104/106): J2_1...J2_6 (Zone 1-6 AB)
+NOTA: con scheda zone presente, le connessioni ZONA1/2 AB sulla scheda madre NON si usano
+
+=== INSTALLAZIONE A PARETE ===
+PERICOLO: interruttore magnetotermico a monte SPENTO prima di qualsiasi operazione
+GUANTI DI SICUREZZA obbligatori
+
+Condizioni obbligatorie:
+- Display a 150-170 cm dal pavimento
+- 10 cm liberi ai lati (ventilazione)
+- 25 cm liberi sopra il centro dei fori staffa
+
+Procedura:
+1. Aprire dima in dotazione e segnare i fori sul muro
+2. Inserire tasselli idonei al peso e al tipo di muro
+3. Fissare la staffa di fissaggio
+4. Agganciare la centrale (senza batterie, in due persone)
+5. Fissare con tassello centrale inferiore (evita movimenti laterali)
+
+Passacavi: tappi IP66 in alto (pressacavi M20 non forniti) + vano asportabile sul retro
+Cavo 230V sempre SEPARATO dagli altri cavi
+
+Installazione a rack: kit staffe 49BRM100 (opzionale)
+
+=== COLLEGAMENTO INGRESSI SUPERVISIONATI (J5) ===
+Layout J5 da DX a SX (posizioni 1-10):
+IN1(1) | IN2(2) | IN3(3) | IN4(4) | GND(5) | IN5(6) | IN6(7) | IN7(8) | IN8(9) | GND(10)
+Resistenze 2,2kΩ fornite a corredo — collegare ai contatti puliti della centrale rilevazione incendi
+
+=== COLLEGAMENTO USCITE RELÈ (J6) ===
+Layout J6 da DX a SX (posizioni 1-9):
+OUT1-NO(1) | OUT1-COM(2) | OUT1-NC(3) | OUT2-NO(4) | OUT2-COM(5) | OUT2-NC(6) | OUT3-NO(7) | OUT3-COM(8) | OUT3-NC(9)
+
+=== COLLEGAMENTO LINEE DIFFUSORI ===
+49CCO100/101: J10a (ZONA1) e J10b (ZONA2) su scheda madre — 100V / 0V per ogni linea A e B
+49CCO104/106: J2_1...J2_6 su scheda zone — 100V / 0V per ogni linea A e B
+Cavi: non schermati, sezione 1-4 mmq
+Cavo EVAC resistente al fuoco (guaina LSZH VIOLA): verificare normative impianto
+
+=== COLLEGAMENTO POSTAZIONI MICROFONICHE ===
+P1 BUS EMG: max 2 postazioni (49BME101/107, 49MVF101), alimentate dalla centrale
+  - Cablaggio LINEARE (no stelle), UTP cat.3+, entra/esci RJ45, max 300 m
+P2 BUS SRV: max 7 postazioni (49BMC101/107/110), alimentate localmente con 49ABM124
+  - Cablaggio LINEARE, UTP cat.3+, max 300 m
+P3 BUSP: max 8 postazioni 49PMS101, RJ25, diramazioni max 5 m, totale max 300 m
+  - Sdoppiatore RJ45 (incluso) prima di ogni diramazione
+
+J7 PABX:
+  Pos.1: BGM (chiudi verso massa per attivare audio)
+  Pos.2: HOT +
+  Pos.3: COLD -
+  Pos.4: 0V
+  Funziona con qualsiasi tecnologia PABX (VoIP, ISDN, analogico)
+
+=== COLLEGAMENTO LINK (J1) ===
+SOLO CAVI DRITTI (cavi CROSS = guasto e errore segnalato)
+Standard T568A o T568B | Cavo UTP cat.3+ | Max 500 m totali
+Cablaggio LINEARE (no stelle, no miste)
+EOL Link: abilitare SOLO sulle 2 centrali agli estremi della catena
+
+=== COLLEGAMENTO CENTRALE FIRE COMELIT ===
+41CPE118: modulo interfaccia nativo in centrale (porta RJ45 FIRE/EVAC)
+41CPE112: modulo opzionale 41EVC101
+Atena 41CPE024/41CPE012: modulo opzionale 41EVC101
+
+Configurazione su LOGIVOX (PROGRAMMAZIONE > SISTEMA):
+- Rack di Sistema = totale centrali nel sistema (fire+evac, max 7)
+- Indirizzo Rack = ID della centrale evac (1=prima, 2=seconda, ecc.)
+- EOL Link = abilitare solo sull'ultima LOGIVOX della catena
+Esempio: 1 fire + 1 LOGIVOX → Rack di Sistema=2, Indirizzo Rack=1
+Esempio: 1 fire + 6 LOGIVOX → Rack di Sistema=7, Indirizzo Rack 1...6
+
+Sul display 41CPE118 appaiono: Allerta, Evacuazione, Guasti (generici)
+
+=== COLLEGAMENTO ALIMENTAZIONI ===
+PERICOLO SCOSSA ELETTRICA: interruttore SPENTO prima di operare, guanti obbligatori
+
+Sequenza corretta:
+1. Verificare interruttore magnetotermico a monte SPENTO
+2. Collegare alimentazione 230V alla morsettiera in alto a destra:
+   FASE = MARRONE | TERRA = GIALLO-VERDE | NEUTRO = BLU
+3. Collegare capicorda batterie: ROSSO = positivo batt.1, NERO = negativo batt.2
+4. Portare interruttore su ACCESO
+5. Collegare i terminali interni delle 2 batterie con il cavo in dotazione
+6. Chiudere la portella con le 2 viti
+
+ATTENZIONE: se 230V non ancora disponibile → disconnettere batterie per preservarne l'efficienza
+
+=== INDIRIZZAMENTO DIP-SWITCH POSTAZIONI ===
+(Modelli con dip-switch: 49BME101/107, 49MVF101, 49BMC101/107/110)
+ATTENZIONE: ID duplicati sullo stesso bus NON ammessi!
+
+ID 1 (BUS EMG o SRV): SW1=ON, SW2-7=OFF
+ID 2 (BUS EMG o SRV): SW2=ON, SW1+SW3-7=OFF
+ID 3 (solo BUS SRV): SW1=ON, SW2=ON, SW3-7=OFF
+ID 4 (solo BUS SRV): SW3=ON, SW1-2+SW4-7=OFF
+ID 5 (solo BUS SRV): SW1=ON, SW3=ON, SW2+SW4-7=OFF
+ID 6 (solo BUS SRV): SW2=ON, SW3=ON, SW1+SW4-7=OFF
+ID 7 (solo BUS SRV): SW1=ON, SW2=ON, SW3=ON, SW4-7=OFF
+
+BUS EMG: max ID 1 e ID 2 (max 2 postazioni)
+BUS SRV: ammette ID 1-7 (max 7 postazioni)
+Trimmer guadagno microfono: accesso interno lato sinistro

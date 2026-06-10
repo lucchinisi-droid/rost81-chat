@@ -1,0 +1,118 @@
+COMELIT LOGIVOX — DATASHEET 49CCO101
+Centrale EVAC 2 Zone 500W
+Famiglia: 49CCO100 / 49CCO101 / 49CCO104 / 49CCO106
+Certificazioni: EN 54-16:2008, EN 54-4:1997+A1:2002+A2:2006
+DOP: 501 | 0068-CPR-175/2023
+Produttore: Comelit Group S.p.A. — Via Don Arrigoni 5, 24020 Rovetta (BG)
+
+=== TABELLA MODELLI ===
+49CCO100: 250W, 1 zona AB, NO Spare Amp
+49CCO101: 500W (250+250W), 1/2 zone AB*, SÌ Spare Amp
+49CCO104: 500W, 4 zone AB, SÌ Spare Amp
+49CCO106: 500W, 6 zone AB, SÌ Spare Amp
+* Con "Preserva Amp" abilitato = 1 sola zona
+
+=== BUS E CONNESSIONI ===
+
+BUS EMG (connettore P1):
+- Max 2 postazioni microfoniche di emergenza
+- Modelli: 49BME101 (1 tasto), 49BME107 (7 tasti), 49MVF101 (PTT da parete)
+- Alimentate dalla centrale
+- Cavo UTP cat. 3+, entra/esci RJ45 lineare, max 300 m
+
+BUS SRV (connettore P2):
+- Max 7 postazioni microfoniche di servizio
+- Modelli: 49BMC101, 49BMC107, 49BMD110
+- Alimentate localmente 24VDC-1A (art. 49ABM124)
+- Cavo UTP cat. 3+, max 300 m
+
+BUSP (connettore P3):
+- Max 8 postazioni 49PMS101
+- Alimentate dalla centrale (sospese su batteria)
+- Cavo RJ25, diramazioni max 5 m, totale max 300 m
+
+LINK (connettore J1):
+- Max 6 centrali LOGIVOX + 1 centrale fire indirizzata Comelit
+- RS-485 + audio, cavo UTP dritto T568A/B, max 500 m
+- EOL Link: resistenza 120Ω, attivare solo sulle 2 centrali agli estremi
+
+CENTRALI FIRE COMPATIBILI:
+- LogiFire8 41CPE118: modulo nativo
+- LogiFire2 41CPE112: modulo opzionale 41EVC101
+- Atena 41CPE024 / Atena Easy 41CPE012: modulo opzionale 41EVC101
+
+Configurazione LOGIVOX collegata a fire:
+PROGRAMMAZIONE > SISTEMA:
+- Rack di Sistema = totale centrali (fire+evac, max 7)
+- Indirizzo Rack = ID della centrale evac (1-6)
+- Abilitare EOL Link sull'ultima LOGIVOX in cascata
+
+=== INGRESSI SUPERVISIONATI (J5) ===
+8 ingressi monitorati, resistenza 2200 Ohm
+Layout J5 (da DX a SX): IN1, IN2, IN3, IN4, GND, IN5, IN6, IN7, IN8, GND
+Configurazione per input: NO o NC, monitoraggio ON/OFF, azione per zona: EVAC/ALERT/Messaggio 1-6/Null
+Max 2 opzioni messaggio diverse per rack
+
+=== USCITE RELÈ (J6) ===
+3 uscite relè, max 30Vdc / 1A, NA/NC configurabili
+Layout J6 (da DX a SX): OUT1-NO, OUT1-COM, OUT1-NC, OUT2-NO, OUT2-COM, OUT2-NC, OUT3-NO, OUT3-COM, OUT3-NC
+Condizioni: Null / Status ALARM / Status FAULT / Evac Msg / Alert Msg / Bus EMG occ. / Bus SRV occ. / Messaggio 1-6 / Replica Input 1-8
+
+=== ALTRI CONNETTORI ===
+J3 AUX1 / J4 AUX2: RCA per sorgenti musicali esterne
+J12 uscita 0dB: per subwoofer o impianto alta fedeltà (COLD/HOT/0V)
+J7 PABX: audio bilanciato (HOT+, COLD-, 0V) + contatto BGM (chiudi verso massa per attivare)
+T1 ETHERNET: RJ45 per future implementazioni
+
+=== MESSAGGI AUDIO ===
+Formato: MP3, campionamento max 48 kHz
+Storage: 2 micro-SD (FAT/FAT32, max 32GB) — contenuto IDENTICO su entrambe
+Messaggi preconfigurati: EVAC e ALERT (multilingua: IT, EN, FR, NL, ES, PT), CHIME.mp3, STIPA.mp3
+Slot commerciali: 6 (Messaggio 1-6) — riproduzione singola da centrale/postazione, loop da contatto
+Messaggi EVAC/ALERT: sempre in loop
+Aggiunta messaggi: prefisso numerico 2 cifre (es. "08-mio-messaggio.mp3"), nome max 50 caratteri
+SD Mismatch: errore se le due SD non sono identiche
+
+=== ALIMENTAZIONE ===
+Primaria: 230Vac (-15%/+10%), 50/60Hz, 300VA
+Batterie: 2×12V, 33-42Ah (es. 12FGL42), Ri max 0,2Ω
+Tensione batteria: min ~21V / max ~27,8V / corrente max ~25A
+Fusibili 49CCO101: T5A 250Vac (primaria), PM544.F3 T3A (carica batt.), PM544.F2 T50A (inverter), 2×T2A5 250Vac (amplificatori)
+SEQUENZA COLLEGAMENTO: interruttore SPENTO → 230V → batterie (rosso=+, nero=-) → interruttore ACCESO → collega terminali interni batterie
+
+=== MECCANICA ===
+Dimensioni (L×H×P): 430×710×280 mm
+Peso senza batterie: 21,9 kg
+IP30 | Metallico | Grigio RAL 7045
+Temperatura operativa: +5°C ÷ +40°C
+Installazione: a parete (staffa inclusa) o rack (49BRM100 opzionale)
+Vincoli parete: display a 150-170 cm, 10 cm lati, 25 cm sopra staffa
+
+=== LIVELLI DI ACCESSO ===
+Livello 1 — UTENTE: visualizza stato, gestisce musica (default, nessuna password)
+Livello 2 — ADDETTO SICUREZZA: + evacuazione manuale (pw default 2222)
+Livello 3 — INSTALLATORE/MANUTENTORE: + programmazione (pw default 3333)
+Livello 4 — FABBRICANTE: + aggiornamento firmware (riservato)
+
+=== PRIORITÀ COMUNICAZIONI ===
+1. Microfono PTT (massima priorità)
+2. Postazione BUS EMG vocale live EVAC
+3. Postazione BUS EMG messaggio EVAC / Ingresso supervisionato EVAC / Messaggio da centrale FIRE EVAC
+4. Ingresso supervisionato ALERT / Postazione BUS EMG ALERT / Messaggio da centrale FIRE ALERT
+5. Postazione BUS SRV vocale live servizio
+6. Postazione BUS EMG/SRV messaggio servizio / Ingresso supervisionato servizio
+7. Ingresso PABX/BUSP
+8. Musica AUX1, AUX2, USB1, USB2 (minima priorità)
+A parità: vince chi ha fatto la richiesta per primo
+
+=== LOG FAULT (principali) ===
+Initialization | HMI Comm. | Ext Flash | SPI | SD 1 | SD 2 | SD Mismatch
+IO Exp Matrix | IO Exp Feedback | IO Exp Zone | TDA ampli 1/2
+Input Short | Input Cut | PTT Open | PTT Short
+PM544 ModBus | PM544 230VAC | PM544 24VDC | PM544 Charger | PM544 Battery | Watchdog
+Bus EMG/SRV Id x: Capsule OPEN / Capsule SHORT / Type Err / Comm. Timeout
+Zone x: Open / Underload / Overload / Short A-B to GND / Short A-B / Amp
+Ampli 1/2 | Config. | Link x | EEPROM
+
+=== LOG SISTEMA ===
+Power On | Status IDLE | Status FAULT | Status ALARM | Status LOW POWER | Input IDLE | Input ACTIVE
