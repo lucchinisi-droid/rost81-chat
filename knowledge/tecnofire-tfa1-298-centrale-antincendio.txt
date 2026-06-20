@@ -1,0 +1,598 @@
+# TECNOFIRE TFA1-298 — CENTRALE ANTINCENDIO ANALOGICA
+# Manuale di riferimento operativo per Sentinel-81
+# Fonte: Manuale installazione Tecnofire TFA1-298 (Release 3.0, FW 2.0.00) + foto impianto reale
+
+---
+
+## IDENTIFICAZIONE APPARECCHIO
+
+- **Produttore:** Tecnofire Detection by Tecnoalarm S.r.l.
+- **Modello:** TFA1-298
+- **Tipo:** Centrale antincendio analogica indirizzabile, 1 loop
+- **Firmware impianto reale:** 3.0.32 ITA
+- **Certificazione:** EN 54-2:1997+A1:2006 (pannello) / EN 54-4:1997+A1:2002+A2:2006 (alimentazione)
+- **Numero certificazione:** 0051-CPR-0444 (Ente: IMQ)
+- **Direttive:** LVD 2014/35/EU, EMC 2014/30/EU, CPR 305/2011
+- **Alimentazione:** 230V AC ±10%/-15% 50Hz, I max 600mA
+- **Dimensioni:** 361 x 301 x 107mm — Peso: 2.7Kg (senza batterie)
+- **Classe ambientale:** 3K5 (EN 60721-3-3:1995)
+- **Temperatura operativa:** -5°C ... +40°C
+- **Umidità relativa:** 10% ... 93% non condensante
+- **Protezione:** IP30
+
+---
+
+## CODICI DI ACCESSO E LIVELLI
+
+La centrale gestisce 10 codici di accesso e 4 livelli:
+
+| Livello | Accesso | Operazioni |
+|---------|---------|-----------|
+| 1 | Libero (no codice) | Tacitazione speaker, visualizzazione eventi |
+| 2 | Tasto 1 (↑) + codice + conferma | + Ripristino, evacuazione, modo presidiato, stop sirene |
+| 3 | Tasto 2 (↑) + codice + conferma | + Menu configurazione sistema (personale installatore) |
+| 4 | Chiudere JP5 KEY + Tasto 3 (↑) + codice + conferma | + Operazioni produttore |
+
+**CODICE RIPRISTINO SITO (dall'etichetta impianto):** 11111
+
+Sequenza accesso: [tasto livello] + [cifre codice] + [tasto conferma ↑]
+
+---
+
+## PANNELLO FRONTALE — STRUTTURA
+
+Il pannello è composto da:
+- **A** — 16 LED segnalatori (colonna sinistra)
+- **B** — Display TFT colore 480x272 pixel (centro)
+- **C** — 5 tasti funzione (colonna destra)
+- **D** — Tastierino numerico 0-9 con navigazione frecce + OK
+
+---
+
+## LED DI SEGNALAZIONE (16 LED)
+
+Frequenza lampeggio:
+- **Lento (2.5s ON / 2.5s OFF)** = guasto (non riconosciuto)
+- **Veloce (0.5s ON / 0.5s OFF)** = allarme (non riconosciuto)
+- **Fisso** = evento riconosciuto (tacitato)
+
+| LED | Colore | Spento | Lampeggia | Fisso |
+|-----|--------|--------|-----------|-------|
+| ALLARME | Rosso | Nessun allarme | Allarme attivo non riconosciuto | Allarme attivo riconosciuto |
+| PREALLARME | Rosso | Nessun preallarme | Preallarme attivo non ric. | Preallarme attivo ric. |
+| ALLARME TECNICO | Rosso | Nessun allarme | Allarme tecnico non ric. | Allarme tecnico ric. |
+| GUASTO | Giallo | Nessun guasto | Guasto attivo non ric. | Guasto attivo ric. |
+| GUASTO ALIMENT. | Giallo | Nessun guasto | Check alimentazione in corso | Guasto alimentazione attivo |
+| GUASTO SISTEMA | Giallo | Nessun guasto | Guasto sistema non ric. | Guasto sistema ric. |
+| BATTERIA | Giallo | Batteria OK | Batteria bassa | Guasto batteria o batteria mancante |
+| SIRENE TACITATE | Giallo | Sirene non fermate | — | Sirene fermate |
+| ESCLUSIONE | Giallo | Nessun dispositivo escluso | — | Almeno un dispositivo escluso |
+| GUASTO/ESCL SIRENA | Giallo | Nessuna sirena esclusa | Guasto sirena non ric. | Guasto ric. o sirena esclusa |
+| GUASTO/ESCL COM | Giallo | Nessun guasto ATE | Guasto ATE non ric. | Guasto ric. o ATE escluso |
+| ZONE IN TEST | Giallo | Nessuna zona in test | — | Almeno una zona in test |
+| PRESIDIATO | Giallo | Sistema non presidiato | — | Sistema presidiato |
+| PRESENZA RETE | Verde | Mancanza rete 230V | — | Rete 230V presente e OK |
+| DISPOSITIVI IN RETE | Giallo | Comunicazione RS485 OK | Errore comunicazione non ric. | Errore comunicazione ric. |
+| TRASMISSIONE AV/VENUTA | Rosso | Nessuna notifica telefonica | Notifica in corso | Notifica trasmessa con successo |
+
+N.B.: Ogni LED di guasto specifico è sempre accompagnato dall'accensione del LED GUASTO GENERALE.
+
+---
+
+## TASTI FUNZIONE
+
+### RIPRISTINO (RESET)
+- **Funzione:** Azzera tutti gli allarmi (allarme fuoco, preallarme, allarme tecnico, preallarme tecnico) e i guasti. Riporta la centrale in stato normale.
+- **Sequenza:** Premere RIPRISTINO → inserire codice livello 2 → I LED e il display si azzerano
+
+### EVACUAZ (EVACUATE)
+- **Funzione:** Attiva la procedura di evacuazione programmata (sirene + uscite programmate per evacuazione)
+- **Sequenza:** Premere EVACUAZ → inserire codice livello 2 → Confermare → LED ALLARME si accende, display mostra "Evacuation"
+
+### TACITAZ (ACK)
+- **Funzione:** Tacita lo speaker della centrale e di tutti i ripetitori. NON ferma le sirene esterne e gli attuatori.
+- **Sequenza:** Premere TACITAZ (nessun codice richiesto). LED ALLARME rimane acceso. Le notifiche sul display rimangono visibili.
+- **N.B.:** Primo riconoscimento = muto speaker / Secondo riconoscimento = speaker annuncia lista zone in allarme
+
+### PRESIDIATO (MONITORED)
+- **Funzione:** Attiva/disattiva il modo presidiato (gli allarmi automatici vengono riportati come preallarmi; i pulsanti manuali danno sempre allarme immediato)
+- **Sequenza:** Premere PRESIDIATO → inserire codice livello 2 → LED PRESIDIATO si accende/spegne
+- **N.B.:** Funziona solo se la funzione è stata abilitata nella programmazione
+
+### TAC/RIP SIRENE (STOP/RESET SIRENS)
+- **Funzione:** Ferma e azzera tutte le sirene programmate per preallarme/allarme/allarme tecnico e tutti gli attuatori esterni
+- **Sequenza:** Premere TAC/RIP SIRENE → inserire codice livello 2 → LED SIRENE TACITATE si accende
+
+### ESC
+- Esce dal menu o dalla funzione visualizzata
+
+### BACK
+- Torna alla posizione precedente e cancella il contenuto
+
+### Navigazione (frecce + OK)
+- ▲ = cursore su / incrementa valore
+- ▼ = cursore giù / decrementa valore
+- ◄ = cursore sinistra / decrementa valore
+- ► = cursore destra / incrementa valore
+- OK = conferma selezione
+
+---
+
+## DISPLAY — STATI OPERATIVI
+
+### Stand-by (nessun allarme)
+Il display mostra:
+- Data e ora
+- Livello di accesso corrente (es. "Livello di accesso 1")
+- Nome impianto (es. "ISTIT.COMPRENS.G.REALE")
+- Versione firmware (es. "3.0.32 ITA")
+- "**Centrale in funzione**" (in verde)
+- Scatole di puntamento per Livello 2, 3, 4
+
+### Evento attivo (non riconosciuto)
+Il display mostra:
+- Categoria evento: ALLARME / PREALLARME / ALLARME TECNICO / GUASTO
+- Nome centrale e zona/dispositivo interessato
+- Data e ora evento
+- Lo speaker emette il segnale acustico corrispondente
+
+### Evento riconosciuto (dopo ACK)
+Il display mostra 6 cartelle eventi in basso con contatori:
+- **Alarm** — tutti gli allarmi fuoco per zona
+- **Preal.** — tutti i preallarmi fuoco per zona
+- **Tech.Al.** — allarmi tecnici e preallarmi tecnici per zona
+- **Failure** — guasti zona e sistema
+- **Excl.** — dispositivi esclusi (fuori servizio)
+- **Test** — allarmi da dispositivi in test
+
+Navigazione cartelle: frecce sinistra/destra per cambiare cartella, su/giù per scorrere lista, OK per espandere evento.
+
+Buffer eventi: max 8192 eventi. Le cartelle si azzerano a ogni RIPRISTINO.
+
+---
+
+## PROCEDURE OPERATIVE STANDARD
+
+### Procedura 1 — RIPRISTINO ALLARME FUOCO
+1. Verificare l'assenza di pericolo reale nell'area interessata
+2. Premere **RIPRISTINO**
+3. Inserire codice livello 2 (default installatore o codice sito: 11111)
+4. LED e display tornano allo stato normale
+5. Annotare l'evento sul registro di manutenzione
+
+### Procedura 2 — TACITAZIONE SIRENE
+1. Premere **TACITAZ** (nessun codice) → muto speaker locale e ripetitori
+2. Per fermare anche le sirene esterne: premere **TAC/RIP SIRENE** + codice liv.2
+
+### Procedura 3 — EVACUAZIONE MANUALE
+1. Premere **EVACUAZ**
+2. Inserire codice livello 2
+3. Confermare l'operazione
+4. LED ALLARME si accende, display mostra "Evacuation"
+5. Per terminare: premere RIPRISTINO + codice liv.2
+
+### Procedura 4 — ATTIVAZIONE MODO PRESIDIATO
+1. Premere **PRESIDIATO**
+2. Inserire codice livello 2
+3. LED PRESIDIATO si accende (modo attivo)
+4. In modo presidiato: allarmi automatici → preallarme; operatore ha tempo di verificare; pulsanti manuali → allarme immediato
+5. Per disattivare: ripetere la procedura
+
+### Procedura 5 — ESCLUSIONE ZONA/DISPOSITIVO
+Richede accesso livello 3 (installatore). Procedura da menu configurazione.
+
+### Procedura 6 — ACCESSO MENU LIVELLO 3 (installatore)
+1. Premere il tasto "2" (con freccia su)
+2. Inserire codice installatore
+3. Premere conferma
+4. Navigare il menu con frecce + OK
+
+---
+
+## STATI DI ALLARME — PRIORITÀ E COMPORTAMENTO
+
+| Priorità | Stato |
+|----------|-------|
+| 1 | Allarme fuoco |
+| 2 | Preallarme fuoco |
+| 3 | Allarme tecnico |
+| 4 | Preallarme tecnico |
+| 5 | Guasto |
+| 6 | Stand-by |
+
+### Stato stand-by
+- Display: "Centrale in funzione" (verde)
+- LED PRESENZA RETE acceso (verde)
+- Tutte le altre LED spente
+- Nessuna sirena o uscita attiva
+
+### Stato preallarme fuoco
+Prima del riconoscimento: speaker emette segnale preallarme, LED PREALLARME lampeggia, uscita preallarme attivata.
+Dopo primo ACK: speaker muto, LED PREALLARME fisso, display lista zone in preallarme.
+Dopo secondo ACK: speaker annuncia zone in preallarme.
+
+### Stato allarme fuoco
+Prima del riconoscimento: speaker emette segnale allarme, LED ALLARME lampeggia, relay allarme attivato.
+Dopo primo ACK: speaker muto, LED ALLARME fisso, display lista zone in allarme.
+Dopo secondo ACK: speaker annuncia zone; display mostra piano allarme della zona (se associato).
+
+### Stato guasto
+Prima del riconoscimento: speaker emette segnale guasto, LED GUASTO GENERALE lampeggia, relay guasto attivato.
+Dopo primo ACK: speaker muto, LED GUASTO fisso, display lista guasti.
+Dopo secondo ACK: speaker annuncia lista guasti.
+
+---
+
+## GUASTI ALIMENTAZIONE — TABELLE DIAGNOSTICA
+
+### Mancanza rete 230V (Tabella 1)
+- Test: ogni 1 secondo
+- Notifica: ritardo programmabile 0-30 minuti
+- Segnalazione: LED PRESENZA RETE spento → LED GUASTO ALIMENT. lampeggia → display "POWER FAILURE" → LED GUASTO ALIMENT. fisso + LED GUASTO GENERALE lampeggia + relay guasto attivato
+- Reset: al ripristino tensione di rete per il tempo preimpostato
+
+### Guasto batteria secondaria (Tabella 2)
+- Test: ogni 10 secondi (solo se rete presente)
+- Notifica: 5 minuti di ritardo
+- Condizione: tensione batteria <10V senza carico
+- Segnalazione: LED BATTERIA lampeggia → display "BATTERY FAILURE" → LED BATTERIA fisso + relay guasto
+- Reset: tensione batteria >10V senza carico per 30 secondi
+
+### Alta impedanza batteria (Tabella 3)
+- Test: ogni 30 minuti (solo se rete presente)
+- Notifica: 2 ore di ritardo
+- Condizione: impedenza batteria >1.5Ω (soglia fissa)
+- Segnalazione: LED BATTERIA lampeggia → display "BATTERY FAILURE" → LED BATTERIA fisso + relay guasto
+- Reset: impedenza sotto soglia per 30 secondi
+
+### Guasto carica batteria (Tabella 4)
+- Test: ogni 1 secondo
+- Notifica: 5 minuti
+- Condizione: presenza rete ma assenza corrente di carica
+- Segnalazione: LED GUASTO ALIMENT. lampeggia → display "FAIL. PWR SUP./BATT. CHARGER" → LED GUASTO ALIMENT. fisso
+- Reset: corrente di carica rilevata per 5 minuti
+
+### Sovratensione (Tabella 5)
+- Test: ogni 1 secondo
+- Notifica: 60 secondi
+- Condizione: tensione >30V sui dispositivi esterni per più di 60s
+- Segnalazione: display "OVERVOLTAGE FAILURE"
+- Reset: tensione tornata al valore nominale 30V per 60 secondi
+
+### Batteria scarica (Tabella 6)
+- Test: ogni 1 secondo (solo in mancanza rete)
+- Notifica: 15 minuti
+- Condizione: tensione batteria <21.6V
+- Segnalazione: LED BATTERIA lampeggia → display "LOW BATTERY" → LED BATTERIA fisso + relay guasto
+- Reset: tensione batteria >22.8V per 30 secondi
+
+### Batteria esaurita / spegnimento automatico (Tabella 7)
+- Condizione: tensione batteria <18V per 15 minuti consecutivi (solo senza rete)
+- 10 secondi prima dello spegnimento: display "BATTERY FAILURE", LED BATTERIA fisso, relay guasto attivato
+- Dopo 10 secondi: la centrale si spegne automaticamente
+
+---
+
+## GUASTI SISTEMA
+
+| Evento | Riconoscimento automatico |
+|--------|--------------------------|
+| Reset da watchdog | No |
+| Jumper KEY inserito con livello accesso <4 | Sì |
+| Guasto buffer centrale | No |
+
+---
+
+## GUASTI GENERALI
+
+| Evento | Ric. auto | Evento | Ric. auto |
+|--------|-----------|--------|-----------|
+| Mancanza comunicazione tra centrali/ripetitori | Sì | Loop aperto | No |
+| Batteria bassa | Sì | Loop in cortocircuito | No |
+| Guasto batteria | Sì | Sovratensione | Sì |
+| Guasto alimentazione | Sì | Resistenza terminazione sirena mancante | Sì |
+| Programmazione inconsistente | No | Guasto interfaccia Ethernet | No |
+| Dispersione a terra | Sì | Connessione Ethernet mancante | Sì |
+| Guasto alimentazione | Sì | Mancanza comunicazione (canale) | Sì |
+| Loop RS485 aperto | Sì | Nessuna risposta (canale) | Sì |
+
+---
+
+## RISORSE SISTEMA
+
+| Risorsa | Capacità |
+|---------|----------|
+| Loop di rilevazione | 1 |
+| Rivelatori per loop | max 199 |
+| Moduli per loop | max 99 |
+| Zone totali (fire + tecniche) | 150 |
+| Zone virtuali | 100 |
+| Ripetitori RS485 | max 5 |
+| Periodi di accesso | 8 |
+| Livelli di accesso | 4 |
+| Codici di accesso | 10 |
+| Formule | 100 |
+| Piani allarme | 50 |
+| Buffer eventi | 8192 |
+| Comunicatori telefonici (TFCOM) | max 5 |
+
+---
+
+## ZONE DI RILEVAZIONE
+
+### Tipi di zona
+- **Fire zone:** rivelatori incendio + attuatori. L'allarme attiva procedura allarme e sirene evacuazione.
+- **Zona tecnica:** rivelatori allagamento, gas, ecc. L'allarme attiva uscita tecnica dedicata. Il monitoraggio non è coperto da EN 54-2 ma non interferisce con le funzioni obbligatorie della centrale.
+- **Zona default:** tutti i dispositivi non assegnati a nessuna zona. Single-knock, non programmabile.
+
+### Modalità di attivazione zona
+**Single-knock (singolo colpo):**
+- 1 dispositivo in allarme → zona in allarme immediato
+- 1 dispositivo in preallarme → zona in preallarme
+
+**Double-knock (doppio colpo):**
+- 1 dispositivo in preallarme → zona in preallarme
+- 2° dispositivo in preallarme o 1° in allarme → zona in allarme
+- Eccezione: pulsante manuale attivato → allarme immediato anche in double-knock
+
+**Timeout preallarme doppio colpo:**
+- Impostabile da 0 (infinito) a 60 minuti (passi di 5 min)
+- Se scade il timeout senza 2° evento: zona torna a stand-by (comportamento dipende da impostazione "Behavior after prealarm")
+
+### Modo presidiato (Monitored System Mode)
+- Attivabile con codice livello 2 (solo se abilitato in programmazione)
+- Con modo presidiato attivo: allarmi automatici → segnalati come preallarme
+- Pulsanti manuali → allarme immediato anche in modo presidiato
+- LED PRESIDIATO acceso quando attivo
+
+---
+
+## SPECIFICHE ELETTRICHE
+
+### Alimentatore ALSW2827
+- Tipo: switching 2.7A/28.8V DC (@ 25°C)
+- Alimentazione: 230V AC ±10%/-15%, 50Hz
+- Consumo max: 600mA AC
+- Corrente nominale uscita: 2.7A @ 27.6V DC ±2%
+- Corrente max disponibile: 2.7A
+- Tensione di picco: ≤230mV p-p
+- Fusibile protezione inversa batteria: T 1A
+
+### Batterie
+- Configurazione: 2x 12V/7.2Ah in serie
+- Classe: Fiamme V-2 o superiore
+- Resistenza interna max: 1.5Ω
+- Tensione di cut-off: <17.6V (centrale) / <18V (spegnimento automatico con JP1 BATT attivo)
+- Ricarica: 100% in 24h
+- Test automatico: ogni 30 minuti
+
+### Correnti disponibili per carichi
+| Circuito | Corrente max |
+|----------|-------------|
+| Carica batteria | 700mA |
+| Autoconsumo CPU | 200mA |
+| Loop | 500mA |
+| Master Bus (RS485) | 500mA |
+| Uscite cablate | 800mA |
+
+### Specifiche CPU
+| Parametro | Valore |
+|-----------|--------|
+| Consumo CPU | 200mA @ 24V DC |
+| Uscite elettriche | max 50mA |
+| Tensione alimentazione (loop, bus, sirene) | 20...27.6V DC |
+
+---
+
+## MORSETTIERA — DESCRIZIONE COMPLETA
+
+| Mors. | Sigla | Funzione | Note |
+|-------|-------|----------|------|
+| 1 | + | Tensione alimentazione positiva | Uscita alimentazione carichi esterni, 500mA 24V DC |
+| 2 | - | Tensione alimentazione negativa | |
+| 3 | C | Contatto comune relay allarme | Relay allarme con contatto libero, 1A 30V DC |
+| 4 | NC | Normalmente chiuso relay allarme | |
+| 5 | NA | Normalmente aperto relay allarme | |
+| 6 | C | Contatto comune relay guasto | Relay guasto con contatto libero, 1A 30V DC |
+| 7 | NC | Normalmente chiuso relay guasto | N.B.: invertiti quando centrale spenta |
+| 8 | NA | Normalmente aperto relay guasto | |
+| 9 | SIR+ | Positivo uscita sirena | Uscita sirena supervisionata, 750mA 24V DC, polarità invertita in stand-by |
+| 10 | SIR- | Negativo uscita sirena | |
+| 11 | OUT1 | Uscita segnalazione 1 | Open collector programmabile, 150mA |
+| 12 | OUT2 | Uscita segnalazione 2 | Open collector programmabile, 150mA |
+| 13 | + | Tensione alimentazione positiva | Uscita alimentazione carichi esterni, 500mA 24V DC |
+| 14 | - | Tensione alimentazione negativa | |
+| 15 | + | Positivo BUS MASTER | Alimentazione dispositivi espansione, 500mA 24V DC |
+| 16 | - | Negativo BUS MASTER | |
+| 17 | A | Canale A bus seriale RS485 | Comunicazione Master Bus (ripetitori, espansioni) |
+| 18 | B | Canale B bus seriale RS485 | |
+| 19 | I | Schermatura loop | Connessione schermatura cavo loop |
+| 20 | L1A- | Negativo linea L1A (uscente) | Loop uscente |
+| 21 | L1A+ | Positivo linea L1A (uscente) | |
+| 22 | L1B- | Negativo linea L1B (rientrante) | Loop rientrante (modo chiuso) |
+| 23 | L1B+ | Positivo linea L1B (rientrante) | |
+| 24 | + | Positivo ingresso alimentazione ausiliaria | Ingresso 24V DC per collegamento TFPS-5 |
+| 25 | - | Negativo ingresso alimentazione ausiliaria | |
+
+**N.B.:** La corrente max per carichi esterni è condivisa tra morsetti 1 e 13.
+
+---
+
+## JUMPER SCHEDA CPU
+
+| Jumper | Funzione | Condizione normale | Uso |
+|--------|----------|--------------------|-----|
+| JP1 W.DOG | Disabilita watchdog | APERTO | Chiudere solo per fw upgrade |
+| JP2 RESET | Reset e riavvio microprocessore | APERTO | Chiudere per fw upgrade |
+| JP4 PROG | Aggiornamento firmware via seriale | APERTO | Chiudere per fw upgrade via seriale |
+| JP5 KEY | Abilita accesso livello 4 | APERTO | Chiudere per accedere a menu livello 4 |
+| JP6 CLR | Reset configurazione a default | APERTO | Chiudere per cancellare programmazione |
+| JP7 BOOT | Fw upgrade via USB (con CLR) | APERTO | Chiudere insieme a CLR per fw upgrade USB |
+
+**ATTENZIONE:** Se il jumper JP5 KEY resta inserito durante il normale funzionamento, la centrale genera "System failure" → "KEY JP inserted". Rimuovere sempre il jumper dopo l'uso.
+
+### LED scheda CPU
+| LED | Colore | Significato |
+|-----|--------|-------------|
+| D2 | Verde | Lampeggiante = firmware in funzione correttamente |
+| D5 | Rosso | Acceso = cavo USB connesso |
+
+### Jumper JP1 BATT (morsettiera terminale)
+| Posizione | Funzione |
+|-----------|----------|
+| •• (aperto) | Disconnessione automatica batterie se Vbat <18V DC |
+| ■ (chiuso) | Protezione contro scarica profonda disabilitata |
+
+---
+
+## CONNESSIONE LOOP DI RILEVAZIONE
+
+- **Protocollo:** Fire-Speed
+- **Modo chiuso:** fino a 199 rivelatori + 99 moduli, lunghezza max 3000m
+  - Collegare L1A (uscente) e L1B (rientrante) — in caso di rottura, il loop rimane parzialmente funzionante
+- **Modo aperto:** max 32 dispositivi per ramo (come da EN 54)
+  - Collegare solo L1A (o L1B), lasciare aperta l'altra estremità
+
+**Sezioni minime cavo loop:**
+| Lunghezza loop | Sezione minima |
+|----------------|---------------|
+| 750 m | 0.75 mm² |
+| 1000 m | 1 mm² |
+| 1500 m | 1.5 mm² |
+| 3000 m | 2.5 mm² |
+
+Tipo cavo consigliato: schermato multipolare twisted-pair con conduttori flessibili.
+Le schermature devono essere in continuità e collegate a terra nell'involucro della centrale.
+
+---
+
+## CONNESSIONE SIRENE
+
+- Collegamento a morsetti 9 (SIR+) e 10 (SIR-)
+- La linea DEVE essere terminata con resistenza 47K:
+  - Nessuna sirena → 47K tra morsetti 9 e 10
+  - Una sirena → 47K in parallelo alla sirena
+  - Più sirene → 47K in parallelo all'ultima sirena
+- Corrente max: 750mA @ 24V DC
+- La polarità si riferisce allo stato di allarme; in stand-by la polarità è invertita
+- Le sirene Tecnofire hanno diodi di protezione e resistenze di terminazione integrate (abilitabili via dip-switch)
+
+---
+
+## BUS RS485 MASTER BUS
+
+- Fino a 5 dispositivi di espansione (ripetitori TFT-7/TFT-7S, comunicatori TFCOM, interfacce TFNET)
+- Lunghezza max: 1000m; per distanze maggiori usare convertitore fibra ottica TFSFC01
+- Connessione in modo aperto (non ad anello)
+- Terminazione: resistore sull'ultimo dispositivo (SW1.1 = ON sull'ultimo ripetitore)
+- Cavo: schermato multipolare twisted-pair con conduttori flessibili
+
+### Collegamento ripetitori TFT-7
+| Terminale | Segnale |
+|-----------|---------|
+| 1 (+) | Positivo alimentazione +24V DC |
+| 2 (-) | Negativo alimentazione |
+| 3 (A) | Canale A bus seriale |
+| 4 (B) | Canale B bus seriale |
+| 5 (S) | Connessione schermatura |
+
+SW1.1 ON = bus terminato (solo sull'ultimo ripetitore)
+SW1.3 ON = BOOT function (modalità programmazione)
+SW1.4 ON = CLR function (modalità programmazione)
+
+---
+
+## ALIMENTAZIONE AGGIUNTIVA TFPS-5
+
+Quando il consumo supera la corrente disponibile dalla batteria interna, collegare alimentatore TFPS-5 aggiuntivo:
+- Collegare uscite OUT A, OUT B, OUT C del TFPS-5 in parallelo ai morsetti 24 e 25 della centrale
+- Con 1 TFPS-5: autonomia totale 24.2Ah (7.2Ah TFA1-298 + 17Ah TFPS-5)
+- Con 2 TFPS-5: collegare le positive tramite diodo Schottky SB1240 (12A-40V)
+
+---
+
+## COMUNICATORE TELEFONICO TFCOM
+
+Accessorio opzionale per notifiche PSTN/GSM-GPRS:
+- Fino a 5 TFCOM collegabili via RS485
+- Notifiche via voce, SMS, GPRS
+- Indirizzo configurabile via SW1 (da 1 a 5, indirizzo 0 disabilita)
+- Jumper JP10 BATT: protezione scarica profonda (•• = abilitata se Vbat <8.9V)
+
+---
+
+## INTERFACCIA ETHERNET TFNET
+
+Accessorio opzionale per supervisione via rete:
+- Fino a 5 TFNET collegabili via RS485
+- Connettore RJ45 per collegamento LAN/WAN
+- Supporta protocollo MODBUS
+- Indirizzo configurabile via SW1 (da 1 a 5, indirizzo 0 disabilita)
+- LED RUN verde lampeggiante = funzionamento normale
+
+---
+
+## MANUTENZIONE PERIODICA (EN 54)
+
+Frequenza raccomandata: **almeno ogni 6 mesi** (personale tecnico specializzato).
+
+Controlli obbligatori:
+1. Verifica stato alimentazione primaria (rete) e secondaria (batterie) della centrale e alimentatori ausiliari
+2. Controllo stato batterie e dispositivi autoalimentati (sirene, trasmettitori telefonici)
+3. Verifica efficienza funzionale dei rivelatori
+4. Pulizia camera fumo dei rivelatori ottici
+5. Verifica efficienza funzionale centrali e ripetitori
+6. Verifica procedure di riconoscimento, evacuazione e ripristino
+7. Verifica efficienza pulsanti manuali
+8. Verifica efficienza dispositivi di allarme ottico-acustici
+9. Verifica efficienza apparati trasmissione allarme (ATE)
+10. Verifica attuazioni tramite moduli ingresso e uscita
+11. Verifica serraggio corretto cavi sui morsetti
+12. Redazione rapporto finale di ispezione
+
+---
+
+## ICONE DISPLAY
+
+| Icona | Significato |
+|-------|-------------|
+| Nessuna alimentazione di rete | Guasto alimentazione principale |
+| Triangolo giallo ! | Guasto generico dispositivo |
+| Fiamma rossa con ? | Preallarme tecnico attivo |
+| Goccia blu | Allarme tecnico attivo |
+| Fiamma rossa | Preallarme fuoco attivo |
+| Fiamma grande rossa | Allarme fuoco attivo |
+| Fiamma con lente | Allarme da dispositivo in test |
+| X rossa (pannello) | Esclusione uscite centrale/ripetitore |
+| X rossa (triangolo) | Esclusione dispositivo |
+| Mano rossa | Guasto sistema |
+| Stella gialla | Evento di sistema |
+| Batteria carica/scarica | Stato batteria (varie condizioni) |
+| Lente di ingrandimento | Zona in test |
+| Chiave inglese | Guasto comunicazione loop |
+| Cacciavite | Richiesta manutenzione rivelatore (pulizia camera fumo) |
+| Orologio rosso | Reset ritardi |
+| Telefono | Notifica telefonica eseguita |
+| Persona (manager) | Modo presidiato attivo |
+| Globo con fulmini | Guasto comunicazione di rete |
+| Globo | Dispersione a terra |
+
+---
+
+## NOTE OPERATIVE PRATICHE
+
+- Il codice ripristino installato sull'impianto è **11111**
+- La versione FW attuale è **3.0.32 ITA** (verificare aggiornamenti disponibili sul sito tecnofiredetection.com)
+- Dopo ogni intervento di manutenzione, effettuare sempre un test completo degli allarmi
+- Prima di intervenire su qualsiasi componente del sistema, scollegare ENTRAMBE le alimentazioni: rete 230V e batterie
+- Per evitare danni da scariche elettrostatiche, non toccare direttamente i componenti elettronici delle schede
+- Il LED D2 verde sulla scheda CPU lampeggiante confirma il corretto funzionamento del firmware
+- In caso di "System failure" + "KEY JP inserted" → verificare che il jumper JP5 KEY sia stato rimosso dopo operazioni di livello 4
+- Per avviare la centrale solo a batteria (senza rete), inserire il jumper JP1 sulla scheda CPU; RIMUOVERLO OBBLIGATORIAMENTE quando la rete è disponibile
+- La porta USB è usata per programmazione con software Tecnoalarm/TECNOMONITOR e per aggiornamento firmware
+
+---
+
+*Fonte: Manuale installazione TFA1-298, Tecnofire Detection — Release 3.0 (FW 2.0.00)*
+*Firmware impianto reale verificato sul campo: 3.0.32 ITA*
+*Documento creato per Sentinel-81 — Rost 81 Srl — Giugno 2026*
